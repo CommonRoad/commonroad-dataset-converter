@@ -1,0 +1,8 @@
+locations:
+  0: ZAM_MUC-1_1_T-1
+
+class_to_obstacleType:
+  car: car
+  truck_bus: bus
+  pedestrian: pedestrian
+  bicycle: bicycle
