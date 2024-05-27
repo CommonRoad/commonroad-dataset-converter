@@ -13,6 +13,7 @@ from commonroad_dataset_converter.conversion.tabular.filters import RoutabilityC
 from commonroad_dataset_converter.datasets.exiD import ExiDConverterFactory
 from commonroad_dataset_converter.datasets.highD import HighdConverterFactory
 from commonroad_dataset_converter.datasets.inD import IndConverterFactory
+from commonroad_dataset_converter.datasets.uniD import UnidConverterFactory
 from commonroad_dataset_converter.datasets.INTERACTION import (
     InteractionConverterFactory,
 )
@@ -140,6 +141,15 @@ def inD(
 ) -> None:
     """Convert the inD dataset into CommonRoad scenario(s)."""
     factory = IndConverterFactory(**ctx.obj)
+    _main(factory)
+
+
+@cli.command()
+def uniD(
+    ctx: typer.Context,
+) -> None:
+    """Convert the uniD dataset into CommonRoad scenario(s)"""
+    factory = UnidConverterFactory(**ctx.obj)
     _main(factory)
 
 
