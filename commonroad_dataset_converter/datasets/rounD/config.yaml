@@ -1,5 +1,7 @@
 locations:
   0: DEU_Neuweiler-1
+  1: kackertstrasse
+  2: thiergarten_01
 
 class_to_obstacleType:
   car: car
