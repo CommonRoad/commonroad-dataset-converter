@@ -355,10 +355,10 @@
     <successor ref="22"/>
     <adjacentLeft ref="23" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="151"/>
   </lanelet>
   <lanelet id="24">
@@ -881,10 +881,10 @@
     </rightBound>
     <adjacentRight ref="25" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="25">
     <leftBound>
@@ -1408,10 +1408,10 @@
     <successor ref="26"/>
     <adjacentLeft ref="24" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="23">
     <leftBound>
@@ -1752,10 +1752,10 @@
     <predecessor ref="28"/>
     <adjacentLeft ref="21" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="22">
     <leftBound>
@@ -1944,10 +1944,10 @@
     <successor ref="29"/>
     <adjacentLeft ref="28" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="28">
     <leftBound>
@@ -2138,10 +2138,10 @@
     <adjacentRight ref="27" drivingDir="same"/>
     <laneletType>restricted</laneletType>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="27">
     <leftBound>
@@ -2346,10 +2346,10 @@
     <successor ref="23"/>
     <adjacentLeft ref="28" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="32">
     <leftBound>
@@ -2871,10 +2871,10 @@
     </rightBound>
     <predecessor ref="33"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="29">
     <leftBound>
@@ -2911,10 +2911,10 @@
     <successor ref="34"/>
     <adjacentLeft ref="30" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="30">
     <leftBound>
@@ -2953,10 +2953,10 @@
     <adjacentRight ref="31" drivingDir="same"/>
     <laneletType>restricted</laneletType>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="31">
     <leftBound>
@@ -2994,10 +2994,10 @@
     <adjacentLeft ref="30" drivingDir="same"/>
     <adjacentRight ref="33" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="33">
     <leftBound>
@@ -3034,10 +3034,10 @@
     <successor ref="32"/>
     <adjacentLeft ref="31" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="34">
     <leftBound>
@@ -3099,10 +3099,10 @@
     <adjacentLeft ref="35" drivingDir="opposite"/>
     <adjacentRight ref="39" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="39">
     <leftBound>
@@ -3163,10 +3163,10 @@
     <adjacentLeft ref="34" drivingDir="same"/>
     <adjacentRight ref="26" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="26">
     <leftBound>
@@ -3227,10 +3227,10 @@
     <successor ref="41"/>
     <adjacentLeft ref="39" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="35">
     <leftBound>
@@ -3292,10 +3292,10 @@
     <adjacentRight ref="36" drivingDir="same"/>
     <laneletType>restricted</laneletType>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="152"/>
   </lanelet>
   <lanelet id="36">
@@ -3360,10 +3360,10 @@
     <adjacentRight ref="44" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="160"/>
   </lanelet>
   <lanelet id="44">
@@ -3426,10 +3426,10 @@
     <adjacentLeft ref="36" drivingDir="same"/>
     <adjacentRight ref="37" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="37">
     <leftBound>
@@ -3490,10 +3490,10 @@
     <successor ref="33"/>
     <adjacentLeft ref="44" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="48">
     <leftBound>
@@ -4018,10 +4018,10 @@
     <adjacentLeft ref="50" drivingDir="opposite"/>
     <adjacentRight ref="51" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="153"/>
   </lanelet>
   <lanelet id="51">
@@ -4547,10 +4547,10 @@
     <adjacentLeft ref="48" drivingDir="same"/>
     <adjacentRight ref="53" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="154"/>
   </lanelet>
   <lanelet id="53">
@@ -5076,10 +5076,10 @@
     <adjacentLeft ref="51" drivingDir="same"/>
     <adjacentRight ref="55" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="55">
     <leftBound>
@@ -5603,10 +5603,10 @@
     <successor ref="56"/>
     <adjacentLeft ref="53" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="50">
     <leftBound>
@@ -6132,10 +6132,10 @@
     <adjacentLeft ref="48" drivingDir="opposite"/>
     <adjacentRight ref="59" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="59">
     <leftBound>
@@ -6660,10 +6660,10 @@
     <adjacentLeft ref="50" drivingDir="same"/>
     <adjacentRight ref="61" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="61">
     <leftBound>
@@ -7187,10 +7187,10 @@
     <predecessor ref="62"/>
     <adjacentLeft ref="59" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="49">
     <leftBound>
@@ -7627,10 +7627,10 @@
     <adjacentLeft ref="58" drivingDir="opposite"/>
     <adjacentRight ref="52" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="52">
     <leftBound>
@@ -8068,10 +8068,10 @@
     <adjacentLeft ref="49" drivingDir="same"/>
     <adjacentRight ref="54" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="54">
     <leftBound>
@@ -8501,10 +8501,10 @@
     <adjacentLeft ref="52" drivingDir="same"/>
     <adjacentRight ref="56" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="56">
     <leftBound>
@@ -8933,10 +8933,10 @@
     <successor ref="65"/>
     <adjacentLeft ref="54" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="58">
     <leftBound>
@@ -9374,10 +9374,10 @@
     <adjacentRight ref="57" drivingDir="same"/>
     <laneletType>restricted</laneletType>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="3"/>
     <trafficSignRef ref="4"/>
     <trafficSignRef ref="155"/>
@@ -9818,10 +9818,10 @@
     <adjacentLeft ref="58" drivingDir="same"/>
     <adjacentRight ref="60" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="60">
     <leftBound>
@@ -10259,10 +10259,10 @@
     <adjacentLeft ref="57" drivingDir="same"/>
     <adjacentRight ref="62" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="62">
     <leftBound>
@@ -10699,10 +10699,10 @@
     <successor ref="61"/>
     <adjacentLeft ref="60" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="69">
     <leftBound>
@@ -10741,10 +10741,10 @@
     <adjacentRight ref="73" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="73">
     <leftBound>
@@ -10783,10 +10783,10 @@
     <adjacentRight ref="75" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="75">
     <leftBound>
@@ -10824,16 +10824,16 @@
     <adjacentLeft ref="73" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="77">
     <leftBound>
       <point>
-        <x>145.9251</x>
-        <y>-62.4067</y>
+        <x>145.9250</x>
+        <y>-62.4068</y>
       </point>
       <point>
         <x>145.9334</x>
@@ -10883,10 +10883,10 @@
     <adjacentRight ref="81" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="161"/>
   </lanelet>
   <lanelet id="81">
@@ -10931,8 +10931,8 @@
         <y>-62.3283</y>
       </point>
       <point>
-        <x>151.9568</x>
-        <y>-61.4757</y>
+        <x>152.8585</x>
+        <y>-61.4998</y>
       </point>
       <lineMarking>curb</lineMarking>
     </rightBound>
@@ -10942,10 +10942,10 @@
     <adjacentRight ref="84" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="162"/>
   </lanelet>
   <lanelet id="84">
@@ -10990,8 +10990,8 @@
         <y>-62.6576</y>
       </point>
       <point>
-        <x>155.6310</x>
-        <y>-61.5736</y>
+        <x>155.6648</x>
+        <y>-61.5745</y>
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
@@ -11001,10 +11001,10 @@
     <adjacentLeft ref="81" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="163"/>
   </lanelet>
   <lanelet id="88">
@@ -11290,10 +11290,10 @@
     <adjacentLeft ref="90" drivingDir="opposite"/>
     <adjacentRight ref="91" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="156"/>
   </lanelet>
   <lanelet id="91">
@@ -11579,10 +11579,10 @@
     <adjacentLeft ref="88" drivingDir="same"/>
     <adjacentRight ref="93" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="93">
     <leftBound>
@@ -11866,10 +11866,10 @@
     <successor ref="94"/>
     <adjacentLeft ref="91" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="90">
     <leftBound>
@@ -12155,10 +12155,10 @@
     <adjacentLeft ref="88" drivingDir="opposite"/>
     <adjacentRight ref="97" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="97">
     <leftBound>
@@ -12443,10 +12443,10 @@
     <adjacentLeft ref="90" drivingDir="same"/>
     <adjacentRight ref="99" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="99">
     <leftBound>
@@ -12730,10 +12730,10 @@
     <predecessor ref="100"/>
     <adjacentLeft ref="97" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="8"/>
     <trafficSignRef ref="9"/>
   </lanelet>
@@ -12773,10 +12773,10 @@
     <adjacentLeft ref="95" drivingDir="opposite"/>
     <adjacentRight ref="92" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="92">
     <leftBound>
@@ -12814,10 +12814,10 @@
     <adjacentLeft ref="89" drivingDir="same"/>
     <adjacentRight ref="94" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="94">
     <leftBound>
@@ -12854,10 +12854,10 @@
     <successor ref="85"/>
     <adjacentLeft ref="92" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="6"/>
     <trafficSignRef ref="7"/>
   </lanelet>
@@ -12897,10 +12897,10 @@
     <adjacentRight ref="95" drivingDir="same"/>
     <laneletType>restricted</laneletType>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="157"/>
   </lanelet>
   <lanelet id="95">
@@ -12939,10 +12939,10 @@
     <adjacentLeft ref="89" drivingDir="opposite"/>
     <adjacentRight ref="98" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="164"/>
   </lanelet>
   <lanelet id="98">
@@ -12981,10 +12981,10 @@
     <adjacentLeft ref="95" drivingDir="same"/>
     <adjacentRight ref="100" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="100">
     <leftBound>
@@ -13021,10 +13021,10 @@
     <successor ref="99"/>
     <adjacentLeft ref="98" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="101">
     <leftBound>
@@ -13908,10 +13908,10 @@
     <predecessor ref="101"/>
     <successor ref="101"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="102">
     <leftBound>
@@ -13983,10 +13983,10 @@
     <adjacentRight ref="104" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="165"/>
   </lanelet>
   <lanelet id="104">
@@ -14058,10 +14058,10 @@
     <adjacentRight ref="105" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="166"/>
   </lanelet>
   <lanelet id="105">
@@ -14132,10 +14132,10 @@
     <adjacentLeft ref="104" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="167"/>
   </lanelet>
   <lanelet id="106">
@@ -14253,10 +14253,10 @@
     <adjacentLeft ref="108" drivingDir="opposite"/>
     <adjacentRight ref="109" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="158"/>
   </lanelet>
   <lanelet id="109">
@@ -14373,10 +14373,10 @@
     <successor ref="110"/>
     <adjacentLeft ref="106" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="111">
     <leftBound>
@@ -14490,10 +14490,10 @@
     </rightBound>
     <successor ref="112"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="108">
     <leftBound>
@@ -14610,10 +14610,10 @@
     <adjacentLeft ref="106" drivingDir="opposite"/>
     <adjacentRight ref="114" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="114">
     <leftBound>
@@ -14729,10 +14729,10 @@
     <predecessor ref="115"/>
     <adjacentLeft ref="108" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="107">
     <leftBound>
@@ -14794,10 +14794,10 @@
     <adjacentLeft ref="113" drivingDir="opposite"/>
     <adjacentRight ref="110" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="110">
     <leftBound>
@@ -14859,10 +14859,10 @@
     <adjacentLeft ref="107" drivingDir="same"/>
     <adjacentRight ref="112" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="112">
     <leftBound>
@@ -14923,10 +14923,10 @@
     <successor ref="118"/>
     <adjacentLeft ref="110" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="113">
     <leftBound>
@@ -14988,10 +14988,10 @@
     <adjacentLeft ref="107" drivingDir="opposite"/>
     <adjacentRight ref="115" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="115">
     <leftBound>
@@ -15052,10 +15052,10 @@
     <successor ref="114"/>
     <adjacentLeft ref="113" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="121">
     <leftBound>
@@ -15209,10 +15209,10 @@
     </rightBound>
     <predecessor ref="122"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="116">
     <leftBound>
@@ -15298,10 +15298,10 @@
     <adjacentLeft ref="119" drivingDir="opposite"/>
     <adjacentRight ref="117" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="117">
     <leftBound>
@@ -15387,10 +15387,10 @@
     <adjacentLeft ref="116" drivingDir="same"/>
     <adjacentRight ref="118" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="118">
     <leftBound>
@@ -15475,10 +15475,10 @@
     <successor ref="125"/>
     <adjacentLeft ref="117" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="119">
     <leftBound>
@@ -15565,10 +15565,10 @@
     <adjacentLeft ref="116" drivingDir="opposite"/>
     <adjacentRight ref="120" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="120">
     <leftBound>
@@ -15654,10 +15654,10 @@
     <adjacentLeft ref="119" drivingDir="same"/>
     <adjacentRight ref="129" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="129">
     <leftBound>
@@ -15742,10 +15742,10 @@
     <adjacentLeft ref="120" drivingDir="same"/>
     <adjacentRight ref="122" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="122">
     <leftBound>
@@ -15830,10 +15830,10 @@
     <successor ref="121"/>
     <adjacentLeft ref="129" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="123">
     <leftBound>
@@ -16112,10 +16112,10 @@
     <adjacentLeft ref="127" drivingDir="opposite"/>
     <adjacentRight ref="124" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="124">
     <leftBound>
@@ -16394,10 +16394,10 @@
     <adjacentLeft ref="123" drivingDir="same"/>
     <adjacentRight ref="125" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="125">
     <leftBound>
@@ -16674,10 +16674,10 @@
     <successor ref="47"/>
     <adjacentLeft ref="124" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="127">
     <leftBound>
@@ -16955,10 +16955,10 @@
     <adjacentRight ref="126" drivingDir="same"/>
     <laneletType>restricted</laneletType>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="18"/>
     <trafficSignRef ref="19"/>
     <trafficSignRef ref="159"/>
@@ -17247,10 +17247,10 @@
     <adjacentLeft ref="127" drivingDir="same"/>
     <adjacentRight ref="128" drivingDir="same"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="128">
     <leftBound>
@@ -17536,10 +17536,10 @@
     <adjacentLeft ref="126" drivingDir="same"/>
     <adjacentRight ref="130" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="130">
     <leftBound>
@@ -17825,10 +17825,10 @@
     <adjacentLeft ref="128" drivingDir="same"/>
     <adjacentRight ref="131" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="131">
     <leftBound>
@@ -18113,10 +18113,10 @@
     <successor ref="122"/>
     <adjacentLeft ref="130" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="67">
     <leftBound>
@@ -18337,10 +18337,10 @@
     <successor ref="60"/>
     <adjacentRight ref="68" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="68">
     <leftBound>
@@ -18561,10 +18561,10 @@
     <successor ref="62"/>
     <adjacentLeft ref="67" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="66">
     <leftBound>
@@ -18840,10 +18840,10 @@
     <predecessor ref="102"/>
     <successor ref="57"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="70">
     <leftBound>
@@ -19078,10 +19078,10 @@
     <predecessor ref="102"/>
     <successor ref="69"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="63">
     <leftBound>
@@ -19341,10 +19341,10 @@
     <predecessor ref="52"/>
     <successor ref="69"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="64">
     <leftBound>
@@ -19541,10 +19541,10 @@
     <successor ref="73"/>
     <adjacentRight ref="65" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="65">
     <leftBound>
@@ -19741,10 +19741,10 @@
     <successor ref="75"/>
     <adjacentLeft ref="64" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="74">
     <leftBound>
@@ -20005,10 +20005,10 @@
     <successor ref="98"/>
     <adjacentRight ref="76" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="76">
     <leftBound>
@@ -20269,10 +20269,10 @@
     <successor ref="100"/>
     <adjacentLeft ref="74" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="71">
     <leftBound>
@@ -20588,10 +20588,10 @@
     <predecessor ref="69"/>
     <successor ref="95"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="72">
     <leftBound>
@@ -20688,8 +20688,8 @@
         <y>-62.9189</y>
       </point>
       <point>
-        <x>145.9251</x>
-        <y>-62.4067</y>
+        <x>145.9250</x>
+        <y>-62.4068</y>
       </point>
     </leftBound>
     <rightBound>
@@ -20794,10 +20794,10 @@
     <predecessor ref="69"/>
     <successor ref="77"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="82">
     <leftBound>
@@ -21042,10 +21042,10 @@
     <successor ref="81"/>
     <adjacentRight ref="85" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="85">
     <leftBound>
@@ -21290,10 +21290,10 @@
     <successor ref="84"/>
     <adjacentLeft ref="82" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="12"/>
   </lanelet>
   <lanelet id="78">
@@ -21443,8 +21443,8 @@
         <y>-62.9015</y>
       </point>
       <point>
-        <x>145.9251</x>
-        <y>-62.4067</y>
+        <x>145.9250</x>
+        <y>-62.4068</y>
       </point>
       <lineMarking>no_marking</lineMarking>
     </leftBound>
@@ -21602,10 +21602,10 @@
     <predecessor ref="89"/>
     <successor ref="77"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="42">
     <leftBound>
@@ -22201,10 +22201,10 @@
     <predecessor ref="77"/>
     <successor ref="36"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="40">
     <leftBound>
@@ -22577,10 +22577,10 @@
     <successor ref="104"/>
     <adjacentRight ref="41" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="41">
     <leftBound>
@@ -22953,10 +22953,10 @@
     <successor ref="105"/>
     <adjacentLeft ref="40" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="13"/>
     <trafficSignRef ref="14"/>
   </lanelet>
@@ -23386,10 +23386,10 @@
     <predecessor ref="34"/>
     <successor ref="102"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="43">
     <leftBound>
@@ -24041,10 +24041,10 @@
     <predecessor ref="123"/>
     <successor ref="36"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="46">
     <leftBound>
@@ -24578,10 +24578,10 @@
     <adjacentRight ref="45" drivingDir="same"/>
     <laneletType>restricted</laneletType>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="45">
     <leftBound>
@@ -25115,10 +25115,10 @@
     <adjacentLeft ref="46" drivingDir="same"/>
     <adjacentRight ref="47" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="47">
     <leftBound>
@@ -25651,10 +25651,10 @@
     <successor ref="37"/>
     <adjacentLeft ref="45" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
     <trafficSignRef ref="10"/>
     <trafficSignRef ref="11"/>
   </lanelet>
@@ -26043,10 +26043,10 @@
     <predecessor ref="77"/>
     <successor ref="102"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="83">
     <leftBound>
@@ -26056,159 +26056,159 @@
       </point>
       <point>
         <x>151.5895</x>
-        <y>-60.9827</y>
+        <y>-60.9828</y>
       </point>
       <point>
         <x>151.5918</x>
-        <y>-60.4996</y>
+        <y>-60.4999</y>
       </point>
       <point>
         <x>151.5872</x>
-        <y>-60.0166</y>
+        <y>-60.0170</y>
       </point>
       <point>
-        <x>151.5757</x>
-        <y>-59.5337</y>
+        <x>151.5756</x>
+        <y>-59.5342</y>
       </point>
       <point>
-        <x>151.5572</x>
-        <y>-59.0510</y>
+        <x>151.5571</x>
+        <y>-59.0516</y>
       </point>
       <point>
-        <x>151.5325</x>
-        <y>-58.5686</y>
+        <x>151.5324</x>
+        <y>-58.5694</y>
       </point>
       <point>
-        <x>151.5057</x>
-        <y>-58.0863</y>
+        <x>151.5058</x>
+        <y>-58.0872</y>
       </point>
       <point>
-        <x>151.4858</x>
-        <y>-57.6036</y>
+        <x>151.4862</x>
+        <y>-57.6047</y>
       </point>
       <point>
-        <x>151.4797</x>
-        <y>-57.1207</y>
+        <x>151.4804</x>
+        <y>-57.1218</y>
       </point>
       <point>
-        <x>151.4896</x>
-        <y>-56.6378</y>
+        <x>151.4904</x>
+        <y>-56.6390</y>
       </point>
       <point>
-        <x>151.5153</x>
-        <y>-56.1555</y>
+        <x>151.5163</x>
+        <y>-56.1568</y>
       </point>
       <point>
-        <x>151.5569</x>
-        <y>-55.6743</y>
+        <x>151.5581</x>
+        <y>-55.6758</y>
       </point>
       <point>
-        <x>151.6144</x>
-        <y>-55.1948</y>
+        <x>151.6157</x>
+        <y>-55.1964</y>
       </point>
       <point>
-        <x>151.6876</x>
-        <y>-54.7173</y>
+        <x>151.6891</x>
+        <y>-54.7191</y>
       </point>
       <point>
-        <x>151.7732</x>
-        <y>-54.2419</y>
+        <x>151.7737</x>
+        <y>-54.2437</y>
       </point>
       <point>
-        <x>151.8638</x>
-        <y>-53.7675</y>
+        <x>151.8637</x>
+        <y>-53.7692</y>
       </point>
       <point>
-        <x>151.9667</x>
-        <y>-53.2960</y>
+        <x>151.9742</x>
+        <y>-53.2994</y>
       </point>
       <point>
-        <x>152.1203</x>
-        <y>-52.8388</y>
+        <x>152.1320</x>
+        <y>-52.8441</y>
       </point>
       <point>
-        <x>152.3380</x>
-        <y>-52.4083</y>
+        <x>152.3507</x>
+        <y>-52.4150</y>
       </point>
       <point>
-        <x>152.6109</x>
-        <y>-52.0097</y>
+        <x>152.6113</x>
+        <y>-52.0086</y>
       </point>
       <point>
-        <x>152.8819</x>
-        <y>-51.6099</y>
+        <x>152.8720</x>
+        <y>-51.6024</y>
       </point>
       <point>
-        <x>153.1108</x>
-        <y>-51.1845</y>
+        <x>153.1096</x>
+        <y>-51.1822</y>
       </point>
       <point>
-        <x>153.3320</x>
-        <y>-50.7550</y>
+        <x>153.3381</x>
+        <y>-50.7567</y>
       </point>
       <point>
-        <x>153.5766</x>
-        <y>-50.3386</y>
+        <x>153.5845</x>
+        <y>-50.3418</y>
       </point>
       <point>
-        <x>153.8574</x>
-        <y>-49.9460</y>
+        <x>153.8586</x>
+        <y>-49.9444</y>
       </point>
       <point>
-        <x>154.1455</x>
-        <y>-49.5583</y>
+        <x>154.1462</x>
+        <y>-49.5565</y>
       </point>
       <point>
-        <x>154.4316</x>
-        <y>-49.1690</y>
+        <x>154.4323</x>
+        <y>-49.1674</y>
       </point>
       <point>
-        <x>154.7150</x>
-        <y>-48.7779</y>
+        <x>154.7157</x>
+        <y>-48.7764</y>
       </point>
       <point>
-        <x>154.9960</x>
-        <y>-48.3850</y>
+        <x>154.9966</x>
+        <y>-48.3836</y>
       </point>
       <point>
-        <x>155.2746</x>
-        <y>-47.9903</y>
+        <x>155.2752</x>
+        <y>-47.9891</y>
       </point>
       <point>
-        <x>155.5509</x>
-        <y>-47.5941</y>
+        <x>155.5514</x>
+        <y>-47.5930</y>
       </point>
       <point>
-        <x>155.8250</x>
-        <y>-47.1963</y>
+        <x>155.8255</x>
+        <y>-47.1954</y>
       </point>
       <point>
-        <x>156.0970</x>
-        <y>-46.7971</y>
+        <x>156.0975</x>
+        <y>-46.7963</y>
       </point>
       <point>
-        <x>156.3670</x>
-        <y>-46.3966</y>
+        <x>156.3674</x>
+        <y>-46.3959</y>
       </point>
       <point>
-        <x>156.6353</x>
-        <y>-45.9949</y>
+        <x>156.6356</x>
+        <y>-45.9943</y>
       </point>
       <point>
-        <x>156.9018</x>
-        <y>-45.5920</y>
+        <x>156.9021</x>
+        <y>-45.5916</y>
       </point>
       <point>
-        <x>157.1667</x>
-        <y>-45.1881</y>
+        <x>157.1669</x>
+        <y>-45.1877</y>
       </point>
       <point>
-        <x>157.4301</x>
-        <y>-44.7831</y>
+        <x>157.4303</x>
+        <y>-44.7829</y>
       </point>
       <point>
-        <x>157.6921</x>
-        <y>-44.3773</y>
+        <x>157.6922</x>
+        <y>-44.3772</y>
       </point>
       <point>
         <x>157.9529</x>
@@ -26218,164 +26218,164 @@
     </leftBound>
     <rightBound>
       <point>
-        <x>152.4077</x>
-        <y>-61.4877</y>
+        <x>152.8585</x>
+        <y>-61.4998</y>
       </point>
       <point>
-        <x>152.2011</x>
-        <y>-61.1218</y>
+        <x>152.4386</x>
+        <y>-61.2474</y>
       </point>
       <point>
-        <x>151.9904</x>
-        <y>-60.7558</y>
+        <x>152.0948</x>
+        <y>-60.9213</y>
       </point>
       <point>
-        <x>151.9616</x>
-        <y>-60.2847</y>
+        <x>151.9699</x>
+        <y>-60.4618</y>
       </point>
       <point>
-        <x>151.9499</x>
-        <y>-59.7997</y>
+        <x>151.9541</x>
+        <y>-59.9722</y>
       </point>
       <point>
-        <x>151.9304</x>
-        <y>-59.3149</y>
+        <x>151.9372</x>
+        <y>-59.4827</y>
       </point>
       <point>
-        <x>151.9033</x>
-        <y>-58.8304</y>
+        <x>151.9124</x>
+        <y>-58.9935</y>
       </point>
       <point>
-        <x>151.8709</x>
-        <y>-58.3463</y>
+        <x>151.8815</x>
+        <y>-58.5046</y>
       </point>
       <point>
-        <x>151.8393</x>
-        <y>-57.8622</y>
+        <x>151.8494</x>
+        <y>-58.0158</y>
       </point>
       <point>
-        <x>151.8173</x>
-        <y>-57.3775</y>
+        <x>151.8240</x>
+        <y>-57.5267</y>
       </point>
       <point>
-        <x>151.8104</x>
-        <y>-56.8925</y>
+        <x>151.8122</x>
+        <y>-57.0371</y>
       </point>
       <point>
-        <x>151.8198</x>
-        <y>-56.4075</y>
+        <x>151.8168</x>
+        <y>-56.5473</y>
       </point>
       <point>
-        <x>151.8458</x>
-        <y>-55.9231</y>
+        <x>151.8382</x>
+        <y>-56.0580</y>
       </point>
       <point>
-        <x>151.8885</x>
-        <y>-55.4399</y>
+        <x>151.8766</x>
+        <y>-55.5697</y>
       </point>
       <point>
-        <x>151.9479</x>
-        <y>-54.9585</y>
+        <x>151.9320</x>
+        <y>-55.0831</y>
       </point>
       <point>
-        <x>152.0228</x>
-        <y>-54.4791</y>
+        <x>152.0035</x>
+        <y>-54.5985</y>
       </point>
       <point>
-        <x>152.1062</x>
-        <y>-54.0012</y>
+        <x>152.0859</x>
+        <y>-54.1157</y>
       </point>
       <point>
-        <x>152.1975</x>
-        <y>-53.5249</y>
+        <x>152.1768</x>
+        <y>-53.6345</y>
       </point>
       <point>
-        <x>152.3318</x>
-        <y>-53.0599</y>
+        <x>152.3006</x>
+        <y>-53.1612</y>
       </point>
       <point>
-        <x>152.5340</x>
-        <y>-52.6208</y>
+        <x>152.4901</x>
+        <y>-52.7105</y>
       </point>
       <point>
-        <x>152.7964</x>
-        <y>-52.2136</y>
+        <x>152.7421</x>
+        <y>-52.2906</y>
       </point>
       <point>
-        <x>153.0615</x>
-        <y>-51.8075</y>
+        <x>153.0116</x>
+        <y>-51.8816</y>
       </point>
       <point>
-        <x>153.3027</x>
-        <y>-51.3870</y>
+        <x>153.2552</x>
+        <y>-51.4567</y>
       </point>
       <point>
-        <x>153.5252</x>
-        <y>-50.9558</y>
+        <x>153.4908</x>
+        <y>-51.0272</y>
       </point>
       <point>
-        <x>153.7666</x>
-        <y>-50.5351</y>
+        <x>153.7306</x>
+        <y>-50.6002</y>
       </point>
       <point>
-        <x>154.0474</x>
-        <y>-50.1397</y>
+        <x>154.0058</x>
+        <y>-50.1954</y>
       </point>
       <point>
-        <x>154.3375</x>
-        <y>-49.7508</y>
+        <x>154.2985</x>
+        <y>-49.8027</y>
       </point>
       <point>
-        <x>154.6251</x>
-        <y>-49.3600</y>
+        <x>154.5892</x>
+        <y>-49.4084</y>
       </point>
       <point>
-        <x>154.9099</x>
-        <y>-48.9672</y>
+        <x>154.8771</x>
+        <y>-49.0121</y>
       </point>
       <point>
-        <x>155.1922</x>
-        <y>-48.5726</y>
+        <x>155.1624</x>
+        <y>-48.6139</y>
       </point>
       <point>
-        <x>155.4721</x>
-        <y>-48.1762</y>
+        <x>155.4453</x>
+        <y>-48.2140</y>
       </point>
       <point>
-        <x>155.7496</x>
-        <y>-47.7783</y>
+        <x>155.7258</x>
+        <y>-47.8124</y>
       </point>
       <point>
-        <x>156.0250</x>
-        <y>-47.3788</y>
+        <x>156.0040</x>
+        <y>-47.4093</y>
       </point>
       <point>
-        <x>156.2983</x>
-        <y>-46.9779</y>
+        <x>156.2801</x>
+        <y>-47.0047</y>
       </point>
       <point>
-        <x>156.5697</x>
-        <y>-46.5756</y>
+        <x>156.5542</x>
+        <y>-46.5987</y>
       </point>
       <point>
-        <x>156.8392</x>
-        <y>-46.1722</y>
+        <x>156.8263</x>
+        <y>-46.1914</y>
       </point>
       <point>
-        <x>157.1069</x>
-        <y>-45.7675</y>
+        <x>157.0967</x>
+        <y>-45.7830</y>
       </point>
       <point>
-        <x>157.3730</x>
-        <y>-45.3618</y>
+        <x>157.3654</x>
+        <y>-45.3734</y>
       </point>
       <point>
-        <x>157.6376</x>
-        <y>-44.9551</y>
+        <x>157.6326</x>
+        <y>-44.9629</y>
       </point>
       <point>
-        <x>157.9008</x>
-        <y>-44.5475</y>
+        <x>157.8983</x>
+        <y>-44.5514</y>
       </point>
       <point>
         <x>158.1627</x>
@@ -26387,172 +26387,172 @@
     <successor ref="128"/>
     <adjacentRight ref="86" drivingDir="same"/>
     <laneletType>border</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="86">
     <leftBound>
       <point>
-        <x>152.4077</x>
-        <y>-61.4877</y>
+        <x>152.8585</x>
+        <y>-61.4998</y>
       </point>
       <point>
-        <x>152.2011</x>
-        <y>-61.1218</y>
+        <x>152.4386</x>
+        <y>-61.2474</y>
       </point>
       <point>
-        <x>151.9904</x>
-        <y>-60.7558</y>
+        <x>152.0948</x>
+        <y>-60.9213</y>
       </point>
       <point>
-        <x>151.9616</x>
-        <y>-60.2847</y>
+        <x>151.9699</x>
+        <y>-60.4618</y>
       </point>
       <point>
-        <x>151.9499</x>
-        <y>-59.7997</y>
+        <x>151.9541</x>
+        <y>-59.9722</y>
       </point>
       <point>
-        <x>151.9304</x>
-        <y>-59.3149</y>
+        <x>151.9372</x>
+        <y>-59.4827</y>
       </point>
       <point>
-        <x>151.9033</x>
-        <y>-58.8304</y>
+        <x>151.9124</x>
+        <y>-58.9935</y>
       </point>
       <point>
-        <x>151.8709</x>
-        <y>-58.3463</y>
+        <x>151.8815</x>
+        <y>-58.5046</y>
       </point>
       <point>
-        <x>151.8393</x>
-        <y>-57.8622</y>
+        <x>151.8494</x>
+        <y>-58.0158</y>
       </point>
       <point>
-        <x>151.8173</x>
-        <y>-57.3775</y>
+        <x>151.8240</x>
+        <y>-57.5267</y>
       </point>
       <point>
-        <x>151.8104</x>
-        <y>-56.8925</y>
+        <x>151.8122</x>
+        <y>-57.0371</y>
       </point>
       <point>
-        <x>151.8198</x>
-        <y>-56.4075</y>
+        <x>151.8168</x>
+        <y>-56.5473</y>
       </point>
       <point>
-        <x>151.8458</x>
-        <y>-55.9231</y>
+        <x>151.8382</x>
+        <y>-56.0580</y>
       </point>
       <point>
-        <x>151.8885</x>
-        <y>-55.4399</y>
+        <x>151.8766</x>
+        <y>-55.5697</y>
       </point>
       <point>
-        <x>151.9479</x>
-        <y>-54.9585</y>
+        <x>151.9320</x>
+        <y>-55.0831</y>
       </point>
       <point>
-        <x>152.0228</x>
-        <y>-54.4791</y>
+        <x>152.0035</x>
+        <y>-54.5985</y>
       </point>
       <point>
-        <x>152.1062</x>
-        <y>-54.0012</y>
+        <x>152.0859</x>
+        <y>-54.1157</y>
       </point>
       <point>
-        <x>152.1975</x>
-        <y>-53.5249</y>
+        <x>152.1768</x>
+        <y>-53.6345</y>
       </point>
       <point>
-        <x>152.3318</x>
-        <y>-53.0599</y>
+        <x>152.3006</x>
+        <y>-53.1612</y>
       </point>
       <point>
-        <x>152.5340</x>
-        <y>-52.6208</y>
+        <x>152.4901</x>
+        <y>-52.7105</y>
       </point>
       <point>
-        <x>152.7964</x>
-        <y>-52.2136</y>
+        <x>152.7421</x>
+        <y>-52.2906</y>
       </point>
       <point>
-        <x>153.0615</x>
-        <y>-51.8075</y>
+        <x>153.0116</x>
+        <y>-51.8816</y>
       </point>
       <point>
-        <x>153.3027</x>
-        <y>-51.3870</y>
+        <x>153.2552</x>
+        <y>-51.4567</y>
       </point>
       <point>
-        <x>153.5252</x>
-        <y>-50.9558</y>
+        <x>153.4908</x>
+        <y>-51.0272</y>
       </point>
       <point>
-        <x>153.7666</x>
-        <y>-50.5351</y>
+        <x>153.7306</x>
+        <y>-50.6002</y>
       </point>
       <point>
-        <x>154.0474</x>
-        <y>-50.1397</y>
+        <x>154.0058</x>
+        <y>-50.1954</y>
       </point>
       <point>
-        <x>154.3375</x>
-        <y>-49.7508</y>
+        <x>154.2985</x>
+        <y>-49.8027</y>
       </point>
       <point>
-        <x>154.6251</x>
-        <y>-49.3600</y>
+        <x>154.5892</x>
+        <y>-49.4084</y>
       </point>
       <point>
-        <x>154.9099</x>
-        <y>-48.9672</y>
+        <x>154.8771</x>
+        <y>-49.0121</y>
       </point>
       <point>
-        <x>155.1922</x>
-        <y>-48.5726</y>
+        <x>155.1624</x>
+        <y>-48.6139</y>
       </point>
       <point>
-        <x>155.4721</x>
-        <y>-48.1762</y>
+        <x>155.4453</x>
+        <y>-48.2140</y>
       </point>
       <point>
-        <x>155.7496</x>
-        <y>-47.7783</y>
+        <x>155.7258</x>
+        <y>-47.8124</y>
       </point>
       <point>
-        <x>156.0250</x>
-        <y>-47.3788</y>
+        <x>156.0040</x>
+        <y>-47.4093</y>
       </point>
       <point>
-        <x>156.2983</x>
-        <y>-46.9779</y>
+        <x>156.2801</x>
+        <y>-47.0047</y>
       </point>
       <point>
-        <x>156.5697</x>
-        <y>-46.5756</y>
+        <x>156.5542</x>
+        <y>-46.5987</y>
       </point>
       <point>
-        <x>156.8392</x>
-        <y>-46.1722</y>
+        <x>156.8263</x>
+        <y>-46.1914</y>
       </point>
       <point>
-        <x>157.1069</x>
-        <y>-45.7675</y>
+        <x>157.0967</x>
+        <y>-45.7830</y>
       </point>
       <point>
-        <x>157.3730</x>
-        <y>-45.3618</y>
+        <x>157.3654</x>
+        <y>-45.3734</y>
       </point>
       <point>
-        <x>157.6376</x>
-        <y>-44.9551</y>
+        <x>157.6326</x>
+        <y>-44.9629</y>
       </point>
       <point>
-        <x>157.9008</x>
-        <y>-44.5475</y>
+        <x>157.8983</x>
+        <y>-44.5514</y>
       </point>
       <point>
         <x>158.1627</x>
@@ -26562,164 +26562,164 @@
     </leftBound>
     <rightBound>
       <point>
-        <x>154.2447</x>
-        <y>-61.5367</y>
+        <x>154.2616</x>
+        <y>-61.5371</y>
       </point>
       <point>
-        <x>155.5637</x>
-        <y>-61.0607</y>
+        <x>155.5675</x>
+        <y>-61.0632</y>
       </point>
       <point>
-        <x>155.5173</x>
-        <y>-60.5486</y>
+        <x>155.5175</x>
+        <y>-60.5516</y>
       </point>
       <point>
-        <x>155.4466</x>
-        <y>-60.0377</y>
+        <x>155.4471</x>
+        <y>-60.0406</y>
       </point>
       <point>
-        <x>155.3482</x>
-        <y>-59.5306</y>
+        <x>155.3487</x>
+        <y>-59.5333</y>
       </point>
       <point>
-        <x>155.2247</x>
-        <y>-59.0270</y>
+        <x>155.2254</x>
+        <y>-59.0297</y>
       </point>
       <point>
-        <x>155.0786</x>
-        <y>-58.5419</y>
+        <x>155.0793</x>
+        <y>-58.5444</y>
       </point>
       <point>
-        <x>154.9169</x>
-        <y>-58.0826</y>
+        <x>154.9177</x>
+        <y>-58.0850</y>
       </point>
       <point>
-        <x>154.7482</x>
-        <y>-57.6712</y>
+        <x>154.7491</x>
+        <y>-57.6735</y>
       </point>
       <point>
-        <x>154.5724</x>
-        <y>-57.2587</y>
+        <x>154.5734</x>
+        <y>-57.2609</y>
       </point>
       <point>
-        <x>154.3984</x>
-        <y>-56.8416</y>
+        <x>154.3993</x>
+        <y>-56.8438</y>
       </point>
       <point>
-        <x>154.2401</x>
-        <y>-56.4159</y>
+        <x>154.2409</x>
+        <y>-56.4180</y>
       </point>
       <point>
-        <x>154.1015</x>
-        <y>-55.9820</y>
+        <x>154.1022</x>
+        <y>-55.9841</y>
       </point>
       <point>
-        <x>153.9867</x>
-        <y>-55.5401</y>
+        <x>153.9872</x>
+        <y>-55.5422</y>
       </point>
       <point>
-        <x>153.9003</x>
-        <y>-55.0875</y>
+        <x>153.9008</x>
+        <y>-55.0895</y>
       </point>
       <point>
-        <x>153.8477</x>
-        <y>-54.6000</y>
+        <x>153.8480</x>
+        <y>-54.6019</y>
       </point>
       <point>
-        <x>153.8184</x>
-        <y>-54.1446</y>
+        <x>153.8185</x>
+        <y>-54.1465</y>
       </point>
       <point>
-        <x>153.8014</x>
-        <y>-53.7964</y>
+        <x>153.8015</x>
+        <y>-53.7981</y>
       </point>
       <point>
-        <x>153.8236</x>
-        <y>-53.4507</y>
+        <x>153.8232</x>
+        <y>-53.4524</y>
       </point>
       <point>
-        <x>153.9724</x>
-        <y>-53.1373</y>
+        <x>153.9715</x>
+        <y>-53.1387</y>
       </point>
       <point>
-        <x>154.2949</x>
-        <y>-52.6362</y>
+        <x>154.2941</x>
+        <y>-52.6375</y>
       </point>
       <point>
-        <x>154.5812</x>
-        <y>-52.1073</y>
+        <x>154.5805</x>
+        <y>-52.1086</y>
       </point>
       <point>
-        <x>154.7534</x>
-        <y>-51.7815</y>
+        <x>154.7527</x>
+        <y>-51.7828</y>
       </point>
       <point>
-        <x>154.9388</x>
-        <y>-51.4640</y>
+        <x>154.9381</x>
+        <y>-51.4651</y>
       </point>
       <point>
-        <x>155.0989</x>
-        <y>-51.2320</y>
+        <x>155.0982</x>
+        <y>-51.2330</y>
       </point>
       <point>
-        <x>155.2681</x>
-        <y>-51.0064</y>
+        <x>155.2674</x>
+        <y>-51.0073</y>
       </point>
       <point>
-        <x>155.5662</x>
-        <y>-50.6067</y>
+        <x>155.5655</x>
+        <y>-50.6076</y>
       </point>
       <point>
-        <x>155.8615</x>
-        <y>-50.2049</y>
+        <x>155.8609</x>
+        <y>-50.2057</y>
       </point>
       <point>
-        <x>156.1538</x>
-        <y>-49.8014</y>
+        <x>156.1532</x>
+        <y>-49.8022</y>
       </point>
       <point>
-        <x>156.4438</x>
-        <y>-49.3956</y>
+        <x>156.4433</x>
+        <y>-49.3963</y>
       </point>
       <point>
-        <x>156.7315</x>
-        <y>-48.9880</y>
+        <x>156.7311</x>
+        <y>-48.9886</y>
       </point>
       <point>
-        <x>157.0169</x>
-        <y>-48.5786</y>
+        <x>157.0165</x>
+        <y>-48.5792</y>
       </point>
       <point>
-        <x>157.3000</x>
-        <y>-48.1675</y>
+        <x>157.2997</x>
+        <y>-48.1681</y>
       </point>
       <point>
-        <x>157.5810</x>
-        <y>-47.7548</y>
+        <x>157.5807</x>
+        <y>-47.7553</y>
       </point>
       <point>
-        <x>157.8600</x>
-        <y>-47.3407</y>
+        <x>157.8597</x>
+        <y>-47.3411</y>
       </point>
       <point>
-        <x>158.0496</x>
-        <y>-47.0568</y>
+        <x>158.0494</x>
+        <y>-47.0571</y>
       </point>
       <point>
-        <x>158.2383</x>
-        <y>-46.7723</y>
+        <x>158.2381</x>
+        <y>-46.7726</y>
       </point>
       <point>
-        <x>158.5157</x>
-        <y>-46.3514</y>
+        <x>158.5156</x>
+        <y>-46.3516</y>
       </point>
       <point>
-        <x>158.7916</x>
-        <y>-45.9294</y>
+        <x>158.7915</x>
+        <y>-45.9295</y>
       </point>
       <point>
         <x>159.0656</x>
-        <y>-45.5066</y>
+        <y>-45.5067</y>
       </point>
       <point>
         <x>159.3387</x>
@@ -26732,172 +26732,172 @@
     <adjacentLeft ref="83" drivingDir="same"/>
     <adjacentRight ref="87" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="87">
     <leftBound>
       <point>
-        <x>154.2447</x>
-        <y>-61.5367</y>
+        <x>152.8585</x>
+        <y>-61.4998</y>
       </point>
       <point>
-        <x>155.5637</x>
-        <y>-61.0607</y>
+        <x>155.5675</x>
+        <y>-61.0632</y>
       </point>
       <point>
-        <x>155.5173</x>
-        <y>-60.5486</y>
+        <x>155.5175</x>
+        <y>-60.5516</y>
       </point>
       <point>
-        <x>155.4466</x>
-        <y>-60.0377</y>
+        <x>155.4471</x>
+        <y>-60.0406</y>
       </point>
       <point>
-        <x>155.3482</x>
-        <y>-59.5306</y>
+        <x>155.3487</x>
+        <y>-59.5333</y>
       </point>
       <point>
-        <x>155.2247</x>
-        <y>-59.0270</y>
+        <x>155.2254</x>
+        <y>-59.0297</y>
       </point>
       <point>
-        <x>155.0786</x>
-        <y>-58.5419</y>
+        <x>155.0793</x>
+        <y>-58.5444</y>
       </point>
       <point>
-        <x>154.9169</x>
-        <y>-58.0826</y>
+        <x>154.9177</x>
+        <y>-58.0850</y>
       </point>
       <point>
-        <x>154.7482</x>
-        <y>-57.6712</y>
+        <x>154.7491</x>
+        <y>-57.6735</y>
       </point>
       <point>
-        <x>154.5724</x>
-        <y>-57.2587</y>
+        <x>154.5734</x>
+        <y>-57.2609</y>
       </point>
       <point>
-        <x>154.3984</x>
-        <y>-56.8416</y>
+        <x>154.3993</x>
+        <y>-56.8438</y>
       </point>
       <point>
-        <x>154.2401</x>
-        <y>-56.4159</y>
+        <x>154.2409</x>
+        <y>-56.4180</y>
       </point>
       <point>
-        <x>154.1015</x>
-        <y>-55.9820</y>
+        <x>154.1022</x>
+        <y>-55.9841</y>
       </point>
       <point>
-        <x>153.9867</x>
-        <y>-55.5401</y>
+        <x>153.9872</x>
+        <y>-55.5422</y>
       </point>
       <point>
-        <x>153.9003</x>
-        <y>-55.0875</y>
+        <x>153.9008</x>
+        <y>-55.0895</y>
       </point>
       <point>
-        <x>153.8477</x>
-        <y>-54.6000</y>
+        <x>153.8480</x>
+        <y>-54.6019</y>
       </point>
       <point>
-        <x>153.8184</x>
-        <y>-54.1446</y>
+        <x>153.8185</x>
+        <y>-54.1465</y>
       </point>
       <point>
-        <x>153.8014</x>
-        <y>-53.7964</y>
+        <x>153.8015</x>
+        <y>-53.7981</y>
       </point>
       <point>
-        <x>153.8236</x>
-        <y>-53.4507</y>
+        <x>153.8232</x>
+        <y>-53.4524</y>
       </point>
       <point>
-        <x>153.9724</x>
-        <y>-53.1373</y>
+        <x>153.9715</x>
+        <y>-53.1387</y>
       </point>
       <point>
-        <x>154.2949</x>
-        <y>-52.6362</y>
+        <x>154.2941</x>
+        <y>-52.6375</y>
       </point>
       <point>
-        <x>154.5812</x>
-        <y>-52.1073</y>
+        <x>154.5805</x>
+        <y>-52.1086</y>
       </point>
       <point>
-        <x>154.7534</x>
-        <y>-51.7815</y>
+        <x>154.7527</x>
+        <y>-51.7828</y>
       </point>
       <point>
-        <x>154.9388</x>
-        <y>-51.4640</y>
+        <x>154.9381</x>
+        <y>-51.4651</y>
       </point>
       <point>
-        <x>155.0989</x>
-        <y>-51.2320</y>
+        <x>155.0982</x>
+        <y>-51.2330</y>
       </point>
       <point>
-        <x>155.2681</x>
-        <y>-51.0064</y>
+        <x>155.2674</x>
+        <y>-51.0073</y>
       </point>
       <point>
-        <x>155.5662</x>
-        <y>-50.6067</y>
+        <x>155.5655</x>
+        <y>-50.6076</y>
       </point>
       <point>
-        <x>155.8615</x>
-        <y>-50.2049</y>
+        <x>155.8609</x>
+        <y>-50.2057</y>
       </point>
       <point>
-        <x>156.1538</x>
-        <y>-49.8014</y>
+        <x>156.1532</x>
+        <y>-49.8022</y>
       </point>
       <point>
-        <x>156.4438</x>
-        <y>-49.3956</y>
+        <x>156.4433</x>
+        <y>-49.3963</y>
       </point>
       <point>
-        <x>156.7315</x>
-        <y>-48.9880</y>
+        <x>156.7311</x>
+        <y>-48.9886</y>
       </point>
       <point>
-        <x>157.0169</x>
-        <y>-48.5786</y>
+        <x>157.0165</x>
+        <y>-48.5792</y>
       </point>
       <point>
-        <x>157.3000</x>
-        <y>-48.1675</y>
+        <x>157.2997</x>
+        <y>-48.1681</y>
       </point>
       <point>
-        <x>157.5810</x>
-        <y>-47.7548</y>
+        <x>157.5807</x>
+        <y>-47.7553</y>
       </point>
       <point>
-        <x>157.8600</x>
-        <y>-47.3407</y>
+        <x>157.8597</x>
+        <y>-47.3411</y>
       </point>
       <point>
-        <x>158.0496</x>
-        <y>-47.0568</y>
+        <x>158.0494</x>
+        <y>-47.0571</y>
       </point>
       <point>
-        <x>158.2383</x>
-        <y>-46.7723</y>
+        <x>158.2381</x>
+        <y>-46.7726</y>
       </point>
       <point>
-        <x>158.5157</x>
-        <y>-46.3514</y>
+        <x>158.5156</x>
+        <y>-46.3516</y>
       </point>
       <point>
-        <x>158.7916</x>
-        <y>-45.9294</y>
+        <x>158.7915</x>
+        <y>-45.9295</y>
       </point>
       <point>
         <x>159.0656</x>
-        <y>-45.5066</y>
+        <y>-45.5067</y>
       </point>
       <point>
         <x>159.3387</x>
@@ -26907,8 +26907,8 @@
     </leftBound>
     <rightBound>
       <point>
-        <x>155.6310</x>
-        <y>-61.5736</y>
+        <x>155.6648</x>
+        <y>-61.5745</y>
       </point>
       <point>
         <x>155.7120</x>
@@ -27076,10 +27076,10 @@
     <successor ref="131"/>
     <adjacentLeft ref="86" drivingDir="same"/>
     <laneletType>sidewalk</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="80">
     <leftBound>
@@ -27467,10 +27467,10 @@
     <predecessor ref="77"/>
     <successor ref="126"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="103">
     <leftBound>
@@ -27970,10 +27970,10 @@
     <predecessor ref="123"/>
     <successor ref="102"/>
     <laneletType>urban</laneletType>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>pedestrian</userOneWay>
-    <userOneWay>train</userOneWay>
     <userOneWay>vehicle</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userOneWay>train</userOneWay>
   </lanelet>
   <lanelet id="5">
     <leftBound>
