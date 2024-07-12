@@ -1,5 +1,4 @@
 from pathlib import Path
-
 from commonroad_dataset_converter.conversion.tabular.job_consumer import (
     TabularJobConsumer,
 )

@@ -1,5 +1,5 @@
 locations:
-  0: ZAM_MUC-1_1_T-1
+  0: superc_no_lane11
 
 class_to_obstacleType:
   car: car
