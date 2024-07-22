@@ -114,7 +114,10 @@ class TabularJobConsumer(IScenarioJobConsumer[TabularJob]):
 def _create_obstacle(
     track_df: pd.DataFrame, track_meta: pd.Series, dynamic_obstacle_id: int
 ) -> DynamicObstacle:
-    dynamic_obstacle_type = ObstacleType(track_meta.obstacle_type)
+    obstacle_type_str = track_meta.obstacle_type
+    if obstacle_type_str == "van":
+        obstacle_type_str == "car"
+    dynamic_obstacle_type = ObstacleType(obstacle_type_str)
     if dynamic_obstacle_type == ObstacleType.PEDESTRIAN:
         # as surveyed by the author (approximation, harmonized with
         # https://commonroad.in.tum.de/static/scenario_xml/2018b/ZAM_Intersect-1_2_S-1.xml)
