@@ -116,7 +116,7 @@ def _create_obstacle(
 ) -> DynamicObstacle:
     obstacle_type_str = track_meta.obstacle_type
     if obstacle_type_str == "van":
-        obstacle_type_str == "car"
+        obstacle_type_str = "car"
     dynamic_obstacle_type = ObstacleType(obstacle_type_str)
     if dynamic_obstacle_type == ObstacleType.PEDESTRIAN:
         # as surveyed by the author (approximation, harmonized with
