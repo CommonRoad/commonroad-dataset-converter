@@ -1,5 +1,5 @@
 locations:
-  0: superc_no_lane11
+  0: DEU_UNID-1.xml
 
 class_to_obstacleType:
   car: car

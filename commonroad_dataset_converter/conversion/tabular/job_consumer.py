@@ -126,6 +126,8 @@ def _create_obstacle(
         # as surveyed by the author (handle_width x bicycle length), harmonized
         # with https://commonroad.in.tum.de/static/scenario_xml/2018b/DEU_Muc-30_1_S-1.xml
         dynamic_obstacle_shape = Rectangle(width=0.6, length=1.8)
+    elif dynamic_obstacle_type == ObstacleType.MOTORCYCLE:
+        dynamic_obstacle_shape = Rectangle(width=0.8, length=2.0)
     else:
         length = track_meta.length
         width = track_meta.width
