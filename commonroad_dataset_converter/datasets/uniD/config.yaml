@@ -1,5 +1,5 @@
 locations:
-  0: DEU_UNID-1.xml
+  0: DEU_UNID-1
 
 class_to_obstacleType:
   car: car
