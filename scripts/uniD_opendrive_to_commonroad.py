@@ -12,7 +12,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 input_path = Path.cwd().parent.parent / "/path/to/uniD/opendriveFile"
-output_path = Path.cwd() / "commonroad_dataset_converter/datasets/uniD/maps/superc_no_lane11.xml"
+output_path = Path.cwd() / "commonroad_dataset_converter/datasets/uniD/maps/DEU_UNID-1.xml"
 
 
 
