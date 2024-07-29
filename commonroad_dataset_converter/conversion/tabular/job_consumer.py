@@ -119,6 +119,8 @@ def _create_obstacle(
         obstacle_type_str = "car"
     elif obstacle_type_str == "animal":
         obstacle_type_str = "pedestrian"
+    elif obstacle_type_str == "trailer":
+        obstacle_type_str = "truck"
     dynamic_obstacle_type = ObstacleType(obstacle_type_str)
     if dynamic_obstacle_type == ObstacleType.PEDESTRIAN:
         # as surveyed by the author (approximation, harmonized with
