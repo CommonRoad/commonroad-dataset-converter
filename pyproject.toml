@@ -32,7 +32,6 @@ commonroad-route-planner = "^2022.3"
 commonroad-drivability-checker = "^2023.1"
 pydantic = "^2.3.0"
 
-
 [tool.poetry.scripts]
 crconvert = 'commonroad_dataset_converter.main:cli'
 
