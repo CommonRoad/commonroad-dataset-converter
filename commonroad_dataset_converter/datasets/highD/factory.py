@@ -39,6 +39,7 @@ class HighdConverterFactory(TabularConverterFactory[LevelXRecording]):
             self.num_vertices,
             self._highd_config["road_length"],
             self._highd_config["road_offset"],
+            self._highd_config["shoulder_width"] if self.shoulder else None,
             extend_width=self.extend_width,
         )
         return lanelet_network_creator
