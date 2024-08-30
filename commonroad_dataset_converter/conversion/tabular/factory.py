@@ -53,11 +53,11 @@ class TabularConverterFactory(
 
     def build_job_generator(self) -> TabularJobProducer:
 
-        recoding_generator = self.build_recording_generator()
+        recording_generator = self.build_recording_generator()
         window_generator = self.build_window_generator()
 
         def generator() -> Generator[Tuple[EgoWindow, WindowMetaT], None, None]:
-            for recording in recoding_generator:
+            for recording in recording_generator:
                 yield from window_generator(*recording)
 
         return TabularJobProducer(
