@@ -114,13 +114,9 @@ class TabularJobConsumer(IScenarioJobConsumer[TabularJob]):
 def _create_obstacle(
     track_df: pd.DataFrame, track_meta: pd.Series, dynamic_obstacle_id: int
 ) -> DynamicObstacle:
-    obstacle_type_str = track_meta.obstacle_type
-    if obstacle_type_str == "van":
-        obstacle_type_str = "car"
-    elif obstacle_type_str == "animal":
-        obstacle_type_str = "pedestrian"
-    elif obstacle_type_str == "trailer":
-        obstacle_type_str = "truck"
+    # resolve obstacle types that are not implemented in CommonRoad yet
+    mapping = {"animal": "pedestrian", "trailer": "truck"}
+    obstacle_type_str = mapping.get(track_meta.obstacle_type, track_meta.obstacle_type)
     dynamic_obstacle_type = ObstacleType(obstacle_type_str)
     if dynamic_obstacle_type == ObstacleType.PEDESTRIAN:
         # as surveyed by the author (approximation, harmonized with
@@ -131,7 +127,9 @@ def _create_obstacle(
         # with https://commonroad.in.tum.de/static/scenario_xml/2018b/DEU_Muc-30_1_S-1.xml
         dynamic_obstacle_shape = Rectangle(width=0.6, length=1.8)
     elif dynamic_obstacle_type == ObstacleType.MOTORCYCLE:
-        dynamic_obstacle_shape = Rectangle(width=0.8, length=2.0)
+        # as surveyed by the author (handle_width x bicycle length), harmonized
+        # with ESP_Monzon-2_1_I-1-1
+        dynamic_obstacle_shape = Rectangle(width=0.8, length=2.5)
     else:
         length = track_meta.length
         width = track_meta.width
