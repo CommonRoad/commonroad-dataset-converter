@@ -9,7 +9,7 @@ default:
   before_script:
     - pip install poetry
     - poetry config virtualenvs.in-project true
-    - poetry install
+    - poetry install --with docs
     - source .venv/bin/activate
 
 variables:
@@ -64,17 +64,30 @@ publish_internal:
     name: staging
     url: ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi
 
-pages:
+build_pages:
   stage: deploy
+  before_script:
   script:
-    - poetry install --with docs
     - mkdocs build
-    - apt update && apt install -y graphviz
   artifacts:
     paths:
-      - public
-  only:
-    - develop
+      - site
+  needs: []
+
+pages:
+  stage: deploy
+  when: manual
+  publish: site
+  only :
+    - main
+  script:
+    - mkdocs build
+  artifacts:
+    paths:
+      - site
+  environment:
+    name: Gitlab Pages
+    url: https://cps.pages.gitlab.lrz.de/commonroad/commonroad-dataset-converter/
 
 push_to_external_pipy_test_registry:
   stage: deploy
