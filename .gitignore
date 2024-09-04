@@ -11,6 +11,6 @@ commonroad_dataset_converter.egg-info/
 build/
 dist/
 
-commonroad_dataset_converter/tests/outputs/
+crdata/tests/outputs/
 tests/outputs/
 /doc/_build/

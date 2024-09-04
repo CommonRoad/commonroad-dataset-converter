@@ -3,7 +3,7 @@ FROM python:3.9 AS build
 RUN pip install poetry
 WORKDIR /app
 
-COPY commonroad_dataset_converter /app/commonroad_dataset_converter
+COPY crdata /app/commonroad_dataset_converter
 COPY pyproject.toml /app/
 COPY README.md /app/
 

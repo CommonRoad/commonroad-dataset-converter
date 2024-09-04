@@ -3,7 +3,7 @@ from unittest import TestCase
 import numpy as np
 import numpy.testing
 
-from commonroad_dataset_converter.conversion.util.trajectory_classification import (
+from crdata.conversion.util.trajectory_classification import (
     _calc_curvature,
 )
 

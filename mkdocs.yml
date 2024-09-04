@@ -1,0 +1,16 @@
+site_name: CommonRoad Dataset Converter
+theme:
+  name: material
+  logo: assets/commonroad_white150.png
+plugins:
+  - mkdocstrings
+  - search
+
+nav:
+  - Introduction: index.md
+  - Architecture: overview.md
+  - CommonRoad Dataset Converter API:
+      - "Tabular": api/tabular.md
+      - "Factory": api/factory.md
+      - "Interface": api/interface.md
+  - Examples: examples.md

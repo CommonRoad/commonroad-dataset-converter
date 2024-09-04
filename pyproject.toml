@@ -5,7 +5,7 @@ description = "CommonRoad Dataset Converter"
 authors = ["Cyber-Physical Systems Group, Technical University of Munich <commonroad@lists.lrz.de>"]
 license = "BSD-3-Clause"
 readme = "README.md"
-packages = [{ include = "commonroad_dataset_converter" }]
+packages = [{ include = "crdata" }]
 homepage = "https://commonroad.in.tum.de"
 classifiers = [
     "Programming Language :: Python",
@@ -18,36 +18,37 @@ classifiers = [
 exclude = ["**/*.ipynb"]
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.11"
+python = ">=3.9,<4.0"
 numpy = "^1.21"
 scipy = ">=1.4.1"
 pandas = ">=0.24.2"
 ruamel-yaml = ">=0.16.10"
-commonroad-io = ">=2023.2"
+commonroad-io = ">=2024.2"
 typer = ">=0.4.0"
 tqdm = "^4.64.1"
 pyproj = "^3.4.0"
 pyarrow = ">=10.0.1"
-commonroad-route-planner = "^2022.3"
-commonroad-drivability-checker = "^2023.1"
+commonroad-route-planner = "^2024.2.1"
+commonroad-drivability-checker = "^2024.1"
 pydantic = "^2.3.0"
 
 [tool.poetry.scripts]
-crconvert = 'commonroad_dataset_converter.main:cli'
+crconvert = 'crdata.main:cli'
 
 [tool.poetry.group.dev]
 optional = true
 
 [tool.poetry.group.dev.dependencies]
 jupyter = "^1.0.0"
+pytest = "^8.3.2"
 
-[tool.poetry.group.doc]
+[tool.poetry.group.docs]
 optional = true
 
-[tool.poetry.group.doc.dependencies]
-sphinx = "^5.3.0"
-myst-parser = "^1.0.0"
-sphinx-book-theme = "^1.0.1"
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5.0"
+mkdocstrings-python = "^1.8.0"
+mkdocs-material = "^9.5.12"
 
 [build-system]
 requires = ["poetry-core"]

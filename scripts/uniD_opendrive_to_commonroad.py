@@ -1,4 +1,3 @@
-
 import os
 from pathlib import Path
 import numpy as np
@@ -8,11 +7,13 @@ from crdesigner.common.config.opendrive_config import open_drive_config
 from crdesigner.common.file_writer import CRDesignerFileWriter, OverwriteExistingFile
 from crdesigner.map_conversion.map_conversion_interface import opendrive_to_commonroad
 import warnings
-warnings.filterwarnings('ignore')
+
+warnings.filterwarnings("ignore")
 
 input_path = Path.cwd().parent.parent / "/path/to/uniD/opendriveFile"
-output_path = Path.cwd() / "commonroad_dataset_converter/datasets/uniD/maps/DEU_UNID-1.xml"
-
+output_path = (
+    Path.cwd() / "commonroad_dataset_converter/datasets/uniD/maps/DEU_UNID-1.xml"
+)
 
 
 open_drive_config.proj_string_odr = None

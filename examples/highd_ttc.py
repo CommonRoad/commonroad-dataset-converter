@@ -3,9 +3,9 @@ from pathlib import Path
 import pandas as pd
 from pydantic.dataclasses import dataclass
 
-from commonroad_dataset_converter.conversion.tabular.interface import Window
-from commonroad_dataset_converter.datasets.highD import HighdConverterFactory
-from commonroad_dataset_converter.datasets.highD.implementation import (
+from crdata.conversion.tabular.interface import Window
+from crdata.datasets.highD import HighdConverterFactory
+from crdata.datasets.highD.implementation import (
     HighdObstacleWindowGenerator,
 )
 

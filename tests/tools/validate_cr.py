@@ -11,12 +11,9 @@ __status__ = "Released"
 __desc__ = """
 Validates a Commonroad scenario syntactically
 """
-import glob
-import os
 from pathlib import Path
 
 from commonroad.common.file_reader import CommonRoadFileReader
-from commonroad.common.file_writer import CommonRoadFileWriter
 from commonroad.scenario.lanelet import LaneletNetwork
 from commonroad.scenario.obstacle import DynamicObstacle, StaticObstacle
 from commonroad.scenario.scenario import Scenario
@@ -79,7 +76,7 @@ def check_valid_lanelet_polygon(lanelet_network: LaneletNetwork):
     for lanelet in lanelet_network.lanelets:
         try:
             assert lanelet.polygon.shapely_object.is_valid
-        except AssertionError as e:
+        except AssertionError:
             print(f"Lanelet {lanelet.lanelet_id} has invalid geometry")
             print(explain_validity(lanelet.polygon.shapely_object))
             errors += 1
@@ -95,7 +92,7 @@ def check_successors(lanelet_network: LaneletNetwork):
         if lanelet.successor is not None:
             for i in lanelet.successor:
                 suc = lanelet_network.find_lanelet_by_id(i)
-                if not suc.predecessor or not lanelet.lanelet_id in suc.predecessor:
+                if not suc.predecessor or lanelet.lanelet_id not in suc.predecessor:
                     print(
                         f"Lanelet {i} is successor of {lanelet.lanelet_id} "
                         f"but does not have {lanelet.lanelet_id} as predecessor"
@@ -104,7 +101,7 @@ def check_successors(lanelet_network: LaneletNetwork):
         if lanelet.predecessor is not None:
             for i in lanelet.predecessor:
                 pred = lanelet_network.find_lanelet_by_id(i)
-                if not pred.successor or not lanelet.lanelet_id in pred.successor:
+                if not pred.successor or lanelet.lanelet_id not in pred.successor:
                     print(
                         f"Lanelet {i} is predecessor of {lanelet.lanelet_id} "
                         f"but does not have {lanelet.lanelet_id} as successor"

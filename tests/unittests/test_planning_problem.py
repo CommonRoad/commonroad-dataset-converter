@@ -6,7 +6,7 @@ import numpy.testing
 import pandas as pd
 from commonroad.geometry.shape import Rectangle
 
-from commonroad_dataset_converter.conversion.tabular.planning_problem import (
+from crdata.conversion.tabular.planning_problem import (
     EgoPlanningProblemCreator,
     EgoWindow,
     RandomObstaclePlanningProblemWrapper,
@@ -42,7 +42,6 @@ class TestPlanningProblemCreator(TestCase):
         self.ego_window = EgoWindow(vehicle_states, vehicle_meta, 1.0, [0])
 
     def test_ego_planning_problem_creator_keep_ego(self):
-
         scenario_mock = Mock()
         lanelet_network_mock = Mock()
         lanelet_network_mock.find_lanelet_by_position.return_value = [[None]]
@@ -50,7 +49,7 @@ class TestPlanningProblemCreator(TestCase):
 
         creator = EgoPlanningProblemCreator(keep_ego=True)
         with patch(
-            "commonroad_dataset_converter.conversion.tabular.planning_problem._cut_lanelet_polygon"
+            "crdata.conversion.tabular.planning_problem._cut_lanelet_polygon"
         ) as cut_ll_mock:
             cut_ll_mock.return_value = Rectangle(10, 10, np.array([10, 0]))
             pps = creator(self.ego_window, scenario_mock)
@@ -69,7 +68,7 @@ class TestPlanningProblemCreator(TestCase):
 
         creator = EgoPlanningProblemCreator(keep_ego=False)
         with patch(
-            "commonroad_dataset_converter.conversion.tabular.planning_problem._cut_lanelet_polygon"
+            "crdata.conversion.tabular.planning_problem._cut_lanelet_polygon"
         ) as cut_ll_mock:
             cut_ll_mock.return_value = Rectangle(10, 10, np.array([10, 0]))
             pps = creator(self.ego_window, scenario_mock)
@@ -90,7 +89,7 @@ class TestPlanningProblemCreator(TestCase):
 
         creator = EgoPlanningProblemCreator(keep_ego=False)
         with patch(
-            "commonroad_dataset_converter.conversion.tabular.planning_problem._cut_lanelet_polygon"
+            "crdata.conversion.tabular.planning_problem._cut_lanelet_polygon"
         ) as cut_ll_mock:
             cut_ll_mock.return_value = Rectangle(10, 10, np.array([10, 0]))
             pps = creator(self.ego_window, scenario_mock)
@@ -107,7 +106,7 @@ class TestPlanningProblemCreator(TestCase):
         creator = EgoPlanningProblemCreator(keep_ego=True)
         creator = RandomObstaclePlanningProblemWrapper(creator, num_planning_problems=1)
         with patch(
-            "commonroad_dataset_converter.conversion.tabular.planning_problem._cut_lanelet_polygon"
+            "crdata.conversion.tabular.planning_problem._cut_lanelet_polygon"
         ) as cut_ll_mock:
             cut_ll_mock.return_value = Rectangle(10, 10, np.array([10, 0]))
             pps = creator(self.ego_window, scenario_mock)
@@ -123,7 +122,7 @@ class TestPlanningProblemCreator(TestCase):
         creator = EgoPlanningProblemCreator(keep_ego=False)
         creator = RandomObstaclePlanningProblemWrapper(creator, num_planning_problems=1)
         with patch(
-            "commonroad_dataset_converter.conversion.tabular.planning_problem._cut_lanelet_polygon"
+            "crdata.conversion.tabular.planning_problem._cut_lanelet_polygon"
         ) as cut_ll_mock:
             cut_ll_mock.return_value = Rectangle(10, 10, np.array([10, 0]))
             pps = creator(self.ego_window, scenario_mock)
@@ -139,7 +138,7 @@ class TestPlanningProblemCreator(TestCase):
         creator = EgoPlanningProblemCreator(keep_ego=False)
         creator = RandomObstaclePlanningProblemWrapper(creator, num_planning_problems=2)
         with patch(
-            "commonroad_dataset_converter.conversion.tabular.planning_problem._cut_lanelet_polygon"
+            "crdata.conversion.tabular.planning_problem._cut_lanelet_polygon"
         ) as cut_ll_mock:
             cut_ll_mock.return_value = Rectangle(10, 10, np.array([10, 0]))
             pps = creator(self.ego_window, scenario_mock)

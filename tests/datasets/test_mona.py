@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from commonroad_dataset_converter.datasets.mona.implementation import (
+from crdata.datasets.mona.implementation import (
     MonaRecordingGenerator,
 )
 from tests.tools.base_suite import BaseSuite
