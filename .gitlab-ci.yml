@@ -67,7 +67,7 @@ publish_internal:
 pages:
   stage: deploy
   script:
-    - poetry install --with doc
+    - poetry install --with docs
     - mkdocs build
     - apt update && apt install -y graphviz
   artifacts:
