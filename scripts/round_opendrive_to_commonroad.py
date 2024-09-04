@@ -10,7 +10,10 @@ from crdesigner.common.file_writer import CRDesignerFileWriter, OverwriteExistin
 from crdesigner.common.config.gui_config import gui_config
 from crdesigner.map_conversion.map_conversion_interface import opendrive_to_commonroad
 
-input_path = Path.cwd().parent.parent / "tests/map_conversion/test_maps/opendrive/thiergarten_000.xodr"
+input_path = (
+    Path.cwd().parent.parent
+    / "tests/map_conversion/test_maps/opendrive/thiergarten_000.xodr"
+)
 output_path = Path.cwd() / "example_files/opendrive/thiergarten.xml"
 
 open_drive_config.proj_string_odr = gui_config.utm_default

@@ -1,19 +1,18 @@
 repos:
-  # Format yaml
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v2.5.1
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
     hooks:
-      - id: prettier
-        files: \.(json|markdown|md|yaml|yml)$
-    # Sort imports
-  - repo: https://github.com/pycqa/isort
-    rev: 5.12.0
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.4.7
     hooks:
-      - id: isort
-        name: isort (python)
-        args: [--profile, black, --filter-files, --line-width=88]
-    # Use the black formatter
-  - repo: https://github.com/psf/black
-    rev: 22.6.0
-    hooks:
-      - id: black
+      # Run the linter.
+      - id: ruff
+        args: [ --fix, --ignore=F401 ]
+      # Run the formatter.
+      - id: ruff-format

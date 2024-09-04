@@ -1,11 +1,11 @@
 from unittest import TestCase
-from unittest.mock import MagicMock, Mock
+from unittest.mock import MagicMock
 
 import numpy.testing
 import pandas as pd
 
-from commonroad_dataset_converter.conversion.tabular.interface import Window
-from commonroad_dataset_converter.conversion.tabular.windowing import (
+from crdata.conversion.tabular.interface import Window
+from crdata.conversion.tabular.windowing import (
     DownsamplingWindowWrapper,
     ObstacleWindowGenerator,
     RollingWindowGenerator,

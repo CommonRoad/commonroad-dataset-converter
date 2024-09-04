@@ -2,11 +2,11 @@ import os
 import shutil
 import warnings
 from pathlib import Path
-from unittest import TestCase, skip
+from unittest import TestCase
 
 from typer.testing import CliRunner
 
-from commonroad_dataset_converter.main import cli
+from crdata.main import cli
 
 from .validate_cr import validate_all
 

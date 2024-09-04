@@ -9,11 +9,14 @@ from commonroad.planning.planning_problem import PlanningProblemSet
 
 from crdesigner.common.config.gui_config import gui_config
 from crdesigner.common.config.lanelet2_config import lanelet2_config
-from crdesigner.map_conversion.map_conversion_interface import lanelet_to_commonroad, opendrive_to_commonroad
+from crdesigner.map_conversion.map_conversion_interface import (
+    lanelet_to_commonroad,
+    opendrive_to_commonroad,
+)
 from crdesigner.common.config.opendrive_config import open_drive_config
 
 
-from commonroad_dataset_converter.conversion.util.yaml import load_yaml
+from crdata.conversion.util.yaml import load_yaml
 
 
 lanelet2_config.proj_string = gui_config.utm_default
@@ -21,29 +24,41 @@ open_drive_config.proj_string_odr = gui_config.utm_default
 
 root_dir = Path(__file__).parent.parent
 interaction_path = Path("/path/to/TUM/INTERACTION/")
-cr_path = root_dir / Path("commonroad_dataset_converter/datasets/uniD/maps")
+cr_path = root_dir / Path("crdata/datasets/uniD/maps")
 
-paths = (list((interaction_path/Path("INTERACTION-Dataset-DR-v1_0/maps")).glob("*osm")) +
-         list((interaction_path/Path("INTERACTION-Dataset-TC-v1_0/maps")).glob("*osm")))
+paths = list(
+    (interaction_path / Path("INTERACTION-Dataset-DR-v1_0/maps")).glob("*osm")
+) + list((interaction_path / Path("INTERACTION-Dataset-TC-v1_0/maps")).glob("*osm"))
 cr_files = list(cr_path.glob("*xml"))
 
-config = load_yaml(str(root_dir / "commonroad_dataset_converter/datasets/INTERACTION/config.yaml"))
+config = load_yaml(str(root_dir / "crdata/datasets/INTERACTION/config.yaml"))
 
 for sc_path in cr_files:
     sc, pp = CommonRoadFileReader(sc_path).open()
     for path in paths:
-        if sc.scenario_id.country_id in str(path) and sc.scenario_id.map_name in str(path):
-            offset = config["offsets"][f"{sc.scenario_id.country_id}_{sc.scenario_id.map_name}-{sc.scenario_id.map_id}"]
+        if sc.scenario_id.country_id in str(path) and sc.scenario_id.map_name in str(
+            path
+        ):
+            offset = config["offsets"][
+                f"{sc.scenario_id.country_id}_{sc.scenario_id.map_name}-{sc.scenario_id.map_id}"
+            ]
 
             if path.suffix == ".xodr":
-                scenario = opendrive_to_commonroad(str(path), general_conf=gui_config, odr_conf=open_drive_config)
-                scenario.translate_rotate(np.array([293923.5, 5629269.3]),0)  # rotate with offsets specified in the .xodr file
+                scenario = opendrive_to_commonroad(
+                    str(path), general_conf=gui_config, odr_conf=open_drive_config
+                )
+                scenario.translate_rotate(
+                    np.array([293923.5, 5629269.3]), 0
+                )  # rotate with offsets specified in the .xodr file
             else:
-                scenario = lanelet_to_commonroad(str(path), lanelet2_conf=lanelet2_config)
-
+                scenario = lanelet_to_commonroad(
+                    str(path), lanelet2_conf=lanelet2_config
+                )
             scenario.scenario_id = sc.scenario_id
             scenario.lanelet_network.translate_rotate(
-                    np.array([-offset["x_offset_lanelets"], -offset["y_offset_lanelets"]]), 0)
+                np.array([-offset["x_offset_lanelets"], -offset["y_offset_lanelets"]]),
+                0,
+            )
             writer = CommonRoadFileWriter(
                 scenario=scenario,
                 planning_problem_set=PlanningProblemSet(),
