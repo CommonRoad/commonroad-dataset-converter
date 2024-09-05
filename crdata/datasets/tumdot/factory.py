@@ -6,13 +6,15 @@ from crdata.conversion.tabular.factory import (
 from .implementation import (
     TumdotRecordingGenerator,
     TumdotWindowMeta,
-    TumdotMetaScenarioCreator
+    TumdotMetaScenarioCreator,
 )
+
+
 class TumdotConverterFactory(TabularConverterFactory[TumdotWindowMeta]):
     input_dir: Path
+
     def build_recording_generator(self) -> TumdotRecordingGenerator:
         return TumdotRecordingGenerator(self.input_dir)
+
     def build_meta_scenario_creator(self) -> TumdotMetaScenarioCreator:
         return TumdotMetaScenarioCreator()
-
-
