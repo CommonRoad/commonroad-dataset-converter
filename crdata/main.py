@@ -20,6 +20,7 @@ from crdata.datasets.inD import IndConverterFactory
 from crdata.datasets.mona import MonaConverterFactory
 from crdata.datasets.rounD import RounDConverterFactory
 from crdata.datasets.sind import SindConverterFactory
+from crdata.datasets.tumdot import TumdotConverterFactory
 
 _logger = logging.getLogger(__name__)
 
@@ -198,6 +199,11 @@ def sind(ctx: typer.Context) -> None:
     factory = SindConverterFactory(**ctx.obj)
     _main(factory)
 
+@cli.command()
+def tumdot(ctx: typer.Context) -> None:
+    """Convert the SIND into CommonRoad scenario(s)."""
+    factory = TumdotConverterFactory(**ctx.obj)
+    _main(factory)
 
 if __name__ == "__main__":
     cli()
