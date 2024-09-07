@@ -106,6 +106,8 @@ def main(
     output_dir.mkdir(parents=True, exist_ok=True)
     params["file_writer_type"] = output_type.to_type()
     params["num_time_steps"] = num_time_steps if not all_vehicles else None
+    if all_vehicles:
+        params["obstacles_start_at_zero"] = True
     ctx.obj = params
 
 
