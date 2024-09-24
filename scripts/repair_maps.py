@@ -27,8 +27,6 @@ logging.basicConfig(
     datefmt=date_strftime_format,
 )
 
-
-num_cores = 1
 formulas = []
 
 
@@ -63,7 +61,7 @@ def eval_maps(config: MapVerParams, path: str):
 
 
 def prepare_and_execute_eval(
-    scenario_base_dir: Path, selected_formulas: List[FormulaID]
+    scenario_base_dir: Path, selected_formulas: List[FormulaID], num_cores: int = 1
 ):
     relevant_scenario_paths = glob.glob(f"{scenario_base_dir}/**/*.xml", recursive=True)
     path = Path(__file__).parent.parent / Path("figures")
@@ -71,6 +69,7 @@ def prepare_and_execute_eval(
         path.mkdir()
     config = MapVerParams()
     config.verification.formulas = selected_formulas
+    config.verification.max_iterations = 10
     config.evaluation.overwrite_scenario = True
     func = partial(eval_maps, config)
     with Pool(processes=num_cores) as pool:
@@ -79,5 +78,5 @@ def prepare_and_execute_eval(
 
 if __name__ == "__main__":
     prepare_and_execute_eval(
-        Path(__file__).parent.parent / Path("crdata/datasets"), formulas
+        Path(__file__).parent.parent / Path("crdata/datasets/exiD"), formulas
     )

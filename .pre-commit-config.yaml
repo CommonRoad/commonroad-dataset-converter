@@ -11,8 +11,6 @@ repos:
     # Ruff version.
     rev: v0.4.7
     hooks:
-      # Run the linter.
       - id: ruff
-        args: [ --fix, --ignore=F401 ]
-      # Run the formatter.
+        args: [ --fix, --ignore=F401, --line-length=120]
       - id: ruff-format

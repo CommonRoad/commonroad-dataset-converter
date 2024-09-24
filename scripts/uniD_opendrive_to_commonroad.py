@@ -1,44 +1,64 @@
-import os
 from pathlib import Path
-import numpy as np
-from commonroad.planning.planning_problem import PlanningProblemSet
-from commonroad.scenario.scenario import Tag
+from commonroad.scenario.scenario import Scenario
+
+from crdesigner.common.config.lanelet2_config import lanelet2_config
 from crdesigner.common.config.opendrive_config import open_drive_config
-from crdesigner.common.file_writer import CRDesignerFileWriter, OverwriteExistingFile
-from crdesigner.map_conversion.map_conversion_interface import opendrive_to_commonroad
-import warnings
-
-warnings.filterwarnings("ignore")
-
-input_path = Path.cwd().parent.parent / "/path/to/uniD/opendriveFile"
-output_path = (
-    Path.cwd() / "commonroad_dataset_converter/datasets/uniD/maps/DEU_UNID-1.xml"
-)
+from crdesigner.common.config.general_config import general_config
+from crdata.conversion.util.yaml import load_yaml
+from scripts.utils import convert_opendrive
+from utils import convert_lanelet2
 
 
-open_drive_config.proj_string_odr = None
+lanelet2 = False
+if lanelet2:
+    exid_path = Path("/media/sebastian/TUM/06_code/scenarios/uniD/") / Path(
+        "uniD-dataset-v1.1/maps/lanelet2/"
+    )
+    paths = list(exid_path.rglob("*osm"))
+    general_config.proj_string_cr = "+proj=utm +zone=32 +ellps=WGS84"
+else:
+    exid_path = Path("/media/sebastian/TUM/06_code/scenarios/uniD/") / Path(
+        "uniD-dataset-v1.1/maps/opendrive/"
+    )
+    paths = list(exid_path.rglob("*xodr"))
+    general_config.proj_string_cr = None
+    open_drive_config.proj_string_odr = None
 
-# load OpenDRIVE file, parse it, and convert it to a CommonRoad scenario
-scenario = opendrive_to_commonroad(input_path, odr_conf=open_drive_config)
-scenario.translate_rotate(np.array([293923.5, 5629269.3]), 0)
+root_dir = Path(__file__).parent.parent
+cr_path = root_dir / Path("crdata/datasets/uniD/maps")
+config = load_yaml(str(root_dir / "crdata/datasets/uniD/config.yaml"))
+tags = config["tags"]
+translation = config["offsets"]
+scenario_ids = config["locations"]
 
-# lanelet 11 is converted with a ring intersection, if needed remove following line
-scenario.lanelet_network.remove_lanelet(11)
+map_verification_formulas = []
+map_verification_cores = 1
 
-# store converted file as CommonRoad scenario
-writer = CRDesignerFileWriter(
-    scenario=scenario,
-    planning_problem_set=PlanningProblemSet(),
-    author="Sebastian Maierhofer",
-    affiliation="Technical University of Munich",
-    source="CommonRoad Scenario Designer",
-    tags={Tag.URBAN},
-)
 
-# create a folder for the example file if it does not exist
-if os.path.exists(Path.cwd() / "example_files") is False:
-    os.mkdir(Path.cwd() / "example_files")
-if os.path.exists(Path.cwd() / "example_files/opendrive") is False:
-    os.mkdir(Path.cwd() / "example_files/opendrive")
+def post_process(sc: Scenario):
+    return
 
-writer.write_to_file(str(output_path), OverwriteExistingFile.ALWAYS)
+
+if __name__ == "__main__":
+    if lanelet2:
+        convert_lanelet2(
+            paths,
+            post_process,
+            cr_path,
+            scenario_ids,
+            general_config,
+            lanelet2_config,
+            translation,
+            tags,
+        )
+    else:
+        convert_opendrive(
+            paths,
+            post_process,
+            cr_path,
+            scenario_ids,
+            general_config,
+            open_drive_config,
+            translation,
+            tags,
+        )
