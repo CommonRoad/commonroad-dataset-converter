@@ -7,9 +7,10 @@ stages:
 default:
   image: python:3.10
   before_script:
+    - apt-get update && apt-get install -y cmake build-essential git pkg-config ca-certificates wget libomp-dev libeigen3-dev libboost-all-dev uuid-dev libcgal-dev ffmpeg libegl1
     - pip install poetry
     - poetry config virtualenvs.in-project true
-    - poetry install --with docs
+    - poetry install --with docs,dev
     - source .venv/bin/activate
 
 variables:
@@ -35,12 +36,10 @@ unittest:
 dataset_test:
   image : python:$PYTHON_VERSIONS
   stage: test
-  before_script: []
   parallel :
     matrix :
       - PYTHON_VERSIONS : [ "3.9", "3.10", "3.11"]
   script:
-    - pip install .
     - python -m unittest discover tests/datasets
 
 #test_nuplan :

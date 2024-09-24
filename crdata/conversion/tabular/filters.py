@@ -1,9 +1,12 @@
 from dataclasses import dataclass
 from enum import Enum
+import logging
 
 from commonroad_route_planner.route_planner import RoutePlanner
 
 from .job_producer import TabularJob
+
+_logger = logging.getLogger(__name__)
 
 
 class RoutabilityCheck(str, Enum):
@@ -39,7 +42,7 @@ class RoutabilityFilter:
                 if num_candidates <= 0:
                     return False
             except Exception as e:
-                print(
+                _logger.error(
                     f"An error occurred during route planning for problem {planning_problem.planning_problem_id}: {e}"
                 )
                 return False  # or handle it in another way

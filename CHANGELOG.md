@@ -1,1 +1,18 @@
-All notable changes to this project will be documented in this file.
+# Changelog
+
+## [1.0.0]
+
+### Added
+
+## [2023.2] - 2023-11-03
+
+### Added
+
+## [2022.1.1] - 2023-07-12
+
+### Added
+
+
+## [2022.1] - 2022-11-08
+
+### Added

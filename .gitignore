@@ -14,3 +14,12 @@ dist/
 crdata/tests/outputs/
 tests/outputs/
 /doc/_build/
+/tests/resources/exid/
+/tests/resources/highd/
+/tests/resources/ind/
+/tests/resources/interaction/
+/tests/resources/mona/
+/tests/resources/resources/
+/tests/resources/round/
+/tests/resources/sind/
+/tests/resources/unid/

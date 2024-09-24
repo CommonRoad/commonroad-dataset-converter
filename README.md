@@ -12,7 +12,7 @@ Currently, we support:
 -   [SIND](https://github.com/SOTIF-AVLab/SinD).
 
 ## Install
-
+TODO git submodule
 ```bash
 pip install commonroad-dataset-converter
 ```
