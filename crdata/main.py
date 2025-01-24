@@ -197,14 +197,14 @@ def mona(ctx: typer.Context) -> None:
 
 @cli.command()
 def sind(ctx: typer.Context) -> None:
-    """Convert the SIND into CommonRoad scenario(s)."""
+    """Convert the SIND dataset into CommonRoad scenario(s)."""
     factory = SindConverterFactory(**ctx.obj)
     _main(factory)
 
 
 @cli.command()
 def tumdot(ctx: typer.Context) -> None:
-    """Convert the SIND into CommonRoad scenario(s)."""
+    """Convert the TUM-DOT dataset into CommonRoad scenario(s)."""
     factory = TumdotConverterFactory(**ctx.obj)
     _main(factory)
 
