@@ -1564,6 +1564,7 @@
     </rightBound>
     <predecessor ref="18"/>
     <successor ref="26"/>
+    <adjacentRight ref="21" drivingDir="same"/>
     <laneletType>urban</laneletType>
   </lanelet>
   <lanelet id="20">
@@ -1831,6 +1832,7 @@
     </rightBound>
     <predecessor ref="18"/>
     <successor ref="28"/>
+    <adjacentLeft ref="19" drivingDir="same"/>
     <adjacentRight ref="20" drivingDir="same"/>
     <laneletType>urban</laneletType>
   </lanelet>
