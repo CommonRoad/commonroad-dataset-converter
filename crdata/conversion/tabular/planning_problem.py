@@ -67,8 +67,8 @@ class EgoPlanningProblemCreator(PlanningProblemCreator):
                     dynamic_obstacle_final_state = candidate_state
                     break
             else:
-                print(
-                    "Kein gültiger Endzustand für das Planning Problem gefunden. Szenario wird übersprungen."
+                _logger.info(
+                    "No valid goal state found for dynamic obstacle with id:", ego_id, "Skipping scenario."
                 )
                 continue
 
