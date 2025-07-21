@@ -91,15 +91,8 @@ class SindRecordingGenerator(IRecordingGenerator):
         ].first()
         traj_df = traj_df[["x", "y", "velocity", "orientation"]]
 
-        # Load traffic light states
-        tl_df = pd.read_csv(dataset_dir / "TrafficLight.csv")
-        # Some files are not ordered
-        tl_df.sort_values("RawFrameID", inplace=True)
-        tl_df.reset_index(drop=True, inplace=True)
-        tl_df.dropna(inplace=True)
-        tl_df["time_step"] = np.around(tl_df.RawFrameID / 3.0 / self.downsample).astype(
-            int
-        )
+        # No traffic light states
+        tl_df = pd.DataFrame()
 
         return traj_df, traj_meta, tl_df
 
