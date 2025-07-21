@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<commonRoad timeStepSize="0.1" commonRoadVersion="2020a" author="CPS Group" affiliation="Technical University of Munich, Germany" source="A Drone Dataset at Signalized Intersection in China (SIND)" benchmarkID="CHN_SIND-1" date="2022-11-18">
+<commonRoad timeStepSize="0.1" commonRoadVersion="2020a" author="CPS Group" affiliation="Technical University of Munich, Germany" source="A Drone Dataset at Signalized Intersection in China (SIND)" benchmarkID="CHN_TIANJIN-1_1_T-1" date="2022-11-18">
   <location>
     <geoNameId>-999</geoNameId>
     <gpsLatitude>0.0</gpsLatitude>
     <gpsLongitude>0.0</gpsLongitude>
   </location>
   <scenarioTags>
-    <urban/>
+    <intersection/>
+    <critical/>
   </scenarioTags>
   <lanelet id="32">
     <leftBound>

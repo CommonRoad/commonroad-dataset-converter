@@ -89,6 +89,9 @@ def main(
     samples_per_recording: Optional[int] = typer.Option(
         None, help="Randomly sample n scenarios from each recording."
     ),
+    start_time_step: Optional[int] = typer.Option(None, help="Start time step for scenario window."),
+    end_time_step: Optional[int] = typer.Option(None, help="End time step for scenario window."),
+    ego_vehicle_id: Optional[int] = typer.Option(None, help="ID of the ego-vehicle for the planning problem.")
 ) -> None:
     # Relay all common parameters to all datasets without repeating the method signature.
     frame = inspect.currentframe()
@@ -108,6 +111,11 @@ def main(
     params["num_time_steps"] = num_time_steps if not all_vehicles else None
     if all_vehicles:
         params["obstacles_start_at_zero"] = True
+    params["start_time_step"] = start_time_step
+    params["end_time_step"] = end_time_step
+    if start_time_step is not None and end_time_step is not None:
+        params["num_time_steps"] = end_time_step - start_time_step
+    params["ego_vehicle_id"] = ego_vehicle_id
     ctx.obj = params
 
 
@@ -196,8 +204,12 @@ def mona(ctx: typer.Context) -> None:
 
 
 @cli.command()
-def sind(ctx: typer.Context) -> None:
+def sind(
+        ctx: typer.Context,
+        location: str = typer.Option("Xian", help="Location/Map: Changchun, Chongqing, Xian, Tianjin"),
+) -> None:
     """Convert the SIND dataset into CommonRoad scenario(s)."""
+    ctx.obj["location"] = location
     factory = SindConverterFactory(**ctx.obj)
     _main(factory)
 

@@ -15,6 +15,7 @@ from .implementation import (
     SindScenarioPrototypeGenerator,
     SindWindowMeta,
 )
+from ...conversion.tabular.windowing import FixedTimeRangeWindowGenerator
 
 
 def _get_sind_config() -> Mapping[str, Any]:
@@ -25,13 +26,14 @@ def _get_sind_config() -> Mapping[str, Any]:
 
 class SindConverterFactory(TabularConverterFactory[SindWindowMeta]):
     input_dir: Path
+    location: str = "Xian"
     _config: Mapping[str, Any] = PrivateAttr(default_factory=_get_sind_config)
 
     def build_recording_generator(self) -> SindRecordingGenerator:
         return SindRecordingGenerator(self.input_dir, self.downsample)
 
     def build_meta_scenario_creator(self) -> SindMetaScenarioGenerator:
-        return SindMetaScenarioGenerator()
+        return SindMetaScenarioGenerator(self.location, self.ego_vehicle_id)
 
     def build_scenario_prototype_creator(self) -> SindScenarioPrototypeGenerator:
         return SindScenarioPrototypeGenerator(
@@ -40,3 +42,8 @@ class SindConverterFactory(TabularConverterFactory[SindWindowMeta]):
             traffic_light_incomings=self._config["traffic_light_incomings"],
             traffic_light_positions=self._config["traffic_light_positions"],
         )
+
+    def build_window_generator(self):
+        if self.start_time_step is not None and self.end_time_step is not None:
+            return FixedTimeRangeWindowGenerator(self.start_time_step, self.end_time_step)
+        return super().build_window_generator()
