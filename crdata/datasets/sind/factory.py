@@ -26,7 +26,7 @@ def _get_sind_config() -> Mapping[str, Any]:
 
 class SindConverterFactory(TabularConverterFactory[SindWindowMeta]):
     input_dir: Path
-    location: str = "Xian"
+    location: str = "Tianjin"
     _config: Mapping[str, Any] = PrivateAttr(default_factory=_get_sind_config)
 
     def build_recording_generator(self) -> SindRecordingGenerator:
