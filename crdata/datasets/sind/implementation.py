@@ -91,8 +91,21 @@ class SindRecordingGenerator(IRecordingGenerator):
         ].first()
         traj_df = traj_df[["x", "y", "velocity", "orientation"]]
 
-        # No traffic light states
-        tl_df = pd.DataFrame()
+        # Load traffic light states
+        dataset_ids = dataset_dir.name.split("_")
+        dataset_ids[1] = f"{int(dataset_ids[1]):02d}"
+        tl_csv_path = dataset_dir / f"TrafficLight_{'_'.join(dataset_ids)}.csv"
+        if tl_csv_path.exists():
+            tl_df = pd.read_csv(tl_csv_path)
+            # Some files are not ordered
+            tl_df.sort_values("RawFrameID", inplace=True)
+            tl_df.reset_index(drop=True, inplace=True)
+            tl_df.dropna(inplace=True)
+            tl_df["time_step"] = np.around(
+                tl_df.RawFrameID / 3.0 / self.downsample
+            ).astype(int)
+        else:
+            tl_df = None
 
         return traj_df, traj_meta, tl_df
 
@@ -139,8 +152,51 @@ class SindScenarioPrototypeGenerator(ScenarioPrototypeCreator):
         )
         return tl_states
 
+    def _add_traffic_lights(self, scenario: Scenario, tl_states: pd.DataFrame) -> None:
+        for t in scenario.lanelet_network.traffic_lights:
+            try:
+                # TODO: This seems to be a bug in commonroad-io!
+                scenario.remove_traffic_light(t)
+            except KeyError:
+                continue
+        for tl_index, tl_position in self.traffic_light_positions.items():
+            assert np.all(tl_states.duration.values >= 0)
+            cycle_elems = [
+                TrafficLightCycleElement(state_map[state_index], duration)
+                for state_index, duration in zip(
+                    tl_states[f"Traffic light {tl_index}"].values,
+                    tl_states.duration.values,
+                )
+            ]
+            tl_id = tl_index + 100
+            cycle = TrafficLightCycle(cycle_elems)
+            scenario.add_objects(
+                TrafficLight(
+                    traffic_light_id=tl_id,
+                    traffic_light_cycle=cycle,
+                    position=np.array(tl_position),
+                )
+            )
+            for incoming_id in self.traffic_light_incomings[tl_index]:
+                lanelet = scenario.lanelet_network.find_lanelet_by_id(incoming_id)
+                lanelet.add_traffic_light_to_lanelet(tl_id)
+                assert (
+                    lanelet.stop_line is not None
+                ), f"Lanelet {incoming_id} does not have a stop line!"
+                lanelet.stop_line.traffic_light_ref = {tl_id}
+
     def __call__(self, window_job: Window, window_meta: SindWindowMeta) -> Scenario:
         meta_scenario = super().__call__(window_job, window_meta)
+
+        if window_meta.traffic_light_states is not None:
+            time_steps = window_job.vehicle_states.index.get_level_values(-1).unique()
+            window_meta.traffic_light_states.time_step = (
+                window_meta.traffic_light_states.time_step
+            )
+            traffic_light_states = self._prepare_traffic_light_df(
+                window_meta.traffic_light_states, time_steps
+            )
+            self._add_traffic_lights(meta_scenario, traffic_light_states)
         return meta_scenario
 
 
