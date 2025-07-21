@@ -89,9 +89,15 @@ def main(
     samples_per_recording: Optional[int] = typer.Option(
         None, help="Randomly sample n scenarios from each recording."
     ),
-    start_time_step: Optional[int] = typer.Option(None, help="Start time step for scenario window."),
-    end_time_step: Optional[int] = typer.Option(None, help="End time step for scenario window."),
-    ego_vehicle_id: Optional[int] = typer.Option(None, help="ID of the ego-vehicle for the planning problem.")
+    start_time_step: Optional[int] = typer.Option(
+        None, help="Start time step for scenario window."
+    ),
+    end_time_step: Optional[int] = typer.Option(
+        None, help="End time step for scenario window."
+    ),
+    ego_vehicle_id: Optional[int] = typer.Option(
+        None, help="ID of the ego-vehicle for the planning problem."
+    ),
 ) -> None:
     # Relay all common parameters to all datasets without repeating the method signature.
     frame = inspect.currentframe()
@@ -205,8 +211,10 @@ def mona(ctx: typer.Context) -> None:
 
 @cli.command()
 def sind(
-        ctx: typer.Context,
-        location: str = typer.Option("Xian", help="Location/Map: Changchun, Chongqing, Xian, Tianjin"),
+    ctx: typer.Context,
+    location: str = typer.Option(
+        "Xian", help="Location/Map: Changchun, Chongqing, Xian, Tianjin"
+    ),
 ) -> None:
     """Convert the SIND dataset into CommonRoad scenario(s)."""
     ctx.obj["location"] = location

@@ -45,5 +45,7 @@ class SindConverterFactory(TabularConverterFactory[SindWindowMeta]):
 
     def build_window_generator(self):
         if self.start_time_step is not None and self.end_time_step is not None:
-            return FixedTimeRangeWindowGenerator(self.start_time_step, self.end_time_step)
+            return FixedTimeRangeWindowGenerator(
+                self.start_time_step, self.end_time_step
+            )
         return super().build_window_generator()

@@ -5,9 +5,13 @@ from typing import Callable, Generator, Generic, Iterable, Optional, Tuple, Type
 from commonroad.common.file_writer import FileFormat
 
 from crdata.conversion.factory import AbstractConverterFactory
-from crdata.conversion.tabular.planning_problem import (EgoPlanningProblemCreator, EgoWindow, PlanningProblemCreator,
-                                                        RandomObstaclePlanningProblemWrapper,
-                                                        FixedEgoPlanningProblemCreator, )
+from crdata.conversion.tabular.planning_problem import (
+    EgoPlanningProblemCreator,
+    EgoWindow,
+    PlanningProblemCreator,
+    RandomObstaclePlanningProblemWrapper,
+    FixedEgoPlanningProblemCreator,
+)
 from crdata.conversion.tabular.prototype_scenario import (
     ScenarioIDCreator,
     ScenarioPrototypeCreator,
@@ -111,7 +115,12 @@ class TabularConverterFactory(
 
     def build_planning_problem_set_creator(self) -> PlanningProblemCreator:
         if self.ego_vehicle_id is not None:
-            return FixedEgoPlanningProblemCreator(self.ego_vehicle_id, self.keep_ego, self.start_time_step, self.end_time_step)
+            return FixedEgoPlanningProblemCreator(
+                self.ego_vehicle_id,
+                self.keep_ego,
+                self.start_time_step,
+                self.end_time_step,
+            )
         if self.num_planning_problems <= 0:
             planning_problem_creator = PlanningProblemCreator()
         else:

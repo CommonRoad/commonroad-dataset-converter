@@ -61,12 +61,15 @@ class EgoPlanningProblemCreator(PlanningProblemCreator):
             for idx in range(len(states) - 1, -1, -1):
                 candidate_state = states.iloc[idx]
                 goal_lanelets = meta_scenario.lanelet_network.find_lanelet_by_position(
-                        [candidate_state[["x", "y"]].values])
+                    [candidate_state[["x", "y"]].values]
+                )
                 if len(goal_lanelets[0]) > 0:
                     dynamic_obstacle_final_state = candidate_state
                     break
             else:
-                print("Kein gültiger Endzustand für das Planning Problem gefunden. Szenario wird übersprungen.")
+                print(
+                    "Kein gültiger Endzustand für das Planning Problem gefunden. Szenario wird übersprungen."
+                )
                 continue
 
             # define orientation, velocity and time step intervals as goal region
@@ -150,7 +153,9 @@ class RandomObstaclePlanningProblemWrapper(PlanningProblemCreator):
         ]
         if len(candidates) >= self.num_planning_problems:
             ego_ids = candidates.sample(self.num_planning_problems).index.values
-            ego_window_job = EgoWindow(window.vehicle_states, window.vehicle_meta, window.dt, ego_ids)
+            ego_window_job = EgoWindow(
+                window.vehicle_states, window.vehicle_meta, window.dt, ego_ids
+            )
             return self.wrapped_planning_problem_creator(ego_window_job, meta_scenario)
         else:
             return super().__call__(window, meta_scenario)
@@ -163,7 +168,9 @@ class FixedEgoPlanningProblemCreator(PlanningProblemCreator):
     start_time_step: Optional[int] = None
     end_time_step: Optional[int] = None
 
-    def __call__(self, window_job: Window, meta_scenario: Scenario) -> PlanningProblemSet:
+    def __call__(
+        self, window_job: Window, meta_scenario: Scenario
+    ) -> PlanningProblemSet:
         if self.ego_vehicle_id not in window_job.vehicle_meta.index:
             return PlanningProblemSet()
         vehicle_states = window_job.vehicle_states
@@ -178,6 +185,9 @@ class FixedEgoPlanningProblemCreator(PlanningProblemCreator):
             if vehicle_states.empty:
                 return PlanningProblemSet()
         ego_window_job = EgoWindow(
-            vehicle_states, window_job.vehicle_meta, window_job.dt, [self.ego_vehicle_id]
+            vehicle_states,
+            window_job.vehicle_meta,
+            window_job.dt,
+            [self.ego_vehicle_id],
         )
         return EgoPlanningProblemCreator(self.keep_ego)(ego_window_job, meta_scenario)
