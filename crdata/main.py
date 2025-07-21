@@ -213,7 +213,7 @@ def mona(ctx: typer.Context) -> None:
 def sind(
     ctx: typer.Context,
     location: str = typer.Option(
-        "Xian", help="Location/Map: Changchun, Chongqing, Xian, Tianjin"
+        "Tianjin", help="Location/Map: Changchun, Chongqing, Xian, Tianjin"
     ),
 ) -> None:
     """Convert the SIND dataset into CommonRoad scenario(s)."""

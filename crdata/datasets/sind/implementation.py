@@ -135,23 +135,6 @@ class SindScenarioPrototypeGenerator(ScenarioPrototypeCreator):
     traffic_light_incomings: Dict[int, Sequence[int]]
     traffic_light_positions: Dict[int, Tuple[float, float]]
 
-    @staticmethod
-    def _prepare_traffic_light_df(
-        tl_series: pd.DataFrame, time_steps: np.ndarray
-    ) -> pd.DataFrame:
-        tl_init_state = tl_series[tl_series.time_step <= time_steps.min()].iloc[-1:]
-        tl_init_state.time_step = time_steps.min()
-        tl_states = tl_series[
-            (tl_series.time_step >= time_steps.min())
-            & (tl_series.time_step <= time_steps.max())
-        ]
-        tl_states = pd.concat((tl_init_state, tl_states))
-        tl_states.drop_duplicates(inplace=True)
-        tl_states["duration"] = np.diff(
-            tl_states.time_step.values, append=time_steps.max() + 1
-        )
-        return tl_states
-
     def _add_traffic_lights(self, scenario: Scenario, tl_states: pd.DataFrame) -> None:
         for t in scenario.lanelet_network.traffic_lights:
             try:
@@ -184,6 +167,23 @@ class SindScenarioPrototypeGenerator(ScenarioPrototypeCreator):
                     lanelet.stop_line is not None
                 ), f"Lanelet {incoming_id} does not have a stop line!"
                 lanelet.stop_line.traffic_light_ref = {tl_id}
+
+    @staticmethod
+    def _prepare_traffic_light_df(
+        tl_series: pd.DataFrame, time_steps: np.ndarray
+    ) -> pd.DataFrame:
+        tl_init_state = tl_series[tl_series.time_step <= time_steps.min()].iloc[-1:]
+        tl_init_state.time_step = time_steps.min()
+        tl_states = tl_series[
+            (tl_series.time_step >= time_steps.min())
+            & (tl_series.time_step <= time_steps.max())
+        ]
+        tl_states = pd.concat((tl_init_state, tl_states))
+        tl_states.drop_duplicates(inplace=True)
+        tl_states["duration"] = np.diff(
+            tl_states.time_step.values, append=time_steps.max() + 1
+        )
+        return tl_states
 
     def __call__(self, window_job: Window, window_meta: SindWindowMeta) -> Scenario:
         meta_scenario = super().__call__(window_job, window_meta)
