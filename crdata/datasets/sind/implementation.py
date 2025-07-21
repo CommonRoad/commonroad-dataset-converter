@@ -141,14 +141,6 @@ class SindScenarioPrototypeGenerator(ScenarioPrototypeCreator):
 
     def __call__(self, window_job: Window, window_meta: SindWindowMeta) -> Scenario:
         meta_scenario = super().__call__(window_job, window_meta)
-        time_steps = window_job.vehicle_states.index.get_level_values(-1).unique()
-        window_meta.traffic_light_states.time_step = (
-            window_meta.traffic_light_states.time_step
-        )
-        traffic_light_states = self._prepare_traffic_light_df(
-            window_meta.traffic_light_states, time_steps
-        )
-        self._add_traffic_lights(meta_scenario, traffic_light_states)
         return meta_scenario
 
 
