@@ -68,7 +68,9 @@ class EgoPlanningProblemCreator(PlanningProblemCreator):
                     break
             else:
                 _logger.info(
-                    "No valid goal state found for dynamic obstacle with id:", ego_id, "Skipping scenario."
+                    "No valid goal state found for dynamic obstacle with id:",
+                    ego_id,
+                    "Skipping scenario.",
                 )
                 continue
 
