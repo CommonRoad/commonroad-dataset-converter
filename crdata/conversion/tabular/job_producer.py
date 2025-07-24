@@ -43,16 +43,19 @@ class TabularJobProducer(IScenarioJobProducer[TabularJob], Generic[WindowMetaT])
 
     def __iter__(self) -> Iterable[TabularJob]:
         for i, (window_job, window_meta) in enumerate(self.window_generator):
-            meta_scenario = self.meta_scenario_generator(window_job, window_meta)
-            planning_problem = self.planning_problem_generator(
-                window_job, meta_scenario
-            )
-            job = TabularJob(
-                window_job.vehicle_states,
-                window_job.vehicle_meta,
-                meta_scenario,
-                planning_problem,
-            )
-            yield job
-            if self.max_jobs is not None and i + 1 >= self.max_jobs:
-                break
+            try:
+                meta_scenario = self.meta_scenario_generator(window_job, window_meta)
+                planning_problem = self.planning_problem_generator(
+                    window_job, meta_scenario
+                )
+                job = TabularJob(
+                    window_job.vehicle_states,
+                    window_job.vehicle_meta,
+                    meta_scenario,
+                    planning_problem,
+                )
+                yield job
+                if self.max_jobs is not None and i + 1 >= self.max_jobs:
+                    break
+            except Exception as e:
+                _logger.error(f"Error during job generation: {e}")
