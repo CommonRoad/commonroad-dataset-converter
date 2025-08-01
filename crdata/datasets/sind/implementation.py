@@ -1,5 +1,6 @@
 import copy
 import importlib.resources
+import logging
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, Iterable, Sequence, Tuple
@@ -31,6 +32,8 @@ state_map = {
     3: TrafficLightState.YELLOW,
 }
 
+_logger = logging.getLogger(__name__)
+
 
 @dataclass
 class SindWindowMeta:
@@ -50,8 +53,8 @@ class SindRecordingGenerator(IRecordingGenerator):
         # Read vehicle trajectories
         vehicle_df = pd.read_csv(dataset_dir / "Veh_smoothed_tracks.csv")
         # We don't have a type for tricycle. Replace with motorcycle.
-        vehicle_df["agent_type"].replace(
-            {"tricycle": ObstacleType.MOTORCYCLE.value}, inplace=True
+        vehicle_df.replace(
+            {"agent_type": {"tricycle": ObstacleType.MOTORCYCLE.value}}, inplace=True
         )
         vehicle_df.set_index("track_id", inplace=True)
 
@@ -94,14 +97,22 @@ class SindRecordingGenerator(IRecordingGenerator):
         # Load traffic light states
         dataset_ids = dataset_dir.name.split("_")
         dataset_ids[1] = f"{int(dataset_ids[1]):02d}"
-        tl_df = pd.read_csv(dataset_dir / f"TrafficLight_{'_'.join(dataset_ids)}.csv")
-        # Some files are not ordered
-        tl_df.sort_values("RawFrameID", inplace=True)
-        tl_df.reset_index(drop=True, inplace=True)
-        tl_df.dropna(inplace=True)
-        tl_df["time_step"] = np.around(tl_df.RawFrameID / 3.0 / self.downsample).astype(
-            int
-        )
+        tl_csv_path = dataset_dir / f"TrafficLight_{'_'.join(dataset_ids)}.csv"
+        if tl_csv_path.exists():
+            tl_df = pd.read_csv(tl_csv_path)
+            # Some files are not ordered
+            tl_df.sort_values("RawFrameID", inplace=True)
+            tl_df.reset_index(drop=True, inplace=True)
+            tl_df.dropna(inplace=True)
+            tl_df["time_step"] = np.around(
+                tl_df.RawFrameID / 3.0 / self.downsample
+            ).astype(int)
+        else:
+            _logger.warning(
+                f"Traffic light csv file for dataset {dataset_dir} not found."
+                f"No traffic lights will be added to the scenario."
+            )
+            tl_df = None
 
         return traj_df, traj_meta, tl_df
 
@@ -183,30 +194,43 @@ class SindScenarioPrototypeGenerator(ScenarioPrototypeCreator):
 
     def __call__(self, window_job: Window, window_meta: SindWindowMeta) -> Scenario:
         meta_scenario = super().__call__(window_job, window_meta)
-        time_steps = window_job.vehicle_states.index.get_level_values(-1).unique()
-        window_meta.traffic_light_states.time_step = (
-            window_meta.traffic_light_states.time_step
-        )
-        traffic_light_states = self._prepare_traffic_light_df(
-            window_meta.traffic_light_states, time_steps
-        )
-        self._add_traffic_lights(meta_scenario, traffic_light_states)
+
+        if window_meta.traffic_light_states is not None:
+            time_steps = window_job.vehicle_states.index.get_level_values(-1).unique()
+            window_meta.traffic_light_states.time_step = (
+                window_meta.traffic_light_states.time_step
+            )
+            traffic_light_states = self._prepare_traffic_light_df(
+                window_meta.traffic_light_states, time_steps
+            )
+            self._add_traffic_lights(meta_scenario, traffic_light_states)
         return meta_scenario
 
 
 @dataclass
 class SindMetaScenarioGenerator(IMetaScenarioCreator):
+    location: str
+    ego_vehicle_id: int = None
     _meta_scenario: Scenario = field(default=None, init=False)
 
     def __post_init__(self) -> None:
-        with importlib.resources.path(
-            "crdata.datasets.sind", "CHN_SIND-1.xml"
-        ) as map_path:
+        map_files = {
+            "Changchun": "CHN_CHANGCHUN-1_1_T-1.xml",
+            "Chongqing": "CHN_CHONQING-1_1_T-1.xml",
+            "Xian": "CHN_XIAN-1_1_T-1.xml",
+            "Tianjin": "CHN_TIANJIN-1_1_T-1.xml",
+        }
+        map_file = map_files.get(self.location)
+        with importlib.resources.path("crdata.datasets.sind", map_file) as map_path:
             self._meta_scenario = CommonRoadFileReader(str(map_path)).open()[0]
 
     def __call__(self, _: Window, window_meta: SindWindowMeta) -> Scenario:
         meta_scenario = copy.deepcopy(self._meta_scenario)
-        meta_scenario.scenario_id.map_id = int(
-            window_meta.recording_id.replace("_", "")
-        )
+        base_map_id = str(window_meta.recording_id.replace("_", ""))
+        if self.ego_vehicle_id is not None:
+            meta_scenario.scenario_id.map_id = int(
+                f"{base_map_id}{self.ego_vehicle_id}"
+            )
+        else:
+            meta_scenario.scenario_id.map_id = int(base_map_id)
         return meta_scenario

@@ -164,3 +164,18 @@ class VehicleSamplingWindowGenerator(IWindowGenerator):
         df = index.to_frame().sample(n=min(self.samples_per_recording, len(index)))
         index = pd.Index(df.values.squeeze(axis=0))
         return index
+
+
+@dataclass
+class FixedTimeRangeWindowGenerator(IWindowGenerator):
+    start_time_step: int
+    end_time_step: int
+
+    def __call__(self, window: Window, window_meta: WindowMetaT):
+        vehicle_states = window.vehicle_states[
+            (window.vehicle_states.index.get_level_values(-1) >= self.start_time_step)
+            & (window.vehicle_states.index.get_level_values(-1) <= self.end_time_step)
+        ]
+        vehicles = vehicle_states.index.get_level_values(-2).unique()
+        vehicle_meta = window.vehicle_meta.loc[vehicles]
+        yield Window(vehicle_states, vehicle_meta, window.dt), window_meta
