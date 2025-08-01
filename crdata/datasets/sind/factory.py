@@ -9,13 +9,13 @@ from crdata.conversion.tabular.factory import (
 )
 from crdata.conversion.util.yaml import load_yaml
 
-from .implementation import (
+from crdata.datasets.sind.implementation import (
     SindMetaScenarioGenerator,
     SindRecordingGenerator,
     SindScenarioPrototypeGenerator,
     SindWindowMeta,
 )
-from ...conversion.tabular.windowing import FixedTimeRangeWindowGenerator
+from crdata.conversion.tabular.windowing import FixedTimeRangeWindowGenerator
 
 
 def _get_sind_config() -> Mapping[str, Any]:

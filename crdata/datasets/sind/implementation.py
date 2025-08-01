@@ -1,5 +1,6 @@
 import copy
 import importlib.resources
+import logging
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, Iterable, Sequence, Tuple
@@ -30,6 +31,8 @@ state_map = {
     1: TrafficLightState.GREEN,
     3: TrafficLightState.YELLOW,
 }
+
+_logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -105,6 +108,10 @@ class SindRecordingGenerator(IRecordingGenerator):
                 tl_df.RawFrameID / 3.0 / self.downsample
             ).astype(int)
         else:
+            _logger.warning(
+                f"Traffic light csv file for dataset {dataset_dir} not found."
+                f"No traffic lights will be added to the scenario."
+            )
             tl_df = None
 
         return traj_df, traj_meta, tl_df

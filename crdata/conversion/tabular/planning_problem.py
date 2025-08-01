@@ -57,7 +57,7 @@ class EgoPlanningProblemCreator(PlanningProblemCreator):
             states = window_job.vehicle_states.loc[ego_id]
             dynamic_obstacle_initial_state = states.iloc[0]
 
-            # Suche nach dem letzten State mit gültigem Lanelet
+            # Search for the last state of the dynamic obstacle that is on a lanelet
             for idx in range(len(states) - 1, -1, -1):
                 candidate_state = states.iloc[idx]
                 goal_lanelets = meta_scenario.lanelet_network.find_lanelet_by_position(
@@ -165,6 +165,20 @@ class RandomObstaclePlanningProblemWrapper(PlanningProblemCreator):
 
 @dataclass
 class FixedEgoPlanningProblemCreator(PlanningProblemCreator):
+    """
+    Creates a PlanningProblemSet for a fixed ego vehicle within a specified time interval.
+
+    Attributes:
+        ego_vehicle_id (int): The ID of the ego vehicle for which the planning problem is to be created.
+        keep_ego (bool): Indicates whether the ego vehicle should be retained in the meta-scenario.
+        start_time_step (Optional[int]): Start time step for selecting the ego vehicle's states.
+        end_time_step (Optional[int]): End time step for selecting the ego vehicle's states.
+
+    Methods:
+        __call__(window_job: Window, meta_scenario: Scenario) -> PlanningProblemSet:
+            Creates a PlanningProblemSet for the specified ego vehicle and time interval.
+    """
+
     ego_vehicle_id: int
     keep_ego: bool
     start_time_step: Optional[int] = None
