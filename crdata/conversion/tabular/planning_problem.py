@@ -117,6 +117,8 @@ class EgoPlanningProblemCreator(PlanningProblemCreator):
                     )
                 ]
             )
+
+            dynamic_obstacle_initial_state = dynamic_obstacle_initial_state.copy()
             # do not always initialize these attributes
             dynamic_obstacle_initial_state["yaw_rate"] = 0.0
             dynamic_obstacle_initial_state["slip_angle"] = 0.0

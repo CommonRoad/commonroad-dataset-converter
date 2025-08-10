@@ -36,10 +36,8 @@ class RoutabilityFilter:
                     planning_problem,
                     job.meta_scenario,
                 )
-                candidate_holder = route_planner.plan_routes()
-                _, num_candidates = candidate_holder.retrieve_all_routes()
-
-                if num_candidates <= 0:
+                routes = route_planner.plan_routes()
+                if len(routes) <= 0:
                     return False
             except Exception as e:
                 _logger.error(

@@ -5,9 +5,11 @@ Currently, we support:
 
 -   [highD](https://www.highd-dataset.com/),
 -   [inD](https://www.ind-dataset.com/),
--   [INTERACTION](http://interaction-dataset.com/),
 -   [exiD](https://www.exid-dataset.com/),
+-   [uniD](https://levelxdata.com/unid-dataset/),
 -   [rounD](https://www.round-dataset.com/),
+-   [TUMDOT-MUC](https://www.mos.ed.tum.de/en/vt/research/data-sets/tumdot-muc/),
+-   [INTERACTION](http://interaction-dataset.com/),
 -   [MONA](https://commonroad.in.tum.de/datasets),
 -   [SIND](https://github.com/SOTIF-AVLab/SinD).
 
@@ -77,6 +79,8 @@ Commands:
   exid         Convert the exiD dataset into CommonRoad scenario(s).
   highd        Convert the highD dataset into CommonRoad scenario(s).
   ind          Convert the inD dataset into CommonRoad scenario(s).
+  unid         Convert the uniD dataset into CommonRoad scenario(s).
+  tumdot       Convert the TUMDOT-MUC dataset into CommonRoad scenario(s).
   interaction  Convert the INTERACTION dataset into CommonRoad scenario(s).
   mona         Convert the MONA dataset into CommonRoad scenario(s).
   round        Convert the rounD dataset into CommonRoad scenario(s).
