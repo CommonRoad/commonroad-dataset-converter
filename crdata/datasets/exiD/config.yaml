@@ -1,0 +1,45 @@
+locations:
+  0: DEU_CologneButzweiler-1
+  1: DEU_CologneFortiib-1
+  2: DEU_AachenBrand-1
+  3: DEU_BergheimRoemer-1
+  4: DEU_CologneKlettenberg-1
+  5: DEU_AachenLaurensberg-1
+  6: DEU_MerzenichRather-1
+
+tags:
+  DEU_CologneButzweiler-1: [HIGHWAY, MERGING_LANES, NO_ONCOMING_TRAFFIC, PARALLEL_LANES, MULTI_LANE]
+  DEU_CologneFortiib-1: [HIGHWAY, MERGING_LANES, NO_ONCOMING_TRAFFIC, PARALLEL_LANES, MULTI_LANE]
+  DEU_AachenBrand-1: [HIGHWAY, MERGING_LANES, NO_ONCOMING_TRAFFIC, PARALLEL_LANES, MULTI_LANE]
+  DEU_BergheimRoemer-1: [HIGHWAY, MERGING_LANES, NO_ONCOMING_TRAFFIC, PARALLEL_LANES, MULTI_LANE]
+  DEU_CologneKlettenberg-1: [HIGHWAY, MERGING_LANES, NO_ONCOMING_TRAFFIC, PARALLEL_LANES, MULTI_LANE]
+  DEU_AachenLaurensberg-1: [HIGHWAY, MERGING_LANES, NO_ONCOMING_TRAFFIC, PARALLEL_LANES, MULTI_LANE]
+  DEU_MerzenichRather-1: [HIGHWAY, MERGING_LANES, NO_ONCOMING_TRAFFIC, PARALLEL_LANES, MULTI_LANE]
+
+offsets:
+  DEU_CologneButzweiler-1:
+    x_offset_lanelets: 352146.6
+    y_offset_lanelets: 5651141.9
+  DEU_CologneFortiib-1:
+    x_offset_lanelets : 351816.7
+    y_offset_lanelets : 5651523.4
+  DEU_AachenBrand-1:
+    x_offset_lanelets : 298089.6
+    y_offset_lanelets : 5626462.9
+  DEU_BergheimRoemer-1 :
+    x_offset_lanelets : 334905.3
+    y_offset_lanelets : 5645453.9
+  DEU_CologneKlettenberg-1:
+    x_offset_lanelets : 353013.5
+    y_offset_lanelets : 5640508.6
+  DEU_AachenLaurensberg-1:
+    x_offset_lanelets : 293790.2
+    y_offset_lanelets : 5632271.9
+  DEU_MerzenichRather-1:
+    x_offset_lanelets : 325298.1
+    y_offset_lanelets : 5635819.6
+
+class_to_obstacleType:
+  car: car
+  truck: truck
+  van: truck

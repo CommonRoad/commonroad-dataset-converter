@@ -1,0 +1,21 @@
+locations:
+  0: DEU_AachenUniTemplergraben-1
+
+tags:
+  DEU_UNID-1: [URBAN, PARALLEL_LANES, MULTI_LANE, INTERSECTION]
+
+offsets:
+  DEU_UNID-1:
+    x_offset_lanelets: 293923.5
+    y_offset_lanelets: 5629269.3
+
+class_to_obstacleType:
+  car: car
+  van: car
+  truck: truck
+  trailer: truck
+  bus : bus
+  motorcycle : motorcycle
+  bicycle: bicycle
+  pedestrian: pedestrian
+  animal: pedestrian

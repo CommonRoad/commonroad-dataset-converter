@@ -1,35 +1,45 @@
-image: python:3.10
-
 stages:
   - style
   - test
   - build
   - deploy
 
-before_script:
-  - pip install poetry
-  - poetry config virtualenvs.in-project true
-  - poetry install
-  - source .venv/bin/activate
+default:
+  image: python:3.10
+  before_script:
+    - apt-get update && apt-get install -y cmake build-essential git pkg-config ca-certificates wget libomp-dev libeigen3-dev libboost-all-dev uuid-dev libcgal-dev ffmpeg libegl1
+    - pip install poetry
+    - poetry config virtualenvs.in-project true
+    - poetry install --with docs,dev
+    - source .venv/bin/activate
+
+variables:
+  GIT_SUBMODULE_FORCE_HTTPS: "true"
+  GIT_SUBMODULE_STRATEGY : recursive
+
+pre_commit:
+  stage: style
+  before_script:
+    - pip install pre-commit
+  script:
+    - pre-commit run --all-files --show-diff-on-failure
 
 unittest:
   image : python:$PYTHON_VERSIONS
   stage: test
   parallel :
     matrix :
-      - PYTHON_VERSIONS : [ "3.8", "3.9", "3.10"]
+      - PYTHON_VERSIONS : [ "3.9", "3.10", "3.11"]
   script:
     - poetry run python -m unittest discover tests/unittests
 
 dataset_test:
   image : python:$PYTHON_VERSIONS
   stage: test
-  before_script: []
   parallel :
     matrix :
-      - PYTHON_VERSIONS : [ "3.8", "3.9", "3.10"]
+      - PYTHON_VERSIONS : [ "3.9", "3.10", "3.11"]
   script:
-    - pip install .
     - python -m unittest discover tests/datasets
 
 #test_nuplan :
@@ -39,31 +49,6 @@ dataset_test:
 #  script :
 #    - poetry install -E nuplan
 #    - poetry run python -m unittest tests/test_nuplan.py
-
-flake8:
-  stage: style
-  before_script: []
-  script:
-    - pip install flake8 flake8-todo
-    - flake8 commonroad_dataset_converter
-  allow_failure: true
-
-black:
-  stage: style
-  needs: []
-  image: pyfound/black:22.6.0
-  before_script: []
-  cache: []
-  script:
-    - black --check --verbose --diff --color commonroad_dataset_converter
-
-sphinx:
-  stage: test
-  needs: []
-  script:
-    - poetry install --with doc
-    - apt update && apt install -y graphviz
-    - cd doc && poetry run make html && poetry run make html SPHINXOPTS="-W"
 
 publish_internal:
   stage: build
@@ -78,19 +63,30 @@ publish_internal:
     name: staging
     url: ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi
 
-pages:
+build_pages:
   stage: deploy
-  needs:
-    - sphinx
+  before_script:
   script:
-    - poetry install --with doc
-    - apt update && apt install -y graphviz
-    - cd doc && poetry run sphinx-build -b html . ../public && poetry run sphinx-build -b html . ../public
+    - mkdocs build
   artifacts:
     paths:
-      - public
-  only:
-    - development
+      - site
+  needs: []
+
+pages:
+  stage: deploy
+  when: manual
+  publish: site
+  only :
+    - main
+  script:
+    - mkdocs build
+  artifacts:
+    paths:
+      - site
+  environment:
+    name: Gitlab Pages
+    url: https://cps.pages.gitlab.lrz.de/commonroad/commonroad-dataset-converter/
 
 push_to_external_pipy_test_registry:
   stage: deploy
@@ -110,4 +106,3 @@ push_to_external_pipy_release_registry:
   script:
     - poetry build
     - poetry publish -u __token__ -p ${CR_PYPI_RELEASE_API_TOKEN}
-

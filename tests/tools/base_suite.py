@@ -2,11 +2,11 @@ import os
 import shutil
 import warnings
 from pathlib import Path
-from unittest import TestCase, skip
+from unittest import TestCase
 
 from typer.testing import CliRunner
 
-from commonroad_dataset_converter.main import cli
+from crdata.main import cli
 
 from .validate_cr import validate_all
 
@@ -26,9 +26,7 @@ class BaseSuite:
                 test_path / f"resources/{self.dataset}/single_process"
             )
             self.output_path = test_path / f"outputs/{self.dataset}"
-            self.xsd_path = os.path.join(
-                test_path, "tools/XML_commonRoad_XSD_2020a.xsd"
-            )
+            self.xsd_path = os.path.join(test_path, "tools/XML_commonRoad_XSD.xsd")
 
         def test_vanilla(self):
             remove_output_dir(self.output_path)

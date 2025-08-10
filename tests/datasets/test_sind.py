@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from commonroad_dataset_converter.datasets.sind.implementation import (
+from crdata.datasets.sind.implementation import (
     SindRecordingGenerator,
 )
 from tests.tools.base_suite import BaseSuite
