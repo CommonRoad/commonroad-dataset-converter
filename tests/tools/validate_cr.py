@@ -9,7 +9,7 @@ from crdesigner.verification_repairing.config import MapVerParams
 from crdesigner.verification_repairing.verification.formula_ids import (
     extract_formula_ids,
 )
-from crdesigner.verification_repairing.verification.map_verifier import MapVerifier
+# from crdesigner.verification_repairing.verification.map_verifier import MapVerifier
 from lxml import etree
 
 
@@ -60,29 +60,29 @@ def validate(xml_path: Path) -> int:
     #     xml_bytes = fp.read()
     # return CommonRoadFileWriter.check_validity_of_commonroad_file(xml_bytes)
 
-
-def eval_map(scenario: Scenario, map_ids: Set[int]) -> Tuple[bool, int]:
-    map_name = (
-        scenario.scenario_id.country_id
-        + "_"
-        + scenario.scenario_id.map_name
-        + "-"
-        + str(scenario.scenario_id.map_id)
-    )
-    if map_name not in map_ids:
-        map_ids.add(map_name)
-        lanelet_network = scenario.lanelet_network
-        config = MapVerParams()
-        config.verification.formulas = extract_formula_ids()
-        verifier = MapVerifier(lanelet_network, config)
-        try:
-            res = verifier.verify()
-            return True, sum([len(val) for val in res.values()])
-        except Exception as e:
-            print(
-                f"Error verifying map {map_name}: {e}. This has to be solve in the map verification."
-            )
-            return False, 0
+  # todo: avtivate map evaluation after cr-designer is updated
+# def eval_map(scenario: Scenario, map_ids: Set[int]) -> Tuple[bool, int]:
+#     map_name = (
+#         scenario.scenario_id.country_id
+#         + "_"
+#         + scenario.scenario_id.map_name
+#         + "-"
+#         + str(scenario.scenario_id.map_id)
+#     )
+#     if map_name not in map_ids:
+#         map_ids.add(map_name)
+#         lanelet_network = scenario.lanelet_network
+#         config = MapVerParams()
+#         config.verification.formulas = extract_formula_ids()
+#         verifier = MapVerifier(lanelet_network, config)
+#         try:
+#             res = verifier.verify()
+#             return True, sum([len(val) for val in res.values()])
+#         except Exception as e:
+#             print(
+#                 f"Error verifying map {map_name}: {e}. This has to be solve in the map verification."
+#             )
+#             return False, 0
 
 
 def validate_all(path: Path, xsd_path: str):
