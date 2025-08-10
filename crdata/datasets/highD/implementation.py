@@ -123,7 +123,7 @@ class HighdRecordingGenerator(IRecordingGenerator):
                 vehicle_tracks, vehicle_tracks.orientation
             )
 
-            recording_meta.replace({'locationId': self.locations}, inplace=True)
+            recording_meta.replace({"locationId": self.locations}, inplace=True)
 
             vehicle_tracks = pd.merge(
                 vehicle_tracks, tracks_meta[["id", "drivingDirection"]], on="id"

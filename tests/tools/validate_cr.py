@@ -9,6 +9,7 @@ from crdesigner.verification_repairing.config import MapVerParams
 from crdesigner.verification_repairing.verification.formula_ids import (
     extract_formula_ids,
 )
+
 # from crdesigner.verification_repairing.verification.map_verifier import MapVerifier
 from lxml import etree
 
@@ -60,7 +61,8 @@ def validate(xml_path: Path) -> int:
     #     xml_bytes = fp.read()
     # return CommonRoadFileWriter.check_validity_of_commonroad_file(xml_bytes)
 
-  # todo: avtivate map evaluation after cr-designer is updated
+
+# todo: avtivate map evaluation after cr-designer is updated
 # def eval_map(scenario: Scenario, map_ids: Set[int]) -> Tuple[bool, int]:
 #     map_name = (
 #         scenario.scenario_id.country_id
