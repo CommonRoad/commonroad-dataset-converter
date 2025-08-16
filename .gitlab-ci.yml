@@ -29,7 +29,7 @@ unittest:
   stage: test
   parallel :
     matrix :
-      - PYTHON_VERSIONS : [ "3.9", "3.10", "3.11"]
+      - PYTHON_VERSIONS : ["3.10", "3.11"]
   script:
     - poetry run python -m unittest discover tests/unittests
 
@@ -38,7 +38,7 @@ dataset_test:
   stage: test
   parallel :
     matrix :
-      - PYTHON_VERSIONS : [ "3.9", "3.10", "3.11"]
+      - PYTHON_VERSIONS : ["3.10", "3.11"]
   script:
     - python -m unittest discover tests/datasets
 
