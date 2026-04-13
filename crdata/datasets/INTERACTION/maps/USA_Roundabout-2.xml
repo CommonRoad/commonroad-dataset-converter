@@ -1,2070 +1,2951 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<commonRoad timeStepSize="0.1" commonRoadVersion="2020a" author="Sebastian Maierhofer" affiliation="Technical University of Munich" source="CommonRoad Scenario Designer" benchmarkID="USA_Roundabout-2" date="2023-11-03">
+<commonRoad timeStepSize="0.1" commonRoadVersion="2020a" author="Matthias Hamacher, Xiao Wang" affiliation="Technical University of Munich, Germany" source="The INTERACTION dataset" benchmarkID="ZAM_OpenDrive-123" date="2021-03-23">
   <location>
     <geoNameId>-999</geoNameId>
-    <gpsLatitude>0.00879813248</gpsLatitude>
-    <gpsLongitude>0.0081009516</gpsLongitude>
-    <geoTransformation>
-      <geoReference>+proj=utm +zone=32 +ellps=WGS84</geoReference>
-      <additionalTransformation>
-        <xTranslation>0.0</xTranslation>
-        <yTranslation>0.0</yTranslation>
-        <zRotation>0.0</zRotation>
-        <scaling>1.0</scaling>
-      </additionalTransformation>
-    </geoTransformation>
+    <gpsLatitude>999.0</gpsLatitude>
+    <gpsLongitude>999.0</gpsLongitude>
   </location>
   <scenarioTags>
-    <comfort/>
-    <roundabout/>
     <urban/>
+    <roundabout/>
     <multi_lane/>
+    <comfort/>
   </scenarioTags>
-  <lanelet id="1695">
+  <lanelet id="100">
     <leftBound>
       <point>
-        <x>70.4011</x>
-        <y>18.2109</y>
+        <x>63.210000</x>
+        <y>7.6810000</y>
       </point>
       <point>
-        <x>82.3858</x>
-        <y>19.5029</y>
+        <x>53.390000</x>
+        <y>3.8662000</y>
       </point>
       <point>
-        <x>87.6649</x>
-        <y>19.6151</y>
+        <x>48.850000</x>
+        <y>1.7862000</y>
       </point>
       <point>
-        <x>93.8363</x>
-        <y>18.821</y>
+        <x>45.740000</x>
+        <y>0.85740000</y>
       </point>
-      <point>
-        <x>100.654</x>
-        <y>17.4314</y>
-      </point>
-      <point>
-        <x>110.4411</x>
-        <y>14.9807</y>
-      </point>
-      <point>
-        <x>120.4254</x>
-        <y>12.611</y>
-      </point>
-      <point>
-        <x>130.6451</x>
-        <y>10.6329</y>
-      </point>
-      <point>
-        <x>137.0535</x>
-        <y>9.5033</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>71.2015</x>
-        <y>11.4696</y>
+        <x>49.300000</x>
+        <y>10.517000</y>
       </point>
       <point>
-        <x>79.2800</x>
-        <y>12.6618</y>
+        <x>48.900000</x>
+        <y>9.4656000</y>
       </point>
       <point>
-        <x>87.4501</x>
-        <y>12.6978</y>
+        <x>47.020000</x>
+        <y>7.2760000</y>
       </point>
       <point>
-        <x>95.5497</x>
-        <y>11.7627</y>
+        <x>44.840000</x>
+        <y>4.5225000</y>
       </point>
-      <point>
-        <x>103.4357</x>
-        <y>9.6256</y>
-      </point>
-      <point>
-        <x>111.3301</x>
-        <y>7.5193</y>
-      </point>
-      <point>
-        <x>119.3477</x>
-        <y>5.9961</y>
-      </point>
-      <point>
-        <x>127.4193</x>
-        <y>4.7289</y>
-      </point>
-      <point>
-        <x>135.491</x>
-        <y>3.4617</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1696"/>
+    <predecessor ref="101"/>
+    <successor ref="102"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1697">
+  <lanelet id="103">
     <leftBound>
       <point>
-        <x>23.8859</x>
-        <y>19.5042</y>
+        <x>83.320000</x>
+        <y>5.7290000</y>
       </point>
       <point>
-        <x>27.1315</x>
-        <y>18.9574</y>
+        <x>86.080000</x>
+        <y>7.9368000</y>
       </point>
+      <point>
+        <x>89.910000</x>
+        <y>9.8499000</y>
+      </point>
+      <point>
+        <x>95.730000</x>
+        <y>10.889900</y>
+      </point>
+      <point>
+        <x>101.35000</x>
+        <y>11.891100</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>24.354</x>
-        <y>12.2142</y>
+        <x>98.110000</x>
+        <y>7.1692000</y>
       </point>
       <point>
-        <x>27.6491</x>
-        <y>11.4369</y>
+        <x>98.470000</x>
+        <y>7.4230000</y>
       </point>
+      <point>
+        <x>98.75</x>
+        <y>7.6536000</y>
+      </point>
+      <point>
+        <x>99.630000</x>
+        <y>8.0511000</y>
+      </point>
+      <point>
+        <x>102.24000</x>
+        <y>8.6075000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1727"/>
-    <successor ref="1716"/>
+    <predecessor ref="104"/>
+    <successor ref="105"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1698">
+  <lanelet id="106">
     <leftBound>
       <point>
-        <x>40.9435</x>
-        <y>-20.3612</y>
+        <x>76.610000</x>
+        <y>-4.6427000</y>
       </point>
       <point>
-        <x>41.4231</x>
-        <y>-16.5612</y>
+        <x>77.890000</x>
+        <y>-4.0830000</y>
       </point>
       <point>
-        <x>41.9026</x>
-        <y>-12.7612</y>
+        <x>79.080000</x>
+        <y>-3.3548000</y>
       </point>
       <point>
-        <x>42.3823</x>
-        <y>-8.9612</y>
+        <x>79.600000</x>
+        <y>-3.0862000</y>
       </point>
-      <point>
-        <x>42.8619</x>
-        <y>-5.1612</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>45.7638</x>
-        <y>-19.8359</y>
+        <x>81.980000</x>
+        <y>-18.145190</y>
       </point>
       <point>
-        <x>45.8483</x>
-        <y>-17.3914</y>
+        <x>84.650000</x>
+        <y>-18.142490</y>
       </point>
       <point>
-        <x>46.7749</x>
-        <y>-11.8357</y>
+        <x>89.960000</x>
+        <y>-16.378890</y>
       </point>
       <point>
-        <x>48.5529</x>
-        <y>-8.1302</y>
+        <x>92.680000</x>
+        <y>-15.451290</y>
       </point>
-      <point>
-        <x>50.0736</x>
-        <y>-5.4682</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <successor ref="1699"/>
+    <predecessor ref="107"/>
+    <successor ref="108"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1700">
+  <lanelet id="109">
     <leftBound>
       <point>
-        <x>41.9806</x>
-        <y>-4.9268</y>
+        <x>94.130000</x>
+        <y>-25.620760</y>
       </point>
       <point>
-        <x>41.7213</x>
-        <y>-8.7853</y>
+        <x>93.650000</x>
+        <y>-24.850800</y>
       </point>
       <point>
-        <x>41.4620</x>
-        <y>-12.6439</y>
+        <x>93.370000</x>
+        <y>-23.518370</y>
       </point>
       <point>
-        <x>41.2027</x>
-        <y>-16.5025</y>
+        <x>93.450000</x>
+        <y>-21.385000</y>
       </point>
       <point>
-        <x>40.9435</x>
-        <y>-20.3612</y>
+        <x>94.220000</x>
+        <y>-19.878620</y>
       </point>
+      <point>
+        <x>97.480000</x>
+        <y>-16.696380</y>
+      </point>
+      <point>
+        <x>98.740000</x>
+        <y>-16.100300</y>
+      </point>
+      <point>
+        <x>100.42000</x>
+        <y>-15.521290</y>
+      </point>
+      <point>
+        <x>102.04000</x>
+        <y>-15.476460</y>
+      </point>
+      <point>
+        <x>103.57000</x>
+        <y>-15.678640</y>
+      </point>
+      <point>
+        <x>104.5</x>
+        <y>-16.235380</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>37.9666</x>
-        <y>-4.0095</y>
+        <x>98.670000</x>
+        <y>-23.778660</y>
       </point>
       <point>
-        <x>38.5102</x>
-        <y>-6.9591</y>
+        <x>98.950000</x>
+        <y>-22.519600</y>
       </point>
       <point>
-        <x>38.8562</x>
-        <y>-9.8637</y>
+        <x>99.540000</x>
+        <y>-21.946830</y>
       </point>
       <point>
-        <x>38.7197</x>
-        <y>-14.1846</y>
+        <x>99.850000</x>
+        <y>-21.421000</y>
       </point>
       <point>
-        <x>38.1319</x>
-        <y>-17.9562</y>
+        <x>100.21000</x>
+        <y>-21.092360</y>
       </point>
+      <point>
+        <x>100.64000</x>
+        <y>-20.857620</y>
+      </point>
+      <point>
+        <x>101.05000</x>
+        <y>-20.651050</y>
+      </point>
+      <point>
+        <x>101.59000</x>
+        <y>-20.416320</y>
+      </point>
+      <point>
+        <x>101.91000</x>
+        <y>-20.341210</y>
+      </point>
+      <point>
+        <x>102.21000</x>
+        <y>-20.284870</y>
+      </point>
+      <point>
+        <x>102.54000</x>
+        <y>-20.312110</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1701"/>
+    <predecessor ref="110"/>
+    <successor ref="111"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1702">
+  <lanelet id="111">
     <leftBound>
       <point>
-        <x>48.5665</x>
-        <y>66.0325</y>
+        <x>104.5</x>
+        <y>-16.235380</y>
       </point>
       <point>
-        <x>48.4934</x>
-        <y>71.0763</y>
+        <x>107.67000</x>
+        <y>-18.416380</y>
       </point>
       <point>
-        <x>48.4202</x>
-        <y>76.12</y>
+        <x>109.56000</x>
+        <y>-19.665320</y>
       </point>
+      <point>
+        <x>111.29000</x>
+        <y>-20.821680</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>55.049</x>
-        <y>65.9357</y>
+        <x>102.54000</x>
+        <y>-20.312110</y>
       </point>
       <point>
-        <x>53.9808</x>
-        <y>71.6238</y>
+        <x>103.44000</x>
+        <y>-20.617170</y>
       </point>
       <point>
-        <x>53.9909</x>
-        <y>75.7755</y>
+        <x>106.20000</x>
+        <y>-22.194270</y>
       </point>
+      <point>
+        <x>107.75</x>
+        <y>-23.604250</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1703"/>
+    <predecessor ref="109"/>
+    <predecessor ref="112"/>
+    <successor ref="113"/>
+    <adjacentLeft ref="114" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1704">
+  <lanelet id="115">
     <leftBound>
       <point>
-        <x>51.3478</x>
-        <y>38.2732</y>
+        <x>94.130000</x>
+        <y>-25.620760</y>
       </point>
       <point>
-        <x>50.0308</x>
-        <y>46.8664</y>
+        <x>94.590000</x>
+        <y>-26.317530</y>
       </point>
+      <point>
+        <x>94.910000</x>
+        <y>-26.867050</y>
+      </point>
+      <point>
+        <x>95.400000</x>
+        <y>-27.637030</y>
+      </point>
+      <point>
+        <x>96.180000</x>
+        <y>-28.801410</y>
+      </point>
+      <point>
+        <x>96.880000</x>
+        <y>-29.778940</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>56.7312</x>
-        <y>44.5041</y>
+        <x>89.550000</x>
+        <y>-27.10055</y>
       </point>
       <point>
-        <x>56.2736</x>
-        <y>46.9488</y>
+        <x>90.170000</x>
+        <y>-28.125190</y>
       </point>
+      <point>
+        <x>90.680000</x>
+        <y>-28.893200</y>
+      </point>
+      <point>
+        <x>91.150000</x>
+        <y>-29.590040</y>
+      </point>
+      <point>
+        <x>91.490000</x>
+        <y>-30.172230</y>
+      </point>
+      <point>
+        <x>92.100000</x>
+        <y>-31.165520</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1705"/>
-    <successor ref="1706"/>
-    <adjacentLeft ref="1707" drivingDir="same"/>
+    <predecessor ref="116"/>
+    <adjacentLeft ref="110" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1708">
+  <lanelet id="117">
     <leftBound>
       <point>
-        <x>41.3168</x>
-        <y>47.5878</y>
+        <x>93.290000</x>
+        <y>41.193100</y>
       </point>
       <point>
-        <x>40.2271</x>
-        <y>43.3594</y>
+        <x>92.160000</x>
+        <y>39.172800</y>
       </point>
       <point>
-        <x>39.1374</x>
-        <y>39.1309</y>
+        <x>90.870000</x>
+        <y>36.945700</y>
       </point>
+      <point>
+        <x>89.040000</x>
+        <y>34.195200</y>
+      </point>
+      <point>
+        <x>87.720000</x>
+        <y>32.378600</y>
+      </point>
+      <point>
+        <x>86.480000</x>
+        <y>30.818900</y>
+      </point>
+      <point>
+        <x>85.350000</x>
+        <y>29.362900</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>34.6963</x>
-        <y>48.0582</y>
+        <x>88.510000</x>
+        <y>43.428400</y>
       </point>
       <point>
-        <x>33.7809</x>
-        <y>46.0522</y>
+        <x>87.100000</x>
+        <y>40.478400</y>
       </point>
       <point>
-        <x>32.9246</x>
-        <y>44.6342</y>
+        <x>86.370000</x>
+        <y>38.985400</y>
       </point>
+      <point>
+        <x>85.160000</x>
+        <y>37.3134</y>
+      </point>
+      <point>
+        <x>83.060000</x>
+        <y>34.401200</y>
+      </point>
+      <point>
+        <x>82.350000</x>
+        <y>33.392300</y>
+      </point>
+      <point>
+        <x>81.270000</x>
+        <y>32.465300</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1711"/>
-    <successor ref="1709"/>
-    <adjacentLeft ref="1710" drivingDir="same"/>
+    <successor ref="118"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1712">
+  <lanelet id="119">
     <leftBound>
       <point>
-        <x>139.1485</x>
-        <y>17.3939</y>
+        <x>92.400000</x>
+        <y>24.373500</y>
       </point>
       <point>
-        <x>136.873</x>
-        <y>17.741</y>
+        <x>93.670000</x>
+        <y>26.185500</y>
       </point>
       <point>
-        <x>131.6953</x>
-        <y>18.5697</y>
+        <x>97.660000</x>
+        <y>31.7192</y>
       </point>
       <point>
-        <x>121.8584</x>
-        <y>20.2543</y>
+        <x>101.28000</x>
+        <y>37.321400</y>
       </point>
-      <point>
-        <x>114.8839</x>
-        <y>21.797</y>
-      </point>
-      <point>
-        <x>108.3276</x>
-        <y>23.6331</y>
-      </point>
-      <point>
-        <x>95.5359</x>
-        <y>26.968</y>
-      </point>
-      <point>
-        <x>88.9549</x>
-        <y>28.3203</y>
-      </point>
-      <point>
-        <x>79.0869</x>
-        <y>30.5577</y>
-      </point>
-      <point>
-        <x>75.5228</x>
-        <y>31.3937</y>
-      </point>
-      <point>
-        <x>72.6957</x>
-        <y>32.321</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>139.9505</x>
-        <y>24.1064</y>
+        <x>97.200000</x>
+        <y>20.846400</y>
       </point>
       <point>
-        <x>133.0205</x>
-        <y>25.4226</y>
+        <x>100.65000</x>
+        <y>25.928300</y>
       </point>
       <point>
-        <x>126.0870</x>
-        <y>26.7205</y>
+        <x>102.94000</x>
+        <y>29.186000</y>
       </point>
       <point>
-        <x>119.1529</x>
-        <y>28.0146</y>
+        <x>110.59000</x>
+        <y>39.936500</y>
       </point>
-      <point>
-        <x>115.0479</x>
-        <y>28.9245</y>
-      </point>
-      <point>
-        <x>108.2449</x>
-        <y>30.7878</y>
-      </point>
-      <point>
-        <x>101.4099</x>
-        <y>32.5313</y>
-      </point>
-      <point>
-        <x>94.5464</x>
-        <y>34.1540</y>
-      </point>
-      <point>
-        <x>87.6522</x>
-        <y>35.6466</y>
-      </point>
-      <point>
-        <x>80.7581</x>
-        <y>37.1392</y>
-      </point>
-      <point>
-        <x>73.9868</x>
-        <y>39.1062</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <successor ref="1713"/>
+    <predecessor ref="120"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1714">
+  <lanelet id="121">
     <leftBound>
       <point>
-        <x>34.826</x>
-        <y>17.4572</y>
+        <x>94.130000</x>
+        <y>-25.620760</y>
       </point>
       <point>
-        <x>36.5224</x>
-        <y>16.3584</y>
+        <x>91.140000</x>
+        <y>-21.313810</y>
       </point>
       <point>
-        <x>38.2189</x>
-        <y>15.2596</y>
+        <x>90.570000</x>
+        <y>-20.509230</y>
       </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>32.2465</x>
-        <y>9.9078</y>
+        <x>98.670000</x>
+        <y>-23.778660</y>
       </point>
       <point>
-        <x>33.4477</x>
-        <y>9.3084</y>
+        <x>96.780000</x>
+        <y>-21.139220</y>
       </point>
       <point>
-        <x>34.258</x>
-        <y>8.5486</y>
+        <x>95.080000</x>
+        <y>-18.717440</y>
       </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1716"/>
-    <predecessor ref="1726"/>
-    <successor ref="1715"/>
-    <successor ref="1718"/>
+    <predecessor ref="110"/>
+    <successor ref="122"/>
+    <adjacentLeft ref="116" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1707">
+  <lanelet id="123">
     <leftBound>
       <point>
-        <x>51.3478</x>
-        <y>38.2732</y>
+        <x>104.5</x>
+        <y>-16.235380</y>
       </point>
       <point>
-        <x>48.4003</x>
-        <y>39.4882</y>
+        <x>101.56000</x>
+        <y>-14.181390</y>
       </point>
+      <point>
+        <x>100.04000</x>
+        <y>-13.120280</y>
+      </point>
+      <point>
+        <x>98.420000</x>
+        <y>-11.970580</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>56.7312</x>
-        <y>44.5041</y>
+        <x>107.40000</x>
+        <y>-12.606020</y>
       </point>
       <point>
-        <x>50.0308</x>
-        <y>46.8664</y>
+        <x>101.97000</x>
+        <y>-8.9982800</y>
       </point>
+      <point>
+        <x>101.21000</x>
+        <y>-8.5920500</y>
+      </point>
+      <point>
+        <x>99.700000</x>
+        <y>-7.4944500</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1705"/>
-    <successor ref="1738"/>
-    <adjacentRight ref="1704" drivingDir="same"/>
+    <predecessor ref="114"/>
+    <successor ref="124"/>
+    <adjacentLeft ref="112" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1709">
+  <lanelet id="105">
     <leftBound>
       <point>
-        <x>39.1374</x>
-        <y>39.1309</y>
+        <x>101.35000</x>
+        <y>11.891100</y>
       </point>
       <point>
-        <x>35.9548</x>
-        <y>37.2512</y>
+        <x>128.64000</x>
+        <y>19.947300</y>
       </point>
-      <point>
-        <x>33.4304</x>
-        <y>34.5547</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>32.9246</x>
-        <y>44.6342</y>
+        <x>102.24000</x>
+        <y>8.6075000</y>
       </point>
       <point>
-        <x>32.0855</x>
-        <y>44.0066</y>
+        <x>128.48000</x>
+        <y>15.730700</y>
       </point>
-      <point>
-        <x>31.2465</x>
-        <y>43.379</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1708"/>
-    <predecessor ref="1710"/>
-    <successor ref="1717"/>
-    <successor ref="1726"/>
+    <predecessor ref="103"/>
+    <adjacentLeft ref="125" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1718">
+  <lanelet id="126">
     <leftBound>
       <point>
-        <x>38.2189</x>
-        <y>15.2596</y>
+        <x>10.790000</x>
+        <y>-8.3501300</y>
       </point>
       <point>
-        <x>39.9228</x>
-        <y>14.6895</y>
+        <x>18.130000</x>
+        <y>-7.8974300</y>
       </point>
       <point>
-        <x>41.6267</x>
-        <y>14.1194</y>
+        <x>20.140000</x>
+        <y>-7.7472400</y>
       </point>
+      <point>
+        <x>24.030000</x>
+        <y>-7.2590500</y>
+      </point>
+      <point>
+        <x>26.870000</x>
+        <y>-6.9586400</y>
+      </point>
+      <point>
+        <x>35.340000</x>
+        <y>-6.5081400</y>
+      </point>
+      <point>
+        <x>39.570000</x>
+        <y>-6.4331200</y>
+      </point>
+      <point>
+        <x>46.340000</x>
+        <y>-5.9074500</y>
+      </point>
+      <point>
+        <x>47.200000</x>
+        <y>-5.8445000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>34.258</x>
-        <y>8.5486</y>
+        <x>11.130000</x>
+        <y>-11.526260</y>
       </point>
       <point>
-        <x>37.2675</x>
-        <y>7.3184</y>
+        <x>18.340000</x>
+        <y>-10.944660</y>
       </point>
       <point>
-        <x>41.706</x>
-        <y>6.3308</y>
+        <x>20.300000</x>
+        <y>-10.792180</y>
       </point>
+      <point>
+        <x>24.430000</x>
+        <y>-10.343990</y>
+      </point>
+      <point>
+        <x>28.100000</x>
+        <y>-10.011520</y>
+      </point>
+      <point>
+        <x>35.5</x>
+        <y>-9.6171700</y>
+      </point>
+      <point>
+        <x>39.330000</x>
+        <y>-9.4761400</y>
+      </point>
+      <point>
+        <x>46.830000</x>
+        <y>-9.2000400</y>
+      </point>
+      <point>
+        <x>48.230000</x>
+        <y>-9.1405900</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1714"/>
-    <successor ref="1719"/>
-    <adjacentRight ref="1715" drivingDir="same"/>
+    <successor ref="127"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1720">
+  <lanelet id="128">
     <leftBound>
       <point>
-        <x>61.8847</x>
-        <y>34.605</y>
+        <x>59.25</x>
+        <y>27.544400</y>
       </point>
       <point>
-        <x>57.5728</x>
-        <y>35.6209</y>
+        <x>58.930000</x>
+        <y>27.832900</y>
       </point>
       <point>
-        <x>53.2609</x>
-        <y>36.6368</y>
+        <x>58.550000</x>
+        <y>28.440800</y>
       </point>
+      <point>
+        <x>54.030000</x>
+        <y>35.785800</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>61.814</x>
-        <y>41.0539</y>
+        <x>65.030000</x>
+        <y>31.655900</y>
       </point>
       <point>
-        <x>59.4666</x>
-        <y>41.8271</y>
+        <x>64.520000</x>
+        <y>32.395100</y>
       </point>
       <point>
-        <x>57.8532</x>
-        <y>43.0221</y>
+        <x>63.870000</x>
+        <y>33.161200</y>
       </point>
+      <point>
+        <x>60.400000</x>
+        <y>37.231700</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1721"/>
-    <successor ref="1705"/>
+    <predecessor ref="129"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1699">
+  <lanelet id="110">
     <leftBound>
       <point>
-        <x>42.8619</x>
-        <y>-5.1612</y>
+        <x>96.880000</x>
+        <y>-29.778940</y>
       </point>
       <point>
-        <x>43.7484</x>
-        <y>-1.508</y>
+        <x>96.180000</x>
+        <y>-28.801410</y>
       </point>
+      <point>
+        <x>95.400000</x>
+        <y>-27.637030</y>
+      </point>
+      <point>
+        <x>94.910000</x>
+        <y>-26.867050</y>
+      </point>
+      <point>
+        <x>94.590000</x>
+        <y>-26.317530</y>
+      </point>
+      <point>
+        <x>94.130000</x>
+        <y>-25.620760</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>50.0736</x>
-        <y>-5.4682</y>
+        <x>100.64000</x>
+        <y>-27.438590</y>
       </point>
       <point>
-        <x>49.829</x>
-        <y>-2.3125</y>
+        <x>99.740000</x>
+        <y>-26.236320</y>
       </point>
+      <point>
+        <x>99.380000</x>
+        <y>-25.768570</y>
+      </point>
+      <point>
+        <x>99.070000</x>
+        <y>-25.023230</y>
+      </point>
+      <point>
+        <x>98.810000</x>
+        <y>-24.225030</y>
+      </point>
+      <point>
+        <x>98.670000</x>
+        <y>-23.778660</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1698"/>
-    <successor ref="1722"/>
+    <successor ref="121"/>
+    <successor ref="109"/>
+    <adjacentLeft ref="115" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1723">
+  <lanelet id="130">
     <leftBound>
       <point>
-        <x>-43.8584</x>
-        <y>21.8233</y>
+        <x>76.610000</x>
+        <y>-4.6427000</y>
       </point>
       <point>
-        <x>-39.3008</x>
-        <y>21.542</y>
+        <x>78.310000</x>
+        <y>-5.2355400</y>
       </point>
       <point>
-        <x>-31.8171</x>
-        <y>21.066</y>
+        <x>79.75</x>
+        <y>-6.7909500</y>
       </point>
       <point>
-        <x>-23.7047</x>
-        <y>21.2943</y>
+        <x>80.770000</x>
+        <y>-8.0116700</y>
       </point>
       <point>
-        <x>-13.0807</x>
-        <y>21.6441</y>
+        <x>83.030000</x>
+        <y>-10.489680</y>
       </point>
       <point>
-        <x>-6.6274</x>
-        <y>22.1116</y>
+        <x>85.060000</x>
+        <y>-13.119910</y>
       </point>
       <point>
-        <x>0.0386</x>
-        <y>22.5541</y>
+        <x>86.900000</x>
+        <y>-15.598900</y>
       </point>
       <point>
-        <x>5.6355</x>
-        <y>22.7561</y>
+        <x>88.820000</x>
+        <y>-18.190580</y>
       </point>
       <point>
-        <x>8.287</x>
-        <y>22.5355</y>
+        <x>90.570000</x>
+        <y>-20.509230</y>
       </point>
-      <point>
-        <x>10.2718</x>
-        <y>22.1734</y>
-      </point>
-      <point>
-        <x>11.8164</x>
-        <y>22.0548</y>
-      </point>
-      <point>
-        <x>13.2345</x>
-        <y>21.6575</y>
-      </point>
-      <point>
-        <x>15.9968</x>
-        <y>21.0892</y>
-      </point>
-      <point>
-        <x>18.4485</x>
-        <y>20.7532</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>-44.1502</x>
-        <y>15.053</y>
+        <x>81.980000</x>
+        <y>-18.145190</y>
       </point>
       <point>
-        <x>-39.2140</x>
-        <y>14.8806</y>
+        <x>82.5</x>
+        <y>-18.153620</y>
       </point>
       <point>
-        <x>-34.2779</x>
-        <y>14.7083</y>
+        <x>83.070000</x>
+        <y>-18.284680</y>
       </point>
       <point>
-        <x>-29.3418</x>
-        <y>14.5360</y>
+        <x>83.530000</x>
+        <y>-18.530120</y>
       </point>
       <point>
-        <x>-24.4045</x>
-        <y>14.5247</y>
+        <x>83.770000</x>
+        <y>-18.709590</y>
       </point>
       <point>
-        <x>-19.4663</x>
-        <y>14.6245</y>
+        <x>84.060000</x>
+        <y>-18.917240</y>
       </point>
       <point>
-        <x>-14.5319</x>
-        <y>14.7994</y>
+        <x>84.430000</x>
+        <y>-19.341800</y>
       </point>
       <point>
-        <x>-12.1357</x>
-        <y>14.9863</y>
+        <x>84.830000</x>
+        <y>-19.940700</y>
       </point>
       <point>
-        <x>-7.2116</x>
-        <y>15.3706</y>
+        <x>86.270000</x>
+        <y>-22.014690</y>
       </point>
-      <point>
-        <x>-2.2877</x>
-        <y>15.7593</y>
-      </point>
-      <point>
-        <x>2.6371</x>
-        <y>16.1192</y>
-      </point>
-      <point>
-        <x>7.5492</x>
-        <y>15.9215</y>
-      </point>
-      <point>
-        <x>12.3404</x>
-        <y>14.7217</y>
-      </point>
-      <point>
-        <x>17.1316</x>
-        <y>13.5219</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <successor ref="1727"/>
+    <predecessor ref="107"/>
+    <successor ref="116"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1705">
+  <lanelet id="107">
     <leftBound>
       <point>
-        <x>53.2609</x>
-        <y>36.6368</y>
+        <x>68.430000</x>
+        <y>-4.1163000</y>
       </point>
       <point>
-        <x>51.9872</x>
-        <y>37.5778</y>
+        <x>68.710000</x>
+        <y>-4.2836000</y>
       </point>
       <point>
-        <x>51.3478</x>
-        <y>38.2732</y>
+        <x>69.0</x>
+        <y>-4.4150000</y>
       </point>
+      <point>
+        <x>69.330000</x>
+        <y>-4.5277000</y>
+      </point>
+      <point>
+        <x>69.720000</x>
+        <y>-4.6669000</y>
+      </point>
+      <point>
+        <x>70.040000</x>
+        <y>-4.7625000</y>
+      </point>
+      <point>
+        <x>70.370000</x>
+        <y>-4.8658000</y>
+      </point>
+      <point>
+        <x>71.070000</x>
+        <y>-5.0381500</y>
+      </point>
+      <point>
+        <x>71.75</x>
+        <y>-5.1569100</y>
+      </point>
+      <point>
+        <x>72.460000</x>
+        <y>-5.2230200</y>
+      </point>
+      <point>
+        <x>73.170000</x>
+        <y>-5.2508400</y>
+      </point>
+      <point>
+        <x>73.870000</x>
+        <y>-5.2180800</y>
+      </point>
+      <point>
+        <x>74.560000</x>
+        <y>-5.1475900</y>
+      </point>
+      <point>
+        <x>74.950000</x>
+        <y>-5.0818700</y>
+      </point>
+      <point>
+        <x>75.260000</x>
+        <y>-5.0234200</y>
+      </point>
+      <point>
+        <x>75.600000</x>
+        <y>-4.9410000</y>
+      </point>
+      <point>
+        <x>75.950000</x>
+        <y>-4.8378000</y>
+      </point>
+      <point>
+        <x>76.270000</x>
+        <y>-4.7345000</y>
+      </point>
+      <point>
+        <x>76.610000</x>
+        <y>-4.6427000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>57.8532</x>
-        <y>43.0221</y>
+        <x>58.670000</x>
+        <y>-14.879340</y>
       </point>
       <point>
-        <x>57.2922</x>
-        <y>43.7631</y>
+        <x>59.550000</x>
+        <y>-15.512920</y>
       </point>
       <point>
-        <x>56.7312</x>
-        <y>44.5041</y>
+        <x>60.690000</x>
+        <y>-16.31169</y>
       </point>
+      <point>
+        <x>61.800000</x>
+        <y>-16.935940</y>
+      </point>
+      <point>
+        <x>62.760000</x>
+        <y>-17.418360</y>
+      </point>
+      <point>
+        <x>64.160000</x>
+        <y>-17.971710</y>
+      </point>
+      <point>
+        <x>65.430000</x>
+        <y>-18.424020</y>
+      </point>
+      <point>
+        <x>66.790000</x>
+        <y>-18.815810</y>
+      </point>
+      <point>
+        <x>68.090000</x>
+        <y>-19.089400</y>
+      </point>
+      <point>
+        <x>69.910000</x>
+        <y>-19.383820</y>
+      </point>
+      <point>
+        <x>71.700000</x>
+        <y>-19.667140</y>
+      </point>
+      <point>
+        <x>73.520000</x>
+        <y>-19.771620</y>
+      </point>
+      <point>
+        <x>75.290000</x>
+        <y>-19.669020</y>
+      </point>
+      <point>
+        <x>76.760000</x>
+        <y>-19.496700</y>
+      </point>
+      <point>
+        <x>78.300000</x>
+        <y>-19.126690</y>
+      </point>
+      <point>
+        <x>79.400000</x>
+        <y>-18.874120</y>
+      </point>
+      <point>
+        <x>80.5</x>
+        <y>-18.547020</y>
+      </point>
+      <point>
+        <x>81.270000</x>
+        <y>-18.281280</y>
+      </point>
+      <point>
+        <x>81.980000</x>
+        <y>-18.145190</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1720"/>
-    <predecessor ref="1724"/>
-    <successor ref="1704"/>
-    <successor ref="1707"/>
+    <predecessor ref="127"/>
+    <predecessor ref="131"/>
+    <successor ref="106"/>
+    <successor ref="130"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1717">
+  <lanelet id="127">
     <leftBound>
       <point>
-        <x>33.4304</x>
-        <y>34.5547</y>
+        <x>47.200000</x>
+        <y>-5.8445000</y>
       </point>
       <point>
-        <x>29.8635</x>
-        <y>34.2314</y>
+        <x>53.110000</x>
+        <y>-5.6447000</y>
       </point>
       <point>
-        <x>26.2966</x>
-        <y>33.9081</y>
+        <x>58.520000</x>
+        <y>-5.4513500</y>
       </point>
+      <point>
+        <x>66.050000</x>
+        <y>-4.0808000</y>
+      </point>
+      <point>
+        <x>68.430000</x>
+        <y>-4.1163000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>31.2465</x>
-        <y>43.379</y>
+        <x>48.230000</x>
+        <y>-9.1405900</y>
       </point>
       <point>
-        <x>28.8915</x>
-        <y>42.4835</y>
+        <x>52.780000</x>
+        <y>-9.2562200</y>
       </point>
       <point>
-        <x>25.8096</x>
-        <y>41.7083</y>
+        <x>55.710000</x>
+        <y>-10.188200</y>
       </point>
+      <point>
+        <x>57.880000</x>
+        <y>-12.743040</y>
+      </point>
+      <point>
+        <x>58.670000</x>
+        <y>-14.879340</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1709"/>
-    <successor ref="1725"/>
+    <predecessor ref="126"/>
+    <successor ref="107"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1726">
+  <lanelet id="102">
     <leftBound>
       <point>
-        <x>33.4304</x>
-        <y>34.5547</y>
+        <x>45.740000</x>
+        <y>0.85740000</y>
       </point>
       <point>
-        <x>32.3862</x>
-        <y>32.4841</y>
+        <x>44.780000</x>
+        <y>0.57520000</y>
       </point>
       <point>
-        <x>31.5708</x>
-        <y>30.3329</y>
+        <x>42.140000</x>
+        <y>-0.12310000</y>
       </point>
       <point>
-        <x>31.0865</x>
-        <y>28.0651</y>
+        <x>37.020000</x>
+        <y>-1.5620000</y>
       </point>
       <point>
-        <x>31.1187</x>
-        <y>25.7619</y>
+        <x>35.070000</x>
+        <y>-1.9258000</y>
       </point>
       <point>
-        <x>31.4485</x>
-        <y>23.4866</y>
+        <x>33.450000</x>
+        <y>-2.2263000</y>
       </point>
       <point>
-        <x>32.3261</x>
-        <y>21.3401</y>
+        <x>28.590000</x>
+        <y>-3.2337000</y>
       </point>
       <point>
-        <x>33.4814</x>
-        <y>19.3466</y>
+        <x>24.25</x>
+        <y>-3.8056000</y>
       </point>
       <point>
-        <x>34.826</x>
-        <y>17.4572</y>
+        <x>19.600000</x>
+        <y>-4.2674000</y>
       </point>
+      <point>
+        <x>12.880000</x>
+        <y>-4.7423</y>
+      </point>
+      <point>
+        <x>10.710000</x>
+        <y>-4.8935000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>31.2465</x>
-        <y>43.379</y>
+        <x>44.840000</x>
+        <y>4.5225000</y>
       </point>
       <point>
-        <x>28.696</x>
-        <y>38.7004</y>
+        <x>42.970000</x>
+        <y>3.4300000</y>
       </point>
       <point>
-        <x>27.5218</x>
-        <y>34.7452</y>
+        <x>41.220000</x>
+        <y>2.7169000</y>
       </point>
       <point>
-        <x>26.8118</x>
-        <y>29.5152</y>
+        <x>36.780000</x>
+        <y>1.3852000</y>
       </point>
       <point>
-        <x>27.1146</x>
-        <y>25.3776</y>
+        <x>34.760000</x>
+        <y>0.93970000</y>
       </point>
       <point>
-        <x>27.8</x>
-        <y>20.8854</y>
+        <x>32.880000</x>
+        <y>0.57530000</y>
       </point>
       <point>
-        <x>28.5408</x>
-        <y>17.1203</y>
+        <x>28.320000</x>
+        <y>-0.13220000</y>
       </point>
       <point>
-        <x>30.3739</x>
-        <y>13.3142</y>
+        <x>22.720000</x>
+        <y>-0.82200000</y>
       </point>
       <point>
-        <x>32.2465</x>
-        <y>9.9078</y>
+        <x>15.570000</x>
+        <y>-1.4776000</y>
       </point>
+      <point>
+        <x>12.820000</x>
+        <y>-1.6578000</y>
+      </point>
+      <point>
+        <x>10.730000</x>
+        <y>-1.8005000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1709"/>
-    <successor ref="1714"/>
+    <predecessor ref="100"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1727">
+  <lanelet id="112">
     <leftBound>
       <point>
-        <x>18.4485</x>
-        <y>20.7532</y>
+        <x>98.420000</x>
+        <y>-11.970580</y>
       </point>
       <point>
-        <x>23.8859</x>
-        <y>19.5042</y>
+        <x>100.04000</x>
+        <y>-13.120280</y>
       </point>
+      <point>
+        <x>101.56000</x>
+        <y>-14.181390</y>
+      </point>
+      <point>
+        <x>104.5</x>
+        <y>-16.235380</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>17.1316</x>
-        <y>13.5219</y>
+        <x>96.830000</x>
+        <y>-16.595300</y>
       </point>
       <point>
-        <x>24.354</x>
-        <y>12.2142</y>
+        <x>98.370000</x>
+        <y>-17.435530</y>
       </point>
+      <point>
+        <x>100.81000</x>
+        <y>-19.038150</y>
+      </point>
+      <point>
+        <x>102.54000</x>
+        <y>-20.312110</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1723"/>
-    <successor ref="1697"/>
+    <predecessor ref="132"/>
+    <successor ref="111"/>
+    <adjacentLeft ref="123" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1728">
+  <lanelet id="116">
     <leftBound>
       <point>
-        <x>48.4202</x>
-        <y>76.12</y>
+        <x>90.570000</x>
+        <y>-20.509230</y>
       </point>
       <point>
-        <x>47.7819</x>
-        <y>70.1485</y>
+        <x>91.140000</x>
+        <y>-21.313810</y>
       </point>
       <point>
-        <x>47.1437</x>
-        <y>64.177</y>
+        <x>94.130000</x>
+        <y>-25.620760</y>
       </point>
-      <point>
-        <x>46.0221</x>
-        <y>60.665</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>43.2946</x>
-        <y>76.7281</y>
+        <x>86.270000</x>
+        <y>-22.014690</y>
       </point>
       <point>
-        <x>42.3862</x>
-        <y>69.9428</y>
+        <x>88.050000</x>
+        <y>-24.763530</y>
       </point>
       <point>
-        <x>40.8083</x>
-        <y>64.8274</y>
+        <x>89.550000</x>
+        <y>-27.10055</y>
       </point>
-      <point>
-        <x>39.2668</x>
-        <y>61.3091</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <successor ref="1729"/>
+    <predecessor ref="130"/>
+    <successor ref="115"/>
+    <adjacentLeft ref="121" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1730">
+  <lanelet id="133">
     <leftBound>
       <point>
-        <x>50.437</x>
-        <y>15.2129</y>
+        <x>83.320000</x>
+        <y>5.7290000</y>
       </point>
       <point>
-        <x>52.6884</x>
-        <y>16.7061</y>
+        <x>83.180000</x>
+        <y>6.7835000</y>
       </point>
       <point>
-        <x>54.2185</x>
-        <y>17.932</y>
+        <x>82.920000</x>
+        <y>7.8177000</y>
       </point>
+      <point>
+        <x>82.560000</x>
+        <y>8.8201000</y>
+      </point>
+      <point>
+        <x>82.090000</x>
+        <y>9.7797000</y>
+      </point>
+      <point>
+        <x>81.530000</x>
+        <y>10.686100</y>
+      </point>
+      <point>
+        <x>80.870000</x>
+        <y>11.529400</y>
+      </point>
+      <point>
+        <x>80.130000</x>
+        <y>12.300200</y>
+      </point>
+      <point>
+        <x>79.310000</x>
+        <y>12.990200</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>54.8913</x>
-        <y>9.214</y>
+        <x>98.110000</x>
+        <y>7.1692000</y>
       </point>
       <point>
-        <x>55.6553</x>
-        <y>9.6928</y>
+        <x>97.010000</x>
+        <y>9.4720000</y>
       </point>
       <point>
-        <x>56.4192</x>
-        <y>10.1716</y>
+        <x>95.860000</x>
+        <y>11.5942</y>
       </point>
+      <point>
+        <x>94.650000</x>
+        <y>13.791500</y>
+      </point>
+      <point>
+        <x>93.5</x>
+        <y>15.744800</y>
+      </point>
+      <point>
+        <x>92.060000</x>
+        <y>17.340900</y>
+      </point>
+      <point>
+        <x>90.430000</x>
+        <y>18.768300</y>
+      </point>
+      <point>
+        <x>88.810000</x>
+        <y>20.158000</y>
+      </point>
+      <point>
+        <x>87.0</x>
+        <y>21.455900</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1731"/>
-    <predecessor ref="1732"/>
-    <successor ref="1724"/>
-    <successor ref="1733"/>
+    <predecessor ref="104"/>
+    <successor ref="134"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1734">
+  <lanelet id="135">
     <leftBound>
       <point>
-        <x>13.4597</x>
-        <y>32.8604</y>
+        <x>50.710000</x>
+        <y>34.826300</y>
       </point>
       <point>
-        <x>12.149</x>
-        <y>32.5649</y>
+        <x>55.400000</x>
+        <y>27.949000</y>
       </point>
       <point>
-        <x>5.8162</x>
-        <y>31.7232</y>
+        <x>55.960000</x>
+        <y>27.097600</y>
       </point>
       <point>
-        <x>-1.553</x>
-        <y>30.7565</y>
+        <x>56.550000</x>
+        <y>26.005400</y>
       </point>
-      <point>
-        <x>-14.0102</x>
-        <y>29.5113</y>
-      </point>
-      <point>
-        <x>-25.2447</x>
-        <y>28.9852</y>
-      </point>
-      <point>
-        <x>-32.0932</x>
-        <y>29.0409</y>
-      </point>
-      <point>
-        <x>-39.2414</x>
-        <y>29.0208</y>
-      </point>
-      <point>
-        <x>-43.9639</x>
-        <y>29.0756</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>12.5895</x>
-        <y>39.8753</y>
+        <x>41.920000</x>
+        <y>33.272200</y>
       </point>
       <point>
-        <x>5.5746</x>
-        <y>38.7458</y>
+        <x>48.390000</x>
+        <y>25.031100</y>
       </point>
       <point>
-        <x>-1.4443</x>
-        <y>37.6487</y>
+        <x>50.390000</x>
+        <y>22.665700</y>
       </point>
       <point>
-        <x>-8.5216</x>
-        <y>37.0257</y>
+        <x>50.950000</x>
+        <y>21.821500</y>
       </point>
-      <point>
-        <x>-15.6223</x>
-        <y>36.7739</y>
-      </point>
-      <point>
-        <x>-22.7230</x>
-        <y>36.5220</y>
-      </point>
-      <point>
-        <x>-29.8262</x>
-        <y>36.3986</y>
-      </point>
-      <point>
-        <x>-36.9280</x>
-        <y>36.5522</y>
-      </point>
-      <point>
-        <x>-44.027</x>
-        <y>36.8507</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1735"/>
+    <successor ref="136"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1701">
+  <lanelet id="122">
     <leftBound>
       <point>
-        <x>42.0449</x>
-        <y>-1.244</y>
+        <x>90.570000</x>
+        <y>-20.509230</y>
       </point>
       <point>
-        <x>41.9806</x>
-        <y>-4.9268</y>
+        <x>84.600000</x>
+        <y>-11.929010</y>
       </point>
+      <point>
+        <x>80.050000</x>
+        <y>-6.4772700</y>
+      </point>
+      <point>
+        <x>79.470000</x>
+        <y>-4.6957000</y>
+      </point>
+      <point>
+        <x>79.600000</x>
+        <y>-3.0862000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>35.7377</x>
-        <y>-0.2832</y>
+        <x>95.080000</x>
+        <y>-18.717440</y>
       </point>
       <point>
-        <x>37.9666</x>
-        <y>-4.0095</y>
+        <x>94.390000</x>
+        <y>-18.495940</y>
       </point>
+      <point>
+        <x>93.730000</x>
+        <y>-17.170330</y>
+      </point>
+      <point>
+        <x>93.270000</x>
+        <y>-16.444160</y>
+      </point>
+      <point>
+        <x>92.680000</x>
+        <y>-15.451290</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1740"/>
-    <successor ref="1700"/>
+    <predecessor ref="121"/>
+    <successor ref="108"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1696">
+  <lanelet id="137">
     <leftBound>
       <point>
-        <x>64.9213</x>
-        <y>18.6363</y>
+        <x>100.16000</x>
+        <y>37.741000</y>
       </point>
       <point>
-        <x>67.6612</x>
-        <y>18.4236</y>
+        <x>91.0</x>
+        <y>25.520000</y>
       </point>
-      <point>
-        <x>70.4011</x>
-        <y>18.2109</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>65.0721</x>
-        <y>11.0653</y>
+        <x>96.620000</x>
+        <y>39.416300</y>
       </point>
       <point>
-        <x>68.4135</x>
-        <y>11.34</y>
+        <x>88.25</x>
+        <y>27.582000</y>
       </point>
-      <point>
-        <x>71.2015</x>
-        <y>11.4696</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1736"/>
-    <successor ref="1695"/>
+    <successor ref="138"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1724">
+  <lanelet id="139">
     <leftBound>
       <point>
-        <x>54.2185</x>
-        <y>17.932</y>
+        <x>63.210000</x>
+        <y>7.6810000</y>
       </point>
       <point>
-        <x>57.0671</x>
-        <y>22.9128</y>
+        <x>62.980000</x>
+        <y>6.6608000</y>
       </point>
       <point>
-        <x>57.683</x>
-        <y>26.6825</y>
+        <x>62.860000</x>
+        <y>5.6220000</y>
       </point>
       <point>
-        <x>57.2643</x>
-        <y>29.2685</y>
+        <x>62.840000</x>
+        <y>4.5758000</y>
       </point>
       <point>
-        <x>57.4736</x>
-        <y>27.9755</y>
+        <x>62.940000</x>
+        <y>3.5333000</y>
       </point>
-      <point>
-        <x>57.0549</x>
-        <y>30.5616</y>
-      </point>
-      <point>
-        <x>55.5997</x>
-        <y>33.9181</y>
-      </point>
-      <point>
-        <x>53.2609</x>
-        <y>36.6368</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>56.4192</x>
-        <y>10.1716</y>
+        <x>49.300000</x>
+        <y>10.517000</y>
       </point>
       <point>
-        <x>59.5387</x>
-        <y>16.7175</y>
+        <x>51.130000</x>
+        <y>7.2058000</y>
       </point>
       <point>
-        <x>61.0977</x>
-        <y>20.7696</y>
+        <x>53.100000</x>
+        <y>4.6047000</y>
       </point>
       <point>
-        <x>61.6781</x>
-        <y>25.069</y>
+        <x>53.790000</x>
+        <y>3.6982000</y>
       </point>
       <point>
-        <x>61.6206</x>
-        <y>29.4565</y>
+        <x>55.350000</x>
+        <y>1.6973000</y>
       </point>
-      <point>
-        <x>61.2296</x>
-        <y>34.3428</y>
-      </point>
-      <point>
-        <x>59.8424</x>
-        <y>38.4856</y>
-      </point>
-      <point>
-        <x>57.8532</x>
-        <y>43.0221</y>
-      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1730"/>
-    <successor ref="1705"/>
+    <predecessor ref="101"/>
+    <successor ref="140"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1736">
+  <lanelet id="125">
     <leftBound>
       <point>
-        <x>62.0555</x>
-        <y>18.8013</y>
+        <x>128.64000</x>
+        <y>19.947300</y>
       </point>
       <point>
-        <x>64.9213</x>
-        <y>18.6363</y>
+        <x>101.35000</x>
+        <y>11.891100</y>
       </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>61.8723</x>
-        <y>10.8579</y>
+        <x>128.42000</x>
+        <y>25.241200</y>
       </point>
       <point>
-        <x>65.0721</x>
-        <y>11.0653</y>
+        <x>100.34000</x>
+        <y>15.822600</y>
       </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1733"/>
-    <successor ref="1696"/>
+    <successor ref="141"/>
+    <adjacentLeft ref="105" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1725">
+  <lanelet id="108">
     <leftBound>
       <point>
-        <x>26.2966</x>
-        <y>33.9081</y>
+        <x>79.600000</x>
+        <y>-3.0862000</y>
       </point>
       <point>
-        <x>23.2408</x>
-        <y>33.663</y>
+        <x>80.160000</x>
+        <y>-2.4718000</y>
       </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>25.8096</x>
-        <y>41.7083</y>
+        <x>92.680000</x>
+        <y>-15.451290</y>
       </point>
       <point>
-        <x>22.882</x>
-        <y>41.4423</y>
+        <x>93.530000</x>
+        <y>-14.560300</y>
       </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1717"/>
-    <successor ref="1735"/>
+    <predecessor ref="122"/>
+    <predecessor ref="106"/>
+    <successor ref="132"/>
+    <successor ref="142"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1711">
+  <lanelet id="141">
     <leftBound>
       <point>
-        <x>43.55</x>
-        <y>53.4586</y>
+        <x>101.35000</x>
+        <y>11.891100</y>
       </point>
       <point>
-        <x>41.3168</x>
-        <y>47.5878</y>
+        <x>89.830000</x>
+        <y>10.545800</y>
       </point>
+      <point>
+        <x>86.930000</x>
+        <y>10.766800</y>
+      </point>
+      <point>
+        <x>84.040000</x>
+        <y>10.987900</y>
+      </point>
+      <point>
+        <x>79.310000</x>
+        <y>12.990200</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>36.9443</x>
-        <y>53.7923</y>
+        <x>100.34000</x>
+        <y>15.822600</y>
       </point>
       <point>
-        <x>34.6963</x>
-        <y>48.0582</y>
+        <x>98.140000</x>
+        <y>15.294800</y>
       </point>
+      <point>
+        <x>92.400000</x>
+        <y>17.678400</y>
+      </point>
+      <point>
+        <x>87.220000</x>
+        <y>21.015100</y>
+      </point>
+      <point>
+        <x>87.0</x>
+        <y>21.455900</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1737"/>
-    <successor ref="1708"/>
+    <predecessor ref="125"/>
+    <successor ref="134"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1729">
+  <lanelet id="140">
     <leftBound>
       <point>
-        <x>46.0221</x>
-        <y>60.665</y>
+        <x>62.940000</x>
+        <y>3.5333000</y>
       </point>
       <point>
-        <x>44.817</x>
-        <y>56.8916</y>
+        <x>63.230000</x>
+        <y>2.1721000</y>
       </point>
+      <point>
+        <x>63.430000</x>
+        <y>1.5290000</y>
+      </point>
+      <point>
+        <x>63.700000</x>
+        <y>0.86220000</y>
+      </point>
+      <point>
+        <x>63.970000</x>
+        <y>0.24250000</y>
+      </point>
+      <point>
+        <x>64.350000</x>
+        <y>-0.37170000</y>
+      </point>
+      <point>
+        <x>65.170000</x>
+        <y>-1.5066000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>39.2668</x>
-        <y>61.3091</y>
+        <x>55.350000</x>
+        <y>1.6973000</y>
       </point>
       <point>
-        <x>38.0837</x>
-        <y>57.2327</y>
+        <x>55.490000</x>
+        <y>1.4340000</y>
       </point>
+      <point>
+        <x>55.710000</x>
+        <y>0.17690000</y>
+      </point>
+      <point>
+        <x>55.880000</x>
+        <y>-1.0507000</y>
+      </point>
+      <point>
+        <x>56.25</x>
+        <y>-2.1449000</y>
+      </point>
+      <point>
+        <x>56.540000</x>
+        <y>-3.1522000</y>
+      </point>
+      <point>
+        <x>56.900000</x>
+        <y>-4.3117000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1728"/>
-    <successor ref="1737"/>
+    <predecessor ref="139"/>
+    <successor ref="131"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1737">
+  <lanelet id="129">
     <leftBound>
       <point>
-        <x>44.817</x>
-        <y>56.8916</y>
+        <x>71.180000</x>
+        <y>14.911100</y>
       </point>
       <point>
-        <x>43.55</x>
-        <y>53.4586</y>
+        <x>68.930000</x>
+        <y>17.0394</y>
       </point>
+      <point>
+        <x>67.590000</x>
+        <y>19.163200</y>
+      </point>
+      <point>
+        <x>66.160000</x>
+        <y>21.208300</y>
+      </point>
+      <point>
+        <x>63.350000</x>
+        <y>23.972100</y>
+      </point>
+      <point>
+        <x>61.280000</x>
+        <y>25.736300</y>
+      </point>
+      <point>
+        <x>59.25</x>
+        <y>27.544400</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>38.0837</x>
-        <y>57.2327</y>
+        <x>67.910000</x>
+        <y>29.521000</y>
       </point>
       <point>
-        <x>36.9443</x>
-        <y>53.7923</y>
+        <x>67.210000</x>
+        <y>29.543300</y>
       </point>
+      <point>
+        <x>66.630000</x>
+        <y>29.824200</y>
+      </point>
+      <point>
+        <x>66.160000</x>
+        <y>30.241000</y>
+      </point>
+      <point>
+        <x>65.810000</x>
+        <y>30.680600</y>
+      </point>
+      <point>
+        <x>65.450000</x>
+        <y>31.063100</y>
+      </point>
+      <point>
+        <x>65.030000</x>
+        <y>31.655900</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1729"/>
-    <successor ref="1711"/>
+    <predecessor ref="143"/>
+    <successor ref="128"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1738">
+  <lanelet id="144">
     <leftBound>
       <point>
-        <x>48.4003</x>
-        <y>39.4882</y>
+        <x>68.900000</x>
+        <y>14.131900</y>
       </point>
       <point>
-        <x>46.4138</x>
-        <y>39.9097</y>
+        <x>68.520000</x>
+        <y>13.956400</y>
       </point>
       <point>
-        <x>44.1192</x>
-        <y>40.0539</y>
+        <x>68.180000</x>
+        <y>13.792100</y>
       </point>
       <point>
-        <x>41.5248</x>
-        <y>39.9852</y>
+        <x>67.830000</x>
+        <y>13.618400</y>
       </point>
+      <point>
+        <x>67.490000</x>
+        <y>13.450700</y>
+      </point>
+      <point>
+        <x>67.050000</x>
+        <y>13.148900</y>
+      </point>
+      <point>
+        <x>66.640000</x>
+        <y>12.837500</y>
+      </point>
+      <point>
+        <x>66.25</x>
+        <y>12.501000</y>
+      </point>
+      <point>
+        <x>66.050000</x>
+        <y>12.327300</y>
+      </point>
+      <point>
+        <x>65.850000</x>
+        <y>12.140300</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>50.0308</x>
-        <y>46.8664</y>
+        <x>64.360000</x>
+        <y>22.006700</y>
       </point>
       <point>
-        <x>45.5786</x>
-        <y>47.4614</y>
+        <x>64.320000</x>
+        <y>21.802600</y>
       </point>
       <point>
-        <x>43.4477</x>
-        <y>47.5246</y>
+        <x>64.240000</x>
+        <y>21.576600</y>
       </point>
       <point>
-        <x>41.3168</x>
-        <y>47.5878</y>
+        <x>64.150000</x>
+        <y>21.361400</y>
       </point>
+      <point>
+        <x>63.900000</x>
+        <y>21.062300</y>
+      </point>
+      <point>
+        <x>63.760000</x>
+        <y>20.974200</y>
+      </point>
+      <point>
+        <x>60.900000</x>
+        <y>18.580000</y>
+      </point>
+      <point>
+        <x>60.590000</x>
+        <y>18.420300</y>
+      </point>
+      <point>
+        <x>60.300000</x>
+        <y>18.355000</y>
+      </point>
+      <point>
+        <x>60.010000</x>
+        <y>18.373900</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1707"/>
-    <successor ref="1710"/>
+    <predecessor ref="145"/>
+    <successor ref="146"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1731">
+  <lanelet id="120">
     <leftBound>
       <point>
-        <x>45.8744</x>
-        <y>13.7719</y>
+        <x>83.320000</x>
+        <y>5.7290000</y>
       </point>
       <point>
-        <x>48.1557</x>
-        <y>14.4924</y>
+        <x>84.630000</x>
+        <y>11.605500</y>
       </point>
       <point>
-        <x>50.437</x>
-        <y>15.2129</y>
+        <x>87.380000</x>
+        <y>17.383800</y>
       </point>
+      <point>
+        <x>92.080000</x>
+        <y>23.944800</y>
+      </point>
+      <point>
+        <x>92.400000</x>
+        <y>24.373500</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>46.3024</x>
-        <y>6.4144</y>
+        <x>98.110000</x>
+        <y>7.1692000</y>
       </point>
       <point>
-        <x>50.2732</x>
-        <y>7.5091</y>
+        <x>96.630000</x>
+        <y>11.331300</y>
       </point>
       <point>
-        <x>54.8913</x>
-        <y>9.214</y>
+        <x>95.280000</x>
+        <y>14.941400</y>
       </point>
+      <point>
+        <x>95.790000</x>
+        <y>19.697400</y>
+      </point>
+      <point>
+        <x>97.200000</x>
+        <y>20.846400</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1719"/>
-    <successor ref="1730"/>
-    <adjacentRight ref="1732" drivingDir="same"/>
+    <predecessor ref="104"/>
+    <successor ref="119"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1716">
+  <lanelet id="143">
     <leftBound>
       <point>
-        <x>27.1315</x>
-        <y>18.9574</y>
+        <x>75.450000</x>
+        <y>14.805200</y>
       </point>
       <point>
-        <x>30.9787</x>
-        <y>18.2073</y>
+        <x>74.910000</x>
+        <y>14.904700</y>
       </point>
       <point>
-        <x>34.826</x>
-        <y>17.4572</y>
+        <x>74.390000</x>
+        <y>14.997900</y>
       </point>
+      <point>
+        <x>73.860000</x>
+        <y>15.050200</y>
+      </point>
+      <point>
+        <x>73.320000</x>
+        <y>15.080200</y>
+      </point>
+      <point>
+        <x>72.25</x>
+        <y>15.051200</y>
+      </point>
+      <point>
+        <x>71.700000</x>
+        <y>14.998600</y>
+      </point>
+      <point>
+        <x>71.180000</x>
+        <y>14.911100</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>27.6491</x>
-        <y>11.4369</y>
+        <x>78.310000</x>
+        <y>29.978500</y>
       </point>
       <point>
-        <x>31.0141</x>
-        <y>10.4511</y>
+        <x>77.900000</x>
+        <y>29.794600</y>
       </point>
       <point>
-        <x>32.2465</x>
-        <y>9.9078</y>
+        <x>76.680000</x>
+        <y>29.447000</y>
       </point>
+      <point>
+        <x>76.120000</x>
+        <y>29.411200</y>
+      </point>
+      <point>
+        <x>73.520000</x>
+        <y>29.348000</y>
+      </point>
+      <point>
+        <x>71.710000</x>
+        <y>29.354000</y>
+      </point>
+      <point>
+        <x>69.970000</x>
+        <y>29.256300</y>
+      </point>
+      <point>
+        <x>67.910000</x>
+        <y>29.521000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1697"/>
-    <successor ref="1714"/>
+    <predecessor ref="118"/>
+    <predecessor ref="134"/>
+    <predecessor ref="138"/>
+    <successor ref="129"/>
+    <successor ref="145"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1719">
+  <lanelet id="114">
     <leftBound>
       <point>
-        <x>41.6267</x>
-        <y>14.1194</y>
+        <x>111.29000</x>
+        <y>-20.821680</y>
       </point>
       <point>
-        <x>43.9864</x>
-        <y>13.894</y>
+        <x>109.56000</x>
+        <y>-19.665320</y>
       </point>
       <point>
-        <x>45.8744</x>
-        <y>13.7719</y>
+        <x>107.67000</x>
+        <y>-18.416380</y>
       </point>
+      <point>
+        <x>104.5</x>
+        <y>-16.235380</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>41.706</x>
-        <y>6.3308</y>
+        <x>114.58000</x>
+        <y>-17.444330</y>
       </point>
       <point>
-        <x>44.0579</x>
-        <y>6.2783</y>
+        <x>111.85000</x>
+        <y>-15.552660</y>
       </point>
       <point>
-        <x>46.3024</x>
-        <y>6.4144</y>
+        <x>109.72000</x>
+        <y>-14.115850</y>
       </point>
+      <point>
+        <x>107.40000</x>
+        <y>-12.606020</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1718"/>
-    <successor ref="1731"/>
+    <predecessor ref="147"/>
+    <successor ref="123"/>
+    <adjacentLeft ref="111" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1735">
+  <lanelet id="118">
     <leftBound>
       <point>
-        <x>23.2408</x>
-        <y>33.663</y>
+        <x>85.350000</x>
+        <y>29.362900</y>
       </point>
       <point>
-        <x>18.23</x>
-        <y>33.418</y>
+        <x>82.760000</x>
+        <y>23.612000</y>
       </point>
       <point>
-        <x>13.4597</x>
-        <y>32.8604</y>
+        <x>79.720000</x>
+        <y>18.939400</y>
       </point>
+      <point>
+        <x>77.740000</x>
+        <y>16.509700</y>
+      </point>
+      <point>
+        <x>75.450000</x>
+        <y>14.805200</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>22.882</x>
-        <y>41.4423</y>
+        <x>81.270000</x>
+        <y>32.465300</y>
       </point>
       <point>
-        <x>18.7671</x>
-        <y>40.6039</y>
+        <x>80.290000</x>
+        <y>31.381400</y>
       </point>
       <point>
-        <x>12.5895</x>
-        <y>39.8753</y>
+        <x>79.370000</x>
+        <y>30.600600</y>
       </point>
+      <point>
+        <x>78.890000</x>
+        <y>30.278800</y>
+      </point>
+      <point>
+        <x>78.310000</x>
+        <y>29.978500</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1725"/>
-    <successor ref="1734"/>
+    <predecessor ref="117"/>
+    <successor ref="143"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1722">
+  <lanelet id="104">
     <leftBound>
       <point>
-        <x>43.7484</x>
-        <y>-1.508</y>
+        <x>82.550000</x>
+        <y>0.92860000</y>
       </point>
       <point>
-        <x>44.3159</x>
-        <y>0.2525</y>
+        <x>82.800000</x>
+        <y>1.5848000</y>
       </point>
       <point>
-        <x>44.8834</x>
-        <y>2.0130</y>
+        <x>83.0</x>
+        <y>2.2417000</y>
       </point>
       <point>
-        <x>46.3024</x>
-        <y>6.4144</y>
+        <x>83.160000</x>
+        <y>2.9323000</y>
       </point>
+      <point>
+        <x>83.280000</x>
+        <y>3.6049000</y>
+      </point>
+      <point>
+        <x>83.340000</x>
+        <y>4.1154000</y>
+      </point>
+      <point>
+        <x>83.360000</x>
+        <y>4.6655000</y>
+      </point>
+      <point>
+        <x>83.350000</x>
+        <y>5.2093000</y>
+      </point>
+      <point>
+        <x>83.320000</x>
+        <y>5.7290000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>49.829</x>
-        <y>-2.3125</y>
+        <x>97.110000</x>
+        <y>-4.0506000</y>
       </point>
       <point>
-        <x>50.4769</x>
-        <y>0.2358</y>
+        <x>96.870000</x>
+        <y>-2.7938000</y>
       </point>
       <point>
-        <x>51.5444</x>
-        <y>2.8721</y>
+        <x>96.880000</x>
+        <y>-2.0648000</y>
       </point>
       <point>
-        <x>52.6218</x>
-        <y>5.4392</y>
+        <x>96.930000</x>
+        <y>-1.1514000</y>
       </point>
+      <point>
+        <x>96.950000</x>
+        <y>-0.43860000</y>
+      </point>
+      <point>
+        <x>97.080000</x>
+        <y>0.43160000</y>
+      </point>
+      <point>
+        <x>97.400000</x>
+        <y>4.2877000</y>
+      </point>
+      <point>
+        <x>97.680000</x>
+        <y>6.4440000</y>
+      </point>
+      <point>
+        <x>98.110000</x>
+        <y>7.1692000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1699"/>
-    <successor ref="1732"/>
+    <predecessor ref="124"/>
+    <predecessor ref="142"/>
+    <successor ref="133"/>
+    <successor ref="120"/>
+    <successor ref="103"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1703">
+  <lanelet id="101">
     <leftBound>
       <point>
-        <x>49.0549</x>
-        <y>56.6895</y>
+        <x>64.520000</x>
+        <y>10.524700</y>
       </point>
       <point>
-        <x>48.5665</x>
-        <y>66.0325</y>
+        <x>64.240000</x>
+        <y>10.102000</y>
       </point>
+      <point>
+        <x>63.990000</x>
+        <y>9.6233000</y>
+      </point>
+      <point>
+        <x>63.550000</x>
+        <y>8.6720000</y>
+      </point>
+      <point>
+        <x>63.210000</x>
+        <y>7.6810000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>55.4128</x>
-        <y>56.3806</y>
+        <x>51.190000</x>
+        <y>15.434300</y>
       </point>
       <point>
-        <x>55.049</x>
-        <y>65.9357</y>
+        <x>50.570000</x>
+        <y>13.639100</y>
       </point>
+      <point>
+        <x>49.960000</x>
+        <y>12.254800</y>
+      </point>
+      <point>
+        <x>49.630000</x>
+        <y>11.234400</y>
+      </point>
+      <point>
+        <x>49.300000</x>
+        <y>10.517000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1739"/>
-    <successor ref="1702"/>
+    <predecessor ref="146"/>
+    <predecessor ref="136"/>
+    <successor ref="139"/>
+    <successor ref="100"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1739">
+  <lanelet id="132">
     <leftBound>
       <point>
-        <x>49.415</x>
-        <y>53.0626</y>
+        <x>80.160000</x>
+        <y>-2.4718000</y>
       </point>
       <point>
-        <x>49.0549</x>
-        <y>56.6895</y>
+        <x>81.540000</x>
+        <y>-2.4449000</y>
       </point>
+      <point>
+        <x>89.160000</x>
+        <y>-6.3868600</y>
+      </point>
+      <point>
+        <x>97.600000</x>
+        <y>-11.396260</y>
+      </point>
+      <point>
+        <x>98.420000</x>
+        <y>-11.970580</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>55.7432</x>
-        <y>52.6775</y>
+        <x>93.530000</x>
+        <y>-14.560300</y>
       </point>
       <point>
-        <x>55.4128</x>
-        <y>56.3806</y>
+        <x>94.650000</x>
+        <y>-15.129600</y>
       </point>
+      <point>
+        <x>95.560000</x>
+        <y>-15.580330</y>
+      </point>
+      <point>
+        <x>96.640000</x>
+        <y>-16.117920</y>
+      </point>
+      <point>
+        <x>96.830000</x>
+        <y>-16.595300</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1706"/>
-    <successor ref="1703"/>
+    <predecessor ref="108"/>
+    <successor ref="112"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1710">
+  <lanelet id="131">
     <leftBound>
       <point>
-        <x>41.5248</x>
-        <y>39.9852</y>
+        <x>65.170000</x>
+        <y>-1.5066000</y>
       </point>
       <point>
-        <x>40.3311</x>
-        <y>39.558</y>
+        <x>66.130000</x>
+        <y>-2.5212000</y>
       </point>
       <point>
-        <x>39.1374</x>
-        <y>39.1309</y>
+        <x>67.230000</x>
+        <y>-3.3965000</y>
       </point>
+      <point>
+        <x>68.430000</x>
+        <y>-4.1163000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>41.3168</x>
-        <y>47.5878</y>
+        <x>56.900000</x>
+        <y>-4.3117000</y>
       </point>
       <point>
-        <x>37.7174</x>
-        <y>46.6659</y>
+        <x>57.310000</x>
+        <y>-6.8091600</y>
       </point>
       <point>
-        <x>32.9246</x>
-        <y>44.6342</y>
+        <x>57.950000</x>
+        <y>-10.790520</y>
       </point>
+      <point>
+        <x>58.670000</x>
+        <y>-14.879340</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1738"/>
-    <successor ref="1709"/>
-    <adjacentRight ref="1708" drivingDir="same"/>
+    <predecessor ref="140"/>
+    <successor ref="107"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1713">
+  <lanelet id="134">
     <leftBound>
       <point>
-        <x>72.6957</x>
-        <y>32.321</y>
+        <x>79.310000</x>
+        <y>12.990200</y>
       </point>
       <point>
-        <x>64.8456</x>
-        <y>34.0205</y>
+        <x>78.420000</x>
+        <y>13.591700</y>
       </point>
+      <point>
+        <x>77.480000</x>
+        <y>14.098300</y>
+      </point>
+      <point>
+        <x>76.480000</x>
+        <y>14.504200</y>
+      </point>
+      <point>
+        <x>75.450000</x>
+        <y>14.805200</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>73.9868</x>
-        <y>39.1062</y>
+        <x>87.0</x>
+        <y>21.455900</y>
       </point>
       <point>
-        <x>64.7443</x>
-        <y>40.5278</y>
+        <x>84.890000</x>
+        <y>23.726300</y>
       </point>
+      <point>
+        <x>82.720000</x>
+        <y>25.792100</y>
+      </point>
+      <point>
+        <x>80.560000</x>
+        <y>27.951900</y>
+      </point>
+      <point>
+        <x>78.310000</x>
+        <y>29.978500</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1712"/>
-    <successor ref="1721"/>
+    <predecessor ref="133"/>
+    <predecessor ref="141"/>
+    <successor ref="143"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1740">
+  <lanelet id="145">
     <leftBound>
       <point>
-        <x>41.706</x>
-        <y>6.3308</y>
+        <x>71.180000</x>
+        <y>14.911100</y>
       </point>
       <point>
-        <x>41.8189</x>
-        <y>3.8058</y>
+        <x>70.140000</x>
+        <y>14.661600</y>
       </point>
       <point>
-        <x>41.9319</x>
-        <y>1.2809</y>
+        <x>69.520000</x>
+        <y>14.393000</y>
       </point>
       <point>
-        <x>42.0449</x>
-        <y>-1.244</y>
+        <x>68.900000</x>
+        <y>14.131900</y>
       </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>34.9212</x>
-        <y>7.7341</y>
+        <x>67.910000</x>
+        <y>29.521000</y>
       </point>
       <point>
-        <x>35.5585</x>
-        <y>6.401</y>
+        <x>67.550000</x>
+        <y>29.460700</y>
       </point>
       <point>
-        <x>35.8512</x>
-        <y>4.3511</y>
+        <x>64.770000</x>
+        <y>22.212400</y>
       </point>
       <point>
-        <x>35.7377</x>
-        <y>-0.2832</y>
+        <x>64.360000</x>
+        <y>22.006700</y>
       </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1715"/>
-    <successor ref="1701"/>
+    <predecessor ref="143"/>
+    <successor ref="144"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1721">
+  <lanelet id="124">
     <leftBound>
       <point>
-        <x>64.8456</x>
-        <y>34.0205</y>
+        <x>98.420000</x>
+        <y>-11.970580</y>
       </point>
       <point>
-        <x>61.8847</x>
-        <y>34.605</y>
+        <x>97.600000</x>
+        <y>-11.394440</y>
       </point>
+      <point>
+        <x>89.600000</x>
+        <y>-5.7322200</y>
+      </point>
+      <point>
+        <x>84.270000</x>
+        <y>-2.2121000</y>
+      </point>
+      <point>
+        <x>82.520000</x>
+        <y>0.80080000</y>
+      </point>
+      <point>
+        <x>82.550000</x>
+        <y>0.92860000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>64.7443</x>
-        <y>40.5278</y>
+        <x>99.700000</x>
+        <y>-7.4944500</y>
       </point>
       <point>
-        <x>61.814</x>
-        <y>41.0539</y>
+        <x>99.590000</x>
+        <y>-7.4672400</y>
       </point>
+      <point>
+        <x>98.550000</x>
+        <y>-6.5735600</y>
+      </point>
+      <point>
+        <x>97.580000</x>
+        <y>-5.3031700</y>
+      </point>
+      <point>
+        <x>97.080000</x>
+        <y>-4.1772000</y>
+      </point>
+      <point>
+        <x>97.110000</x>
+        <y>-4.0506000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1713"/>
-    <successor ref="1720"/>
+    <predecessor ref="123"/>
+    <successor ref="104"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1733">
+  <lanelet id="142">
     <leftBound>
       <point>
-        <x>54.2185</x>
-        <y>17.932</y>
+        <x>80.160000</x>
+        <y>-2.4718000</y>
       </point>
       <point>
-        <x>58.137</x>
-        <y>18.3667</y>
+        <x>81.110000</x>
+        <y>-1.4504000</y>
       </point>
       <point>
-        <x>62.0555</x>
-        <y>18.8013</y>
+        <x>81.540000</x>
+        <y>-0.83780000</y>
       </point>
+      <point>
+        <x>81.910000</x>
+        <y>-0.30990000</y>
+      </point>
+      <point>
+        <x>82.550000</x>
+        <y>0.92860000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>56.4192</x>
-        <y>10.1716</y>
+        <x>93.530000</x>
+        <y>-14.560300</y>
       </point>
       <point>
-        <x>58.608</x>
-        <y>10.5848</y>
+        <x>94.440000</x>
+        <y>-11.595070</y>
       </point>
       <point>
-        <x>61.8723</x>
-        <y>10.8579</y>
+        <x>95.190000</x>
+        <y>-9.1848600</y>
       </point>
+      <point>
+        <x>96.340000</x>
+        <y>-5.0625300</y>
+      </point>
+      <point>
+        <x>97.110000</x>
+        <y>-4.0506000</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1730"/>
-    <successor ref="1736"/>
+    <predecessor ref="108"/>
+    <successor ref="104"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1732">
+  <lanelet id="146">
     <leftBound>
       <point>
-        <x>46.3024</x>
-        <y>6.4144</y>
+        <x>65.850000</x>
+        <y>12.140300</y>
       </point>
       <point>
-        <x>48.5811</x>
-        <y>12.9909</y>
+        <x>65.150000</x>
+        <y>11.366700</y>
       </point>
       <point>
-        <x>50.437</x>
-        <y>15.2129</y>
+        <x>64.590000</x>
+        <y>10.665600</y>
       </point>
+      <point>
+        <x>64.520000</x>
+        <y>10.524700</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>52.6218</x>
-        <y>5.4392</y>
+        <x>60.010000</x>
+        <y>18.373900</y>
       </point>
       <point>
-        <x>53.4357</x>
-        <y>6.8876</y>
+        <x>59.880000</x>
+        <y>18.279700</y>
       </point>
       <point>
-        <x>54.8913</x>
-        <y>9.214</y>
+        <x>51.230000</x>
+        <y>15.5625</y>
       </point>
+      <point>
+        <x>51.190000</x>
+        <y>15.434300</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1722"/>
-    <successor ref="1730"/>
-    <adjacentLeft ref="1731" drivingDir="same"/>
+    <predecessor ref="144"/>
+    <successor ref="101"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1706">
+  <lanelet id="136">
     <leftBound>
       <point>
-        <x>50.0308</x>
-        <y>46.8664</y>
+        <x>56.550000</x>
+        <y>26.005400</y>
       </point>
       <point>
-        <x>49.415</x>
-        <y>53.0626</y>
+        <x>56.870000</x>
+        <y>25.557600</y>
       </point>
+      <point>
+        <x>57.650000</x>
+        <y>23.276300</y>
+      </point>
+      <point>
+        <x>58.520000</x>
+        <y>20.722200</y>
+      </point>
+      <point>
+        <x>60.660000</x>
+        <y>14.588400</y>
+      </point>
+      <point>
+        <x>64.590000</x>
+        <y>10.662800</y>
+      </point>
+      <point>
+        <x>64.520000</x>
+        <y>10.524700</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>56.2736</x>
-        <y>46.9488</y>
+        <x>50.950000</x>
+        <y>21.821500</y>
       </point>
       <point>
-        <x>55.7432</x>
-        <y>52.6775</y>
+        <x>51.490000</x>
+        <y>20.879100</y>
       </point>
+      <point>
+        <x>51.730000</x>
+        <y>20.046400</y>
+      </point>
+      <point>
+        <x>51.870000</x>
+        <y>19.238900</y>
+      </point>
+      <point>
+        <x>51.910000</x>
+        <y>18.675200</y>
+      </point>
+      <point>
+        <x>51.760000</x>
+        <y>17.340500</y>
+      </point>
+      <point>
+        <x>51.190000</x>
+        <y>15.434300</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1704"/>
-    <successor ref="1739"/>
+    <predecessor ref="135"/>
+    <successor ref="101"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <lanelet id="1715">
+  <lanelet id="138">
     <leftBound>
       <point>
-        <x>38.2189</x>
-        <y>15.2596</y>
+        <x>91.0</x>
+        <y>25.520000</y>
       </point>
       <point>
-        <x>39.5756</x>
-        <y>13.4631</y>
+        <x>90.600000</x>
+        <y>25.278500</y>
       </point>
       <point>
-        <x>40.5365</x>
-        <y>10.538</y>
+        <x>80.630000</x>
+        <y>17.444100</y>
       </point>
       <point>
-        <x>41.706</x>
-        <y>6.3308</y>
+        <x>78.280000</x>
+        <y>15.512800</y>
       </point>
+      <point>
+        <x>75.690000</x>
+        <y>14.735600</y>
+      </point>
+      <point>
+        <x>75.450000</x>
+        <y>14.805200</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </leftBound>
     <rightBound>
       <point>
-        <x>34.258</x>
-        <y>8.5486</y>
+        <x>88.25</x>
+        <y>27.582000</y>
       </point>
       <point>
-        <x>34.4790</x>
-        <y>8.2771</y>
+        <x>87.780000</x>
+        <y>27.342400</y>
       </point>
       <point>
-        <x>34.7001</x>
-        <y>8.0056</y>
+        <x>87.370000</x>
+        <y>26.510400</y>
       </point>
       <point>
-        <x>34.9212</x>
-        <y>7.7341</y>
+        <x>82.960000</x>
+        <y>28.196000</y>
       </point>
+      <point>
+        <x>78.390000</x>
+        <y>29.959600</y>
+      </point>
+      <point>
+        <x>78.310000</x>
+        <y>29.978500</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
     </rightBound>
-    <predecessor ref="1714"/>
-    <successor ref="1740"/>
-    <adjacentLeft ref="1718" drivingDir="same"/>
+    <predecessor ref="137"/>
+    <successor ref="143"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
-    <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="1694"/>
+    <trafficSignRef ref="1"/>
   </lanelet>
-  <trafficSign id="1694">
+  <lanelet id="147">
+    <leftBound>
+      <point>
+        <x>121.28000</x>
+        <y>-27.490790</y>
+      </point>
+      <point>
+        <x>111.29000</x>
+        <y>-20.821680</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
+    </leftBound>
+    <rightBound>
+      <point>
+        <x>124.43000</x>
+        <y>-23.782320</y>
+      </point>
+      <point>
+        <x>114.58000</x>
+        <y>-17.444330</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
+    </rightBound>
+    <successor ref="114"/>
+    <adjacentLeft ref="113" drivingDir="opposite"/>
+    <laneletType>urban</laneletType>
+    <userOneWay>motorcycle</userOneWay>
+    <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userBidirectional>priorityVehicle</userBidirectional>
+    <trafficSignRef ref="1"/>
+  </lanelet>
+  <lanelet id="113">
+    <leftBound>
+      <point>
+        <x>111.29000</x>
+        <y>-20.821680</y>
+      </point>
+      <point>
+        <x>121.28000</x>
+        <y>-27.490790</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
+    </leftBound>
+    <rightBound>
+      <point>
+        <x>107.75</x>
+        <y>-23.604250</y>
+      </point>
+      <point>
+        <x>117.88000</x>
+        <y>-30.829890</y>
+      </point>
+      <lineMarking>unknown</lineMarking>
+    </rightBound>
+    <predecessor ref="111"/>
+    <adjacentLeft ref="147" drivingDir="opposite"/>
+    <laneletType>urban</laneletType>
+    <userOneWay>motorcycle</userOneWay>
+    <userOneWay>car</userOneWay>
+    <userOneWay>bicycle</userOneWay>
+    <userBidirectional>priorityVehicle</userBidirectional>
+    <trafficSignRef ref="1"/>
+  </lanelet>
+  <trafficSign id="1">
     <trafficSignElement>
-      <trafficSignID></trafficSignID>
+      <trafficSignID>274</trafficSignID>
       <additionalValue>25mph</additionalValue>
     </trafficSignElement>
     <position>
       <point>
-        <x>70.4011</x>
-        <y>18.2109</y>
+        <x>63.210000</x>
+        <y>7.6810000</y>
       </point>
     </position>
     <virtual>false</virtual>
