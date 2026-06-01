@@ -6,12 +6,10 @@ import numpy as np
 from commonroad.common.common_lanelet import LaneletType
 from commonroad.common.file_writer import CommonRoadFileWriter
 from commonroad.common.writer.file_writer_interface import OverwriteExistingFile
-
-warnings.filterwarnings('ignore')
-
 from commonroad.common.file_reader import CommonRoadFileReader
 from commonroad.visualization.mp_renderer import MPRenderer
 from commonroad.scenario.intersection import Intersection, IntersectionIncomingElement
+
 
 def find_left_of(lanelet_network, incomings):
     """
@@ -22,7 +20,8 @@ def find_left_of(lanelet_network, incomings):
 
     Only one closest incoming is assigned because incoming.left_of is an int.
     """
-    LANE_SEGMENT_ANGLE=30
+    LANE_SEGMENT_ANGLE = 30
+
     def _incoming_direction(incoming):
         vectors = []
 
@@ -131,12 +130,13 @@ def find_left_of(lanelet_network, incomings):
 
     return incomings
 
-file_path = 'maps/'
+
+file_path = "maps/"
 file_name = "DEU_AachenHeckstrasse-1_old"
 # file_name = "DEU_AachenAseag-1_old"
 scenario, planning_problem_set = CommonRoadFileReader(
-        os.path.join(file_path, file_name + '.xml')
-    ).open()
+    os.path.join(file_path, file_name + ".xml")
+).open()
 
 intersections = []
 
@@ -162,39 +162,52 @@ intersections = []
 # intersections.append(inc_4)
 
 # intersection for AachenHeckstrasse
-inc_1 = IntersectionIncomingElement(incoming_id=scenario.generate_object_id(), incoming_lanelets={124,123,125, 127, 128},
-                                    successors_straight=set(),
-                                    successors_left={155, 151},
-                                    successors_right={136})
+inc_1 = IntersectionIncomingElement(
+    incoming_id=scenario.generate_object_id(),
+    incoming_lanelets={124, 123, 125, 127, 128},
+    successors_straight=set(),
+    successors_left={155, 151},
+    successors_right={136},
+)
 intersections.append(inc_1)
-inc_2 = IntersectionIncomingElement(incoming_id=scenario.generate_object_id(), incoming_lanelets={105, 108},
-                                    successors_straight=set(),
-                                    successors_left={107},
-                                    successors_right=set())
+inc_2 = IntersectionIncomingElement(
+    incoming_id=scenario.generate_object_id(),
+    incoming_lanelets={105, 108},
+    successors_straight=set(),
+    successors_left={107},
+    successors_right=set(),
+)
 intersections.append(inc_2)
-inc_3 = IntersectionIncomingElement(incoming_id=scenario.generate_object_id(), incoming_lanelets={115, 142, 117, 150, 111},
-                                    successors_straight={152, 132, 129},
-                                    successors_left=set(),
-                                    successors_right=set())
+inc_3 = IntersectionIncomingElement(
+    incoming_id=scenario.generate_object_id(),
+    incoming_lanelets={115, 142, 117, 150, 111},
+    successors_straight={152, 132, 129},
+    successors_left=set(),
+    successors_right=set(),
+)
 intersections.append(inc_3)
 
-inc_4 = IntersectionIncomingElement(incoming_id=scenario.generate_object_id(), incoming_lanelets={102, 130},
-                                    successors_straight={131, 135, 143},
-                                    successors_left=set(),
-                                    successors_right=set())
+inc_4 = IntersectionIncomingElement(
+    incoming_id=scenario.generate_object_id(),
+    incoming_lanelets={102, 130},
+    successors_straight={131, 135, 143},
+    successors_left=set(),
+    successors_right=set(),
+)
 intersections.append(inc_4)
 
 intersections = find_left_of(scenario.lanelet_network, intersections)
 
 for inc in intersections:
-        successors = inc.successors_straight | inc.successors_left | inc.successors_right
-        for lanelet_id in list(successors):
-            lanelet = scenario.lanelet_network.find_lanelet_by_id(lanelet_id)
-            lanelet.lanelet_type = lanelet.lanelet_type | {LaneletType.INTERSECTION}
+    successors = inc.successors_straight | inc.successors_left | inc.successors_right
+    for lanelet_id in list(successors):
+        lanelet = scenario.lanelet_network.find_lanelet_by_id(lanelet_id)
+        lanelet.lanelet_type = lanelet.lanelet_type | {LaneletType.INTERSECTION}
 
 
-
-intersection = Intersection(intersection_id=scenario.generate_object_id(), incomings=intersections)
+intersection = Intersection(
+    intersection_id=scenario.generate_object_id(), incomings=intersections
+)
 
 scenario.lanelet_network.add_intersection(intersection)
 author = scenario.author
@@ -203,9 +216,11 @@ source = scenario.source
 tags = scenario.tags
 
 # write new scenario
-fw = CommonRoadFileWriter(scenario, planning_problem_set, author, affiliation, source, tags)
+fw = CommonRoadFileWriter(
+    scenario, planning_problem_set, author, affiliation, source, tags
+)
 
-file_name = "maps/" + file_name[:-4] + '.xml'
+file_name = "maps/" + file_name[:-4] + ".xml"
 fw.write_to_file(file_name, OverwriteExistingFile.ALWAYS)
 
 fig, ax = plt.subplots(figsize=(25, 10))
@@ -215,9 +230,9 @@ rnd.draw_params.lanelet_network.intersection.show_label = True
 rnd.draw_params.lanelet_network.intersection.draw_intersections = True
 rnd.draw_params.lanelet_network.intersection.draw_incoming_lanelets = True
 rnd.draw_params.lanelet_network.intersection.show_label = True
-rnd.draw_params.lanelet_network.intersection.successors_left_color = 'red'
-rnd.draw_params.lanelet_network.intersection.successors_right_color = 'blue'
-rnd.draw_params.lanelet_network.intersection.successors_straight_color = 'green'
+rnd.draw_params.lanelet_network.intersection.successors_left_color = "red"
+rnd.draw_params.lanelet_network.intersection.successors_right_color = "blue"
+rnd.draw_params.lanelet_network.intersection.successors_straight_color = "green"
 scenario.draw(rnd)
 planning_problem_set.draw(rnd)
 for sign in scenario.lanelet_network.traffic_signs:
