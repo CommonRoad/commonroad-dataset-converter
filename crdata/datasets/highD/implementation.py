@@ -23,6 +23,7 @@ from crdata.datasets.common.obstacle_utils import (
     get_acceleration,
     get_orientation,
     get_velocity,
+    unwrap_track_orientations,
 )
 
 from .map_utils import (
@@ -119,6 +120,10 @@ class HighdRecordingGenerator(IRecordingGenerator):
             vehicle_tracks.y = np.array(-(vehicle_tracks.y + vehicle_tracks.width / 2))
             vehicle_tracks["velocity"] = get_velocity(vehicle_tracks)
             vehicle_tracks["orientation"] = get_orientation(vehicle_tracks)
+            vehicle_tracks["orientation"] = unwrap_track_orientations(
+                vehicle_tracks,
+                speed_epsilon=0.2,
+            )
             vehicle_tracks["acceleration"] = get_acceleration(
                 vehicle_tracks, vehicle_tracks.orientation
             )
