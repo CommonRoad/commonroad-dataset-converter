@@ -43,6 +43,7 @@ def get_dt(recording_df: DataFrame) -> float:
     """
     return float(1.0 / recording_df["frameRate"].iloc[0])
 
+
 def unwrap_track_orientations(
     vehicle_tracks: DataFrame,
     speed_epsilon: float = 0.2,
