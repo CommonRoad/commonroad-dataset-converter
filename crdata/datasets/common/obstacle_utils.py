@@ -1,5 +1,5 @@
 import numpy as np
-from pandas import DataFrame
+from pandas import DataFrame, Series
 
 
 def get_velocity(track_df: DataFrame) -> np.array:
@@ -42,3 +42,42 @@ def get_dt(recording_df: DataFrame) -> float:
     :return: time step size
     """
     return float(1.0 / recording_df["frameRate"].iloc[0])
+
+def unwrap_track_orientations(
+    vehicle_tracks: DataFrame,
+    speed_epsilon: float = 0.2,
+) -> Series:
+    orientations = vehicle_tracks["orientation"].copy()
+
+    for vehicle_id, track in vehicle_tracks.groupby("id", sort=False):
+        track = track.sort_values("frame")
+        index = track.index
+
+        theta = track["orientation"].to_numpy(dtype=float)
+        speed = track["velocity"].to_numpy(dtype=float)
+
+        valid = np.isfinite(theta) & np.isfinite(speed) & (speed >= speed_epsilon)
+
+        if not np.any(valid):
+            continue
+
+        fixed = theta.copy()
+
+        # For nearly stationary frames, heading is undefined. Carry the nearest
+        # valid heading through those samples before unwrapping, so zero-speed
+        # velocity noise cannot create artificial rotations.
+        valid_indices = np.flatnonzero(valid)
+        first_valid = valid_indices[0]
+        fixed[:first_valid] = fixed[first_valid]
+
+        last_valid = first_valid
+        for i in range(first_valid + 1, len(fixed)):
+            if valid[i]:
+                last_valid = i
+            else:
+                fixed[i] = fixed[last_valid]
+
+        fixed = np.unwrap(fixed)
+        orientations.loc[index] = fixed
+
+    return orientations
