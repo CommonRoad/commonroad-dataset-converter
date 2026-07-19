@@ -7,10 +7,10 @@
   </location>
   <scenarioTags>
     <oncoming_traffic/>
-    <speed_limit/>
     <multi_lane/>
-    <urban/>
     <intersection/>
+    <urban/>
+    <speed_limit/>
   </scenarioTags>
   <lanelet id="0">
     <leftBound>
@@ -146,9 +146,9 @@
     </stopLine>
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="1">
@@ -357,9 +357,9 @@
     <adjacentLeft ref="7" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="3">
@@ -1984,7 +1984,7 @@
       <successorsRight ref="0"/>
       <successorsStraight ref="8"/>
       <successorsLeft ref="4"/>
-      <isLeftOf ref="30"/>
+      <isLeftOf ref="32"/>
     </incoming>
     <incoming id="30">
       <incomingLanelet ref="17"/>
@@ -1992,14 +1992,14 @@
       <successorsRight ref="1"/>
       <successorsStraight ref="9"/>
       <successorsLeft ref="5"/>
-      <isLeftOf ref="31"/>
+      <isLeftOf ref="29"/>
     </incoming>
     <incoming id="31">
       <incomingLanelet ref="23"/>
       <successorsRight ref="2"/>
       <successorsStraight ref="10"/>
       <successorsLeft ref="6"/>
-      <isLeftOf ref="32"/>
+      <isLeftOf ref="30"/>
     </incoming>
     <incoming id="32">
       <incomingLanelet ref="12"/>
@@ -2007,7 +2007,7 @@
       <successorsRight ref="3"/>
       <successorsStraight ref="11"/>
       <successorsLeft ref="7"/>
-      <isLeftOf ref="29"/>
+      <isLeftOf ref="31"/>
     </incoming>
   </intersection>
 </commonRoad>

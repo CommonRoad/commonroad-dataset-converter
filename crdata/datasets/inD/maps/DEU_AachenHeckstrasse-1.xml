@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<commonRoad timeStepSize="0.1" commonRoadVersion="2020a" author="Niels Mündler, Xiao Wang" affiliation="Technical University of Munich, Germany" source="https://www.ind-dataset.com/" benchmarkID="DEU_AachenHeckstrasse-1" date="2026-06-27">
+<commonRoad timeStepSize="0.1" commonRoadVersion="2020a" author="Niels Mündler, Xiao Wang" affiliation="Technical University of Munich, Germany" source="https://www.ind-dataset.com/" benchmarkID="DEU_AachenHeckstrasse-1" date="2021-02-21">
   <location>
     <geoNameId>-999</geoNameId>
     <gpsLatitude>999.0</gpsLatitude>
     <gpsLongitude>999.0</gpsLongitude>
   </location>
   <scenarioTags>
-    <speed_limit/>
-    <multi_lane/>
     <oncoming_traffic/>
+    <multi_lane/>
     <intersection/>
     <urban/>
+    <speed_limit/>
   </scenarioTags>
   <lanelet id="100">
     <leftBound>
@@ -120,8 +120,8 @@
     </rightBound>
     <predecessor ref="108"/>
     <successor ref="109"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
     <userOneWay>motorcycle</userOneWay>
@@ -553,8 +553,8 @@
     <predecessor ref="132"/>
     <successor ref="133"/>
     <adjacentLeft ref="108" drivingDir="opposite"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
     <userOneWay>motorcycle</userOneWay>
@@ -613,8 +613,8 @@
     </rightBound>
     <predecessor ref="130"/>
     <successor ref="135"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
     <userOneWay>motorcycle</userOneWay>
@@ -958,8 +958,8 @@
     </rightBound>
     <predecessor ref="131"/>
     <successor ref="143"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
     <userOneWay>motorcycle</userOneWay>
@@ -1519,8 +1519,8 @@
     </rightBound>
     <predecessor ref="111"/>
     <successor ref="132"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
     <userOneWay>motorcycle</userOneWay>
@@ -1550,8 +1550,8 @@
     </rightBound>
     <predecessor ref="152"/>
     <successor ref="129"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
     <userOneWay>motorcycle</userOneWay>
@@ -1612,8 +1612,8 @@
     </rightBound>
     <predecessor ref="128"/>
     <successor ref="151"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
     <userOneWay>motorcycle</userOneWay>
@@ -1658,8 +1658,8 @@
     </rightBound>
     <predecessor ref="155"/>
     <successor ref="112"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
     <userOneWay>motorcycle</userOneWay>
@@ -1688,8 +1688,8 @@
     </rightBound>
     <predecessor ref="135"/>
     <successor ref="112"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
     <userOneWay>motorcycle</userOneWay>
@@ -1761,8 +1761,8 @@
       </point>
       <lineMarking>broad_solid</lineMarking>
     </stopLine>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
     <userOneWay>car</userOneWay>
     <userOneWay>motorcycle</userOneWay>
@@ -2048,6 +2048,7 @@
     <incoming id="165">
       <incomingLanelet ref="105"/>
       <incomingLanelet ref="108"/>
+      <incomingLanelet ref="103"/>
       <successorsLeft ref="107"/>
       <isLeftOf ref="164"/>
     </incoming>
@@ -2063,6 +2064,7 @@
     </incoming>
     <incoming id="167">
       <incomingLanelet ref="130"/>
+      <incomingLanelet ref="100"/>
       <incomingLanelet ref="102"/>
       <successorsStraight ref="135"/>
       <successorsStraight ref="131"/>

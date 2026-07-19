@@ -6,11 +6,11 @@
     <gpsLongitude>999.0</gpsLongitude>
   </location>
   <scenarioTags>
-    <intersection/>
     <oncoming_traffic/>
-    <speed_limit/>
-    <urban/>
     <multi_lane/>
+    <intersection/>
+    <urban/>
+    <speed_limit/>
   </scenarioTags>
   <lanelet id="100">
     <leftBound>
@@ -1680,8 +1680,8 @@
     <predecessor ref="106"/>
     <successor ref="141"/>
     <adjacentLeft ref="146" drivingDir="opposite"/>
-    <laneletType>unknown</laneletType>
     <laneletType>intersection</laneletType>
+    <laneletType>unknown</laneletType>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="127">
@@ -2022,36 +2022,6 @@
     <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
-  <intersection id="1000">
-    <incoming id="1001">
-      <incomingLanelet ref="106"/>
-      <successorsRight ref="110"/>
-      <successorsStraight ref="108"/>
-      <successorsLeft ref="109"/>
-      <isLeftOf ref="1002"/>
-    </incoming>
-    <incoming id="1002">
-      <incomingLanelet ref="119"/>
-      <successorsRight ref="122"/>
-      <successorsStraight ref="118"/>
-      <successorsLeft ref="146"/>
-      <isLeftOf ref="1003"/>
-    </incoming>
-    <incoming id="1003">
-      <incomingLanelet ref="115"/>
-      <successorsRight ref="125"/>
-      <successorsStraight ref="114"/>
-      <successorsLeft ref="126"/>
-      <isLeftOf ref="1004"/>
-    </incoming>
-    <incoming id="1004">
-      <incomingLanelet ref="113"/>
-      <successorsRight ref="112"/>
-      <successorsStraight ref="120"/>
-      <successorsLeft ref="121"/>
-      <isLeftOf ref="1001"/>
-    </incoming>
-  </intersection>
   <trafficSign id="151">
     <trafficSignElement>
       <trafficSignID>301</trafficSignID>
@@ -2103,19 +2073,37 @@
   <intersection id="1000">
     <incoming id="1001">
       <incomingLanelet ref="106"/>
-      <isLeftOf ref="1002"/>
+      <incomingLanelet ref="107"/>
+      <incomingLanelet ref="102"/>
+      <successorsRight ref="110"/>
+      <successorsStraight ref="108"/>
+      <successorsLeft ref="109"/>
+      <isLeftOf ref="1004"/>
     </incoming>
     <incoming id="1002">
       <incomingLanelet ref="119"/>
-      <isLeftOf ref="1003"/>
+      <incomingLanelet ref="143"/>
+      <successorsRight ref="122"/>
+      <successorsStraight ref="118"/>
+      <successorsLeft ref="146"/>
+      <isLeftOf ref="1001"/>
     </incoming>
     <incoming id="1003">
       <incomingLanelet ref="115"/>
-      <isLeftOf ref="1004"/>
+      <incomingLanelet ref="124"/>
+      <successorsRight ref="125"/>
+      <successorsStraight ref="114"/>
+      <successorsLeft ref="126"/>
+      <isLeftOf ref="1002"/>
     </incoming>
     <incoming id="1004">
       <incomingLanelet ref="113"/>
-      <isLeftOf ref="1001"/>
+      <incomingLanelet ref="138"/>
+      <incomingLanelet ref="134"/>
+      <successorsRight ref="112"/>
+      <successorsStraight ref="120"/>
+      <successorsLeft ref="121"/>
+      <isLeftOf ref="1003"/>
     </incoming>
   </intersection>
 </commonRoad>

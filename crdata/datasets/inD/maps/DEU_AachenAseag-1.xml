@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<commonRoad timeStepSize="0.1" commonRoadVersion="2020a" author="Niels Mündler, Xiao Wang" affiliation="Technical University of Munich, Germany" source="https://www.ind-dataset.com/" benchmarkID="DEU_AachenAseag-1" date="2026-05-30">
+<commonRoad timeStepSize="0.1" commonRoadVersion="2020a" author="Niels Mündler, Xiao Wang" affiliation="Technical University of Munich, Germany" source="https://www.ind-dataset.com/" benchmarkID="DEU_AachenAseag-1" date="2023-10-30">
   <location>
     <geoNameId>-999</geoNameId>
     <gpsLatitude>999.0</gpsLatitude>
     <gpsLongitude>999.0</gpsLongitude>
   </location>
   <scenarioTags>
-    <speed_limit/>
+    <oncoming_traffic/>
     <multi_lane/>
     <intersection/>
-    <oncoming_traffic/>
     <urban/>
+    <speed_limit/>
   </scenarioTags>
   <lanelet id="100">
     <leftBound>
@@ -39,8 +39,8 @@
     <adjacentRight ref="104" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="103">
@@ -70,8 +70,8 @@
     <adjacentRight ref="107" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="107">
@@ -101,8 +101,8 @@
     <adjacentRight ref="110" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="111">
@@ -132,8 +132,8 @@
     <adjacentRight ref="114" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="113">
@@ -163,8 +163,8 @@
     <adjacentRight ref="116" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="116">
@@ -194,8 +194,8 @@
     <adjacentRight ref="118" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="119">
@@ -225,8 +225,8 @@
     <adjacentRight ref="123" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
     <trafficSignRef ref="257"/>
   </lanelet>
@@ -256,8 +256,8 @@
     <adjacentRight ref="119" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="125">
@@ -293,8 +293,8 @@
     <successor ref="115"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="126">
@@ -324,8 +324,8 @@
     <adjacentRight ref="129" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="129">
@@ -355,8 +355,8 @@
     <adjacentRight ref="132" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="133">
@@ -386,8 +386,8 @@
     <adjacentRight ref="137" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="136">
@@ -416,8 +416,8 @@
     <adjacentRight ref="133" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="139">
@@ -446,8 +446,8 @@
     <adjacentRight ref="135" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="135">
@@ -477,8 +477,8 @@
     <adjacentRight ref="142" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="143">
@@ -509,8 +509,8 @@
     <adjacentRight ref="147" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
     <trafficSignRef ref="251"/>
   </lanelet>
@@ -541,8 +541,8 @@
     <adjacentRight ref="149" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
     <trafficSignRef ref="258"/>
   </lanelet>
@@ -573,8 +573,8 @@
     <adjacentRight ref="151" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="144">
@@ -603,8 +603,8 @@
     <adjacentRight ref="148" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="153">
@@ -640,11 +640,11 @@
     <successor ref="154"/>
     <adjacentLeft ref="155" drivingDir="same"/>
     <adjacentRight ref="156" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
     <trafficSignRef ref="254"/>
   </lanelet>
@@ -680,11 +680,11 @@
     <predecessor ref="152"/>
     <successor ref="157"/>
     <adjacentRight ref="153" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
     <trafficSignRef ref="254"/>
   </lanelet>
@@ -712,11 +712,11 @@
     <predecessor ref="159"/>
     <successor ref="130"/>
     <adjacentLeft ref="160" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="160">
@@ -743,11 +743,11 @@
     <predecessor ref="161"/>
     <successor ref="127"/>
     <adjacentRight ref="158" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="161">
@@ -775,11 +775,11 @@
     <predecessor ref="146"/>
     <successor ref="160"/>
     <adjacentRight ref="159" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="159">
@@ -806,11 +806,11 @@
     <predecessor ref="163"/>
     <successor ref="158"/>
     <adjacentLeft ref="161" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="163">
@@ -837,11 +837,11 @@
     <predecessor ref="164"/>
     <successor ref="159"/>
     <adjacentLeft ref="162" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="162">
@@ -868,11 +868,11 @@
     <predecessor ref="165"/>
     <successor ref="161"/>
     <adjacentRight ref="163" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="164">
@@ -899,11 +899,11 @@
     <predecessor ref="166"/>
     <successor ref="163"/>
     <adjacentLeft ref="165" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
     <trafficSignRef ref="252"/>
   </lanelet>
@@ -931,11 +931,11 @@
     <predecessor ref="167"/>
     <successor ref="162"/>
     <adjacentRight ref="164" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
     <trafficSignRef ref="252"/>
   </lanelet>
@@ -973,11 +973,11 @@
     <successor ref="169"/>
     <successor ref="170"/>
     <adjacentRight ref="166" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
     <trafficSignRef ref="255"/>
   </lanelet>
@@ -1013,11 +1013,11 @@
     <predecessor ref="171"/>
     <successor ref="164"/>
     <adjacentLeft ref="167" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="171">
@@ -1055,8 +1055,8 @@
     <adjacentLeft ref="168" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="168">
@@ -1093,8 +1093,8 @@
     <adjacentRight ref="171" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="172">
@@ -1123,8 +1123,8 @@
     <adjacentLeft ref="174" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="174">
@@ -1153,8 +1153,8 @@
     <adjacentRight ref="172" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="175">
@@ -1184,8 +1184,8 @@
     <adjacentLeft ref="177" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="177">
@@ -1215,8 +1215,8 @@
     <adjacentRight ref="175" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="178">
@@ -1245,8 +1245,8 @@
     <adjacentLeft ref="180" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="180">
@@ -1276,8 +1276,8 @@
     <adjacentRight ref="178" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="184">
@@ -1307,8 +1307,8 @@
     <adjacentRight ref="186" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="186">
@@ -1338,8 +1338,8 @@
     <adjacentRight ref="189" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="190">
@@ -1368,8 +1368,8 @@
     <adjacentLeft ref="193" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="192">
@@ -1422,8 +1422,8 @@
     <adjacentLeft ref="195" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="196">
@@ -1462,11 +1462,11 @@
       <lineMarking>broad_dashed</lineMarking>
       <trafficSignRef ref="251"/>
     </stopLine>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
     <trafficSignRef ref="251"/>
     <trafficSignRef ref="253"/>
@@ -1504,8 +1504,8 @@
     <successor ref="200"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="201">
@@ -1535,8 +1535,8 @@
     <adjacentRight ref="205" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="205">
@@ -1567,8 +1567,8 @@
     <adjacentLeft ref="201" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="154">
@@ -1596,11 +1596,11 @@
     <predecessor ref="156"/>
     <successor ref="206"/>
     <adjacentLeft ref="157" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="157">
@@ -1627,11 +1627,11 @@
     <predecessor ref="155"/>
     <successor ref="202"/>
     <adjacentRight ref="154" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="193">
@@ -1661,8 +1661,8 @@
     <adjacentRight ref="190" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="209">
@@ -1691,8 +1691,8 @@
     <adjacentLeft ref="193" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="210">
@@ -1745,8 +1745,8 @@
     <successor ref="209"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="212">
@@ -1796,11 +1796,11 @@
     </rightBound>
     <predecessor ref="214"/>
     <successor ref="210"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="214">
@@ -1850,11 +1850,11 @@
     </rightBound>
     <predecessor ref="152"/>
     <successor ref="212"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="215">
@@ -1909,11 +1909,11 @@
       <lineMarking>broad_dashed</lineMarking>
       <trafficSignRef ref="251"/>
     </stopLine>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
     <trafficSignRef ref="251"/>
     <trafficSignRef ref="253"/>
@@ -2150,8 +2150,8 @@
     <adjacentRight ref="141" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="141">
@@ -2181,8 +2181,8 @@
     <adjacentRight ref="230" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="230">
@@ -2240,8 +2240,8 @@
     <adjacentRight ref="229" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="115">
@@ -2271,8 +2271,8 @@
     <adjacentRight ref="117" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="117">
@@ -2302,8 +2302,8 @@
     <adjacentRight ref="121" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="121">
@@ -2333,8 +2333,8 @@
     <adjacentRight ref="220" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="150">
@@ -2364,8 +2364,8 @@
     <adjacentRight ref="232" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="232">
@@ -2423,8 +2423,8 @@
     <adjacentRight ref="150" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="222">
@@ -2482,8 +2482,8 @@
     <adjacentRight ref="222" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="128">
@@ -2512,8 +2512,8 @@
     <adjacentRight ref="131" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="219">
@@ -2571,8 +2571,8 @@
     <adjacentRight ref="219" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="124">
@@ -2601,8 +2601,8 @@
     <adjacentRight ref="120" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="179">
@@ -2645,8 +2645,8 @@
     <predecessor ref="175"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="176">
@@ -2688,8 +2688,8 @@
     </rightBound>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="225">
@@ -2724,11 +2724,11 @@
     <predecessor ref="217"/>
     <successor ref="130"/>
     <adjacentRight ref="223" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="217">
@@ -2770,11 +2770,11 @@
     </rightBound>
     <predecessor ref="215"/>
     <successor ref="225"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="221">
@@ -2834,8 +2834,8 @@
     <adjacentRight ref="221" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="127">
@@ -2865,8 +2865,8 @@
     <adjacentRight ref="130" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="173">
@@ -2900,11 +2900,11 @@
     </rightBound>
     <predecessor ref="171"/>
     <successor ref="233"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="234">
@@ -2930,11 +2930,11 @@
     </rightBound>
     <predecessor ref="235"/>
     <successor ref="213"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="213">
@@ -2960,11 +2960,11 @@
     </rightBound>
     <predecessor ref="234"/>
     <successor ref="210"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="236">
@@ -2990,8 +2990,8 @@
     </rightBound>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userBidirectional>car</userBidirectional>
     <userBidirectional>priorityVehicle</userBidirectional>
+    <userBidirectional>car</userBidirectional>
     <userBidirectional>motorcycle</userBidirectional>
   </lanelet>
   <lanelet id="237">
@@ -3020,8 +3020,8 @@
     <adjacentLeft ref="109" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="109">
@@ -3051,8 +3051,8 @@
     <adjacentRight ref="237" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="106">
@@ -3082,8 +3082,8 @@
     <adjacentRight ref="109" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="110">
@@ -3113,8 +3113,8 @@
     <adjacentLeft ref="107" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="104">
@@ -3143,8 +3143,8 @@
     <adjacentLeft ref="100" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="241">
@@ -3173,8 +3173,8 @@
     <adjacentLeft ref="108" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="108">
@@ -3204,8 +3204,8 @@
     <adjacentRight ref="241" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="105">
@@ -3235,8 +3235,8 @@
     <adjacentRight ref="108" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="102">
@@ -3266,8 +3266,8 @@
     <adjacentRight ref="244" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="244">
@@ -3296,8 +3296,8 @@
     <adjacentLeft ref="102" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="118">
@@ -3326,8 +3326,8 @@
     <adjacentLeft ref="116" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="220">
@@ -3385,8 +3385,8 @@
     <adjacentRight ref="226" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="200">
@@ -3422,8 +3422,8 @@
     <successor ref="202"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="112">
@@ -3453,8 +3453,8 @@
     <adjacentRight ref="231" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="231">
@@ -3484,8 +3484,8 @@
     <adjacentRight ref="228" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="228">
@@ -3570,8 +3570,8 @@
     <adjacentRight ref="134" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="145">
@@ -3647,8 +3647,8 @@
     <successor ref="130"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="216">
@@ -3676,11 +3676,11 @@
     <successor ref="215"/>
     <successor ref="245"/>
     <adjacentLeft ref="197" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="197">
@@ -3707,11 +3707,11 @@
     <predecessor ref="246"/>
     <successor ref="196"/>
     <adjacentRight ref="216" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="233">
@@ -3761,11 +3761,11 @@
     </rightBound>
     <predecessor ref="173"/>
     <successor ref="235"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="235">
@@ -3792,9 +3792,10 @@
     <predecessor ref="233"/>
     <successor ref="234"/>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="194">
@@ -3823,8 +3824,8 @@
     <adjacentLeft ref="246" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="246">
@@ -3853,8 +3854,8 @@
     <adjacentRight ref="194" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="195">
@@ -3907,8 +3908,8 @@
     <adjacentRight ref="192" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="146">
@@ -3968,8 +3969,8 @@
     <successor ref="161"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="169">
@@ -4045,8 +4046,8 @@
     <successor ref="202"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="170">
@@ -4114,8 +4115,8 @@
     <successor ref="205"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="224">
@@ -4259,11 +4260,11 @@
     </rightBound>
     <predecessor ref="196"/>
     <successor ref="205"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="206">
@@ -4290,11 +4291,11 @@
     <predecessor ref="154"/>
     <successor ref="205"/>
     <adjacentLeft ref="202" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="202">
@@ -4323,11 +4324,11 @@
     <predecessor ref="200"/>
     <successor ref="201"/>
     <adjacentRight ref="206" drivingDir="same"/>
-    <laneletType>intersection</laneletType>
     <laneletType>urban</laneletType>
+    <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="151">
@@ -4463,8 +4464,8 @@
     <adjacentRight ref="247" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="203">
@@ -4517,8 +4518,8 @@
     <adjacentRight ref="204" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="181">
@@ -4548,8 +4549,8 @@
     <adjacentRight ref="187" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="156">
@@ -4620,8 +4621,8 @@
     <successor ref="127"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="101">
@@ -4651,8 +4652,8 @@
     <adjacentRight ref="243" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="243">
@@ -4682,8 +4683,8 @@
     <adjacentLeft ref="101" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="240">
@@ -4712,8 +4713,8 @@
     <adjacentRight ref="239" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="239">
@@ -4742,8 +4743,8 @@
     <adjacentRight ref="238" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="238">
@@ -4771,8 +4772,8 @@
     <adjacentLeft ref="239" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="211">
@@ -4800,8 +4801,8 @@
     <adjacentLeft ref="208" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="250">
@@ -4829,8 +4830,8 @@
     <adjacentLeft ref="188" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="188">
@@ -4859,8 +4860,8 @@
     <adjacentRight ref="250" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="185">
@@ -4889,8 +4890,8 @@
     <adjacentRight ref="188" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="189">
@@ -4919,8 +4920,8 @@
     <adjacentLeft ref="186" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="247">
@@ -4949,8 +4950,8 @@
     <adjacentLeft ref="187" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="207">
@@ -4979,8 +4980,8 @@
     <adjacentLeft ref="204" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="208">
@@ -5009,8 +5010,8 @@
     <adjacentRight ref="191" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="191">
@@ -5038,8 +5039,8 @@
     <adjacentLeft ref="208" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="248">
@@ -5068,8 +5069,8 @@
     <adjacentRight ref="249" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="249">
@@ -5097,8 +5098,8 @@
     <adjacentLeft ref="248" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="183">
@@ -5127,8 +5128,8 @@
     <adjacentRight ref="182" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="182">
@@ -5156,8 +5157,8 @@
     <adjacentLeft ref="183" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <lanelet id="204">
@@ -5187,8 +5188,8 @@
     <adjacentRight ref="207" drivingDir="same"/>
     <laneletType>urban</laneletType>
     <userOneWay>bicycle</userOneWay>
-    <userOneWay>motorcycle</userOneWay>
     <userOneWay>car</userOneWay>
+    <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
   <trafficSign id="251">
@@ -5301,7 +5302,9 @@
   </trafficSign>
   <intersection id="263">
     <incoming id="260">
+      <incomingLanelet ref="133"/>
       <incomingLanelet ref="135"/>
+      <incomingLanelet ref="136"/>
       <incomingLanelet ref="139"/>
       <incomingLanelet ref="140"/>
       <incomingLanelet ref="141"/>
@@ -5324,9 +5327,10 @@
     <incoming id="261">
       <incomingLanelet ref="168"/>
       <incomingLanelet ref="171"/>
+      <successorsRight ref="213"/>
       <successorsRight ref="233"/>
       <successorsRight ref="234"/>
-      <successorsRight ref="213"/>
+      <successorsRight ref="235"/>
       <successorsRight ref="173"/>
       <successorsStraight ref="160"/>
       <successorsStraight ref="161"/>
