@@ -5181,18 +5181,6 @@
     <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
   </lanelet>
-  <trafficSign id="251">
-    <trafficSignElement>
-      <trafficSignID>205</trafficSignID>
-    </trafficSignElement>
-    <position>
-      <point>
-        <x>121.0813</x>
-        <y>-69.7446</y>
-      </point>
-    </position>
-    <virtual>false</virtual>
-  </trafficSign>
   <trafficSign id="253">
     <trafficSignElement>
       <trafficSignID>205</trafficSignID>
@@ -5217,30 +5205,6 @@
     </position>
     <virtual>false</virtual>
   </trafficSign>
-  <trafficSign id="255">
-    <trafficSignElement>
-      <trafficSignID>205</trafficSignID>
-    </trafficSignElement>
-    <position>
-      <point>
-        <x>164.4813</x>
-        <y>-38.2446</y>
-      </point>
-    </position>
-    <virtual>false</virtual>
-  </trafficSign>
-  <trafficSign id="254">
-    <trafficSignElement>
-      <trafficSignID>301</trafficSignID>
-    </trafficSignElement>
-    <position>
-      <point>
-        <x>149.3413</x>
-        <y>-67.1446</y>
-      </point>
-    </position>
-    <virtual>false</virtual>
-  </trafficSign>
   <trafficSign id="257">
     <trafficSignElement>
       <trafficSignID>301</trafficSignID>
@@ -5261,18 +5225,6 @@
       <point>
         <x>78.4913</x>
         <y>-77.1446</y>
-      </point>
-    </position>
-    <virtual>false</virtual>
-  </trafficSign>
-  <trafficSign id="258">
-    <trafficSignElement>
-      <trafficSignID>301</trafficSignID>
-    </trafficSignElement>
-    <position>
-      <point>
-        <x>129.4555</x>
-        <y>-74.9688</y>
       </point>
     </position>
     <virtual>false</virtual>

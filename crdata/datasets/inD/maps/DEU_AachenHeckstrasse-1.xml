@@ -1980,18 +1980,6 @@
     </position>
     <virtual>false</virtual>
   </trafficSign>
-  <trafficSign id="160">
-    <trafficSignElement>
-      <trafficSignID>301</trafficSignID>
-    </trafficSignElement>
-    <position>
-      <point>
-        <x>29.6147</x>
-        <y>-30.3587</y>
-      </point>
-    </position>
-    <virtual>false</virtual>
-  </trafficSign>
   <trafficSign id="162">
     <trafficSignElement>
       <trafficSignID>306</trafficSignID>
