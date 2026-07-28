@@ -6,11 +6,11 @@
     <gpsLongitude>999.0</gpsLongitude>
   </location>
   <scenarioTags>
-    <oncoming_traffic/>
-    <multi_lane/>
-    <intersection/>
-    <urban/>
-    <speed_limit/>
+    <oncoming_traffic />
+    <multi_lane />
+    <intersection />
+    <urban />
+    <speed_limit />
   </scenarioTags>
   <lanelet id="0">
     <leftBound>
@@ -129,9 +129,9 @@
         <y>-20.9816</y>
       </point>
     </rightBound>
-    <predecessor ref="14"/>
-    <successor ref="19"/>
-    <adjacentLeft ref="5" drivingDir="opposite"/>
+    <predecessor ref="14" />
+    <successor ref="19" />
+    <adjacentLeft ref="5" drivingDir="opposite" />
     <stopLine>
       <point>
         <x>51.4</x>
@@ -142,7 +142,6 @@
         <y>-25.6</y>
       </point>
       <lineMarking>broad_solid</lineMarking>
-      <trafficSignRef ref="4000"/>
     </stopLine>
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
@@ -214,10 +213,9 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="17"/>
-    <successor ref="22"/>
+    <predecessor ref="17" />
+    <successor ref="22" />
     <laneletType>intersection</laneletType>
-    <trafficSignRef ref="26"/>
   </lanelet>
   <lanelet id="2">
     <leftBound>
@@ -352,9 +350,9 @@
         <y>-43.4816</y>
       </point>
     </rightBound>
-    <predecessor ref="23"/>
-    <successor ref="21"/>
-    <adjacentLeft ref="7" drivingDir="opposite"/>
+    <predecessor ref="23" />
+    <successor ref="21" />
+    <adjacentLeft ref="7" drivingDir="opposite" />
     <laneletType>urban</laneletType>
     <laneletType>intersection</laneletType>
     <userOneWay>bicycle</userOneWay>
@@ -425,11 +423,9 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="13"/>
-    <successor ref="20"/>
+    <predecessor ref="13" />
+    <successor ref="20" />
     <laneletType>intersection</laneletType>
-    <trafficSignRef ref="26"/>
-    <trafficSignRef ref="27"/>
   </lanelet>
   <lanelet id="4">
     <leftBound>
@@ -510,8 +506,8 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="14"/>
-    <successor ref="21"/>
+    <predecessor ref="14" />
+    <successor ref="21" />
     <stopLine>
       <point>
         <x>55.25</x>
@@ -522,10 +518,8 @@
         <y>-28.8</y>
       </point>
       <lineMarking>broad_dashed</lineMarking>
-      <trafficSignRef ref="4000"/>
     </stopLine>
     <laneletType>intersection</laneletType>
-    <trafficSignRef ref="28"/>
   </lanelet>
   <lanelet id="5">
     <leftBound>
@@ -646,8 +640,8 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="18"/>
-    <successor ref="20"/>
+    <predecessor ref="18" />
+    <successor ref="20" />
     <stopLine>
       <point>
         <x>49.6476</x>
@@ -658,11 +652,9 @@
         <y>-26.4816</y>
       </point>
       <lineMarking>broad_dashed</lineMarking>
-      <trafficSignRef ref="28"/>
     </stopLine>
     <laneletType>intersection</laneletType>
-    <trafficSignRef ref="26"/>
-    <trafficSignRef ref="28"/>
+    <trafficSignRef ref="26" />
   </lanelet>
   <lanelet id="6">
     <leftBound>
@@ -743,8 +735,8 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="23"/>
-    <successor ref="19"/>
+    <predecessor ref="23" />
+    <successor ref="19" />
     <laneletType>intersection</laneletType>
   </lanelet>
   <lanelet id="7">
@@ -882,9 +874,9 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="12"/>
-    <successor ref="22"/>
-    <adjacentLeft ref="2" drivingDir="opposite"/>
+    <predecessor ref="12" />
+    <successor ref="22" />
+    <adjacentLeft ref="2" drivingDir="opposite" />
     <stopLine>
       <point>
         <x>59.5076</x>
@@ -895,11 +887,8 @@
         <y>-37.3816</y>
       </point>
       <lineMarking>broad_dashed</lineMarking>
-      <trafficSignRef ref="27"/>
     </stopLine>
     <laneletType>intersection</laneletType>
-    <trafficSignRef ref="26"/>
-    <trafficSignRef ref="27"/>
   </lanelet>
   <lanelet id="8">
     <leftBound>
@@ -964,9 +953,9 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="14"/>
-    <successor ref="22"/>
-    <adjacentLeft ref="10" drivingDir="opposite"/>
+    <predecessor ref="14" />
+    <successor ref="22" />
+    <adjacentLeft ref="10" drivingDir="opposite" />
     <stopLine>
       <point>
         <x>55.25</x>
@@ -977,10 +966,8 @@
         <y>-28.8</y>
       </point>
       <lineMarking>broad_dashed</lineMarking>
-      <trafficSignRef ref="4000"/>
     </stopLine>
     <laneletType>intersection</laneletType>
-    <trafficSignRef ref="28"/>
   </lanelet>
   <lanelet id="9">
     <leftBound>
@@ -1029,10 +1016,9 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="17"/>
-    <successor ref="21"/>
+    <predecessor ref="17" />
+    <successor ref="21" />
     <laneletType>intersection</laneletType>
-    <trafficSignRef ref="26"/>
   </lanelet>
   <lanelet id="10">
     <leftBound>
@@ -1097,9 +1083,9 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="23"/>
-    <successor ref="20"/>
-    <adjacentLeft ref="8" drivingDir="opposite"/>
+    <predecessor ref="23" />
+    <successor ref="20" />
+    <adjacentLeft ref="8" drivingDir="opposite" />
     <laneletType>intersection</laneletType>
   </lanelet>
   <lanelet id="11">
@@ -1173,11 +1159,9 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="13"/>
-    <successor ref="19"/>
+    <predecessor ref="13" />
+    <successor ref="19" />
     <laneletType>intersection</laneletType>
-    <trafficSignRef ref="26"/>
-    <trafficSignRef ref="27"/>
   </lanelet>
   <lanelet id="12">
     <leftBound>
@@ -1242,11 +1226,12 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="24"/>
-    <successor ref="7"/>
-    <adjacentLeft ref="21" drivingDir="opposite"/>
-    <adjacentRight ref="13" drivingDir="same"/>
+    <predecessor ref="24" />
+    <successor ref="7" />
+    <adjacentLeft ref="21" drivingDir="opposite" />
+    <adjacentRight ref="13" drivingDir="same" />
     <laneletType>unknown</laneletType>
+    <trafficSignRef ref="27" />
   </lanelet>
   <lanelet id="13">
     <leftBound>
@@ -1311,10 +1296,10 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="24"/>
-    <successor ref="11"/>
-    <successor ref="3"/>
-    <adjacentLeft ref="12" drivingDir="same"/>
+    <predecessor ref="24" />
+    <successor ref="11" />
+    <successor ref="3" />
+    <adjacentLeft ref="12" drivingDir="same" />
     <laneletType>unknown</laneletType>
   </lanelet>
   <lanelet id="14">
@@ -1380,11 +1365,12 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <successor ref="4"/>
-    <successor ref="8"/>
-    <successor ref="0"/>
-    <adjacentLeft ref="20" drivingDir="opposite"/>
+    <successor ref="4" />
+    <successor ref="8" />
+    <successor ref="0" />
+    <adjacentLeft ref="20" drivingDir="opposite" />
     <laneletType>unknown</laneletType>
+    <trafficSignRef ref="28" />
   </lanelet>
   <lanelet id="15">
     <leftBound>
@@ -1425,9 +1411,9 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <successor ref="17"/>
-    <successor ref="18"/>
-    <adjacentLeft ref="16" drivingDir="opposite"/>
+    <successor ref="17" />
+    <successor ref="18" />
+    <adjacentLeft ref="16" drivingDir="opposite" />
     <laneletType>unknown</laneletType>
   </lanelet>
   <lanelet id="16">
@@ -1469,8 +1455,8 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="19"/>
-    <adjacentLeft ref="15" drivingDir="opposite"/>
+    <predecessor ref="19" />
+    <adjacentLeft ref="15" drivingDir="opposite" />
     <laneletType>unknown</laneletType>
   </lanelet>
   <lanelet id="17">
@@ -1528,11 +1514,12 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="15"/>
-    <successor ref="9"/>
-    <successor ref="1"/>
-    <adjacentLeft ref="18" drivingDir="same"/>
+    <predecessor ref="15" />
+    <successor ref="9" />
+    <successor ref="1" />
+    <adjacentLeft ref="18" drivingDir="same" />
     <laneletType>unknown</laneletType>
+    <trafficSignRef ref="34" />
   </lanelet>
   <lanelet id="18">
     <leftBound>
@@ -1589,10 +1576,10 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="15"/>
-    <successor ref="5"/>
-    <adjacentLeft ref="19" drivingDir="opposite"/>
-    <adjacentRight ref="17" drivingDir="same"/>
+    <predecessor ref="15" />
+    <successor ref="5" />
+    <adjacentLeft ref="19" drivingDir="opposite" />
+    <adjacentRight ref="17" drivingDir="same" />
     <laneletType>unknown</laneletType>
   </lanelet>
   <lanelet id="19">
@@ -1650,11 +1637,11 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="6"/>
-    <predecessor ref="11"/>
-    <predecessor ref="0"/>
-    <successor ref="16"/>
-    <adjacentLeft ref="18" drivingDir="opposite"/>
+    <predecessor ref="6" />
+    <predecessor ref="11" />
+    <predecessor ref="0" />
+    <successor ref="16" />
+    <adjacentLeft ref="18" drivingDir="opposite" />
     <laneletType>unknown</laneletType>
   </lanelet>
   <lanelet id="20">
@@ -1720,10 +1707,10 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="5"/>
-    <predecessor ref="10"/>
-    <predecessor ref="3"/>
-    <adjacentLeft ref="14" drivingDir="opposite"/>
+    <predecessor ref="5" />
+    <predecessor ref="10" />
+    <predecessor ref="3" />
+    <adjacentLeft ref="14" drivingDir="opposite" />
     <laneletType>unknown</laneletType>
   </lanelet>
   <lanelet id="21">
@@ -1789,11 +1776,11 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="4"/>
-    <predecessor ref="2"/>
-    <predecessor ref="9"/>
-    <successor ref="25"/>
-    <adjacentLeft ref="12" drivingDir="opposite"/>
+    <predecessor ref="4" />
+    <predecessor ref="2" />
+    <predecessor ref="9" />
+    <successor ref="25" />
+    <adjacentLeft ref="12" drivingDir="opposite" />
     <laneletType>unknown</laneletType>
   </lanelet>
   <lanelet id="22">
@@ -1827,12 +1814,12 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="7"/>
-    <predecessor ref="8"/>
-    <predecessor ref="1"/>
-    <adjacentLeft ref="23" drivingDir="opposite"/>
+    <predecessor ref="7" />
+    <predecessor ref="8" />
+    <predecessor ref="1" />
+    <adjacentLeft ref="23" drivingDir="opposite" />
     <laneletType>unknown</laneletType>
-    <trafficSignRef ref="28"/>
+    <trafficSignRef ref="28" />
   </lanelet>
   <lanelet id="23">
     <leftBound>
@@ -1865,11 +1852,12 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <successor ref="2"/>
-    <successor ref="6"/>
-    <successor ref="10"/>
-    <adjacentLeft ref="22" drivingDir="opposite"/>
+    <successor ref="2" />
+    <successor ref="6" />
+    <successor ref="10" />
+    <adjacentLeft ref="22" drivingDir="opposite" />
     <laneletType>unknown</laneletType>
+    <trafficSignRef ref="35" />
   </lanelet>
   <lanelet id="24">
     <leftBound>
@@ -1902,9 +1890,9 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <successor ref="13"/>
-    <successor ref="12"/>
-    <adjacentLeft ref="25" drivingDir="opposite"/>
+    <successor ref="13" />
+    <successor ref="12" />
+    <adjacentLeft ref="25" drivingDir="opposite" />
     <laneletType>unknown</laneletType>
   </lanelet>
   <lanelet id="25">
@@ -1938,8 +1926,8 @@
       </point>
       <lineMarking>no_marking</lineMarking>
     </rightBound>
-    <predecessor ref="21"/>
-    <adjacentLeft ref="24" drivingDir="opposite"/>
+    <predecessor ref="21" />
+    <adjacentLeft ref="24" drivingDir="opposite" />
     <laneletType>unknown</laneletType>
   </lanelet>
   <trafficSign id="26">
@@ -1978,36 +1966,60 @@
     </position>
     <virtual>false</virtual>
   </trafficSign>
+  <trafficSign id="34">
+    <trafficSignElement>
+      <trafficSignID>301</trafficSignID>
+    </trafficSignElement>
+    <position>
+      <point>
+        <x>42.920911169605965</x>
+        <y>-27.207639808654736</y>
+      </point>
+    </position>
+    <virtual>false</virtual>
+  </trafficSign>
+  <trafficSign id="35">
+    <trafficSignElement>
+      <trafficSignID>205</trafficSignID>
+    </trafficSignElement>
+    <position>
+      <point>
+        <x>52.22646001061408</x>
+        <y>-47.259543865118346</y>
+      </point>
+    </position>
+    <virtual>false</virtual>
+  </trafficSign>
   <intersection id="33">
     <incoming id="29">
-      <incomingLanelet ref="14"/>
-      <successorsRight ref="0"/>
-      <successorsStraight ref="8"/>
-      <successorsLeft ref="4"/>
-      <isLeftOf ref="32"/>
+      <incomingLanelet ref="14" />
+      <successorsRight ref="0" />
+      <successorsStraight ref="8" />
+      <successorsLeft ref="4" />
+      <isLeftOf ref="32" />
     </incoming>
     <incoming id="30">
-      <incomingLanelet ref="17"/>
-      <incomingLanelet ref="18"/>
-      <successorsRight ref="1"/>
-      <successorsStraight ref="9"/>
-      <successorsLeft ref="5"/>
-      <isLeftOf ref="29"/>
+      <incomingLanelet ref="17" />
+      <incomingLanelet ref="18" />
+      <successorsRight ref="1" />
+      <successorsStraight ref="9" />
+      <successorsLeft ref="5" />
+      <isLeftOf ref="29" />
     </incoming>
     <incoming id="31">
-      <incomingLanelet ref="23"/>
-      <successorsRight ref="2"/>
-      <successorsStraight ref="10"/>
-      <successorsLeft ref="6"/>
-      <isLeftOf ref="30"/>
+      <incomingLanelet ref="23" />
+      <successorsRight ref="2" />
+      <successorsStraight ref="10" />
+      <successorsLeft ref="6" />
+      <isLeftOf ref="30" />
     </incoming>
     <incoming id="32">
-      <incomingLanelet ref="12"/>
-      <incomingLanelet ref="13"/>
-      <successorsRight ref="3"/>
-      <successorsStraight ref="11"/>
-      <successorsLeft ref="7"/>
-      <isLeftOf ref="31"/>
+      <incomingLanelet ref="12" />
+      <incomingLanelet ref="13" />
+      <successorsRight ref="3" />
+      <successorsStraight ref="11" />
+      <successorsLeft ref="7" />
+      <isLeftOf ref="31" />
     </incoming>
   </intersection>
 </commonRoad>
