@@ -1104,7 +1104,6 @@
     <userOneWay>car</userOneWay>
     <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="162" />
   </lanelet>
   <lanelet id="117">
     <leftBound>
@@ -1225,7 +1224,6 @@
     <userOneWay>car</userOneWay>
     <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="162" />
   </lanelet>
   <lanelet id="150">
     <leftBound>
@@ -1980,21 +1978,9 @@
     </position>
     <virtual>false</virtual>
   </trafficSign>
-  <trafficSign id="162">
-    <trafficSignElement>
-      <trafficSignID>306</trafficSignID>
-    </trafficSignElement>
-    <position>
-      <point>
-        <x>64.5547</x>
-        <y>-35.7587</y>
-      </point>
-    </position>
-    <virtual>false</virtual>
-  </trafficSign>
   <trafficSign id="161">
     <trafficSignElement>
-      <trafficSignID>205</trafficSignID>
+      <trafficSignID>250</trafficSignID>
     </trafficSignElement>
     <position>
       <point>

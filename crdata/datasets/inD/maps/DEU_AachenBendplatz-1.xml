@@ -1519,7 +1519,7 @@
     <successor ref="1" />
     <adjacentLeft ref="18" drivingDir="same" />
     <laneletType>unknown</laneletType>
-    <trafficSignRef ref="34" />
+    <trafficSignRef ref="26" />
   </lanelet>
   <lanelet id="18">
     <leftBound>
@@ -1581,6 +1581,7 @@
     <adjacentLeft ref="19" drivingDir="opposite" />
     <adjacentRight ref="17" drivingDir="same" />
     <laneletType>unknown</laneletType>
+    <trafficSignRef ref="26" />
   </lanelet>
   <lanelet id="19">
     <leftBound>
@@ -1819,7 +1820,6 @@
     <predecessor ref="1" />
     <adjacentLeft ref="23" drivingDir="opposite" />
     <laneletType>unknown</laneletType>
-    <trafficSignRef ref="28" />
   </lanelet>
   <lanelet id="23">
     <leftBound>
@@ -1962,18 +1962,6 @@
       <point>
         <x>54.8976</x>
         <y>-19.4816</y>
-      </point>
-    </position>
-    <virtual>false</virtual>
-  </trafficSign>
-  <trafficSign id="34">
-    <trafficSignElement>
-      <trafficSignID>301</trafficSignID>
-    </trafficSignElement>
-    <position>
-      <point>
-        <x>42.920911169605965</x>
-        <y>-27.207639808654736</y>
       </point>
     </position>
     <virtual>false</virtual>

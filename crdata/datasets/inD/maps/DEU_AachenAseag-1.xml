@@ -228,7 +228,6 @@
     <userOneWay>car</userOneWay>
     <userOneWay>motorcycle</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="257" />
   </lanelet>
   <lanelet id="122">
     <leftBound>
@@ -1933,7 +1932,6 @@
     <laneletType>busLane</laneletType>
     <userOneWay>bus</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="256" />
   </lanelet>
   <lanelet id="132">
     <leftBound>
@@ -2110,7 +2108,6 @@
     <laneletType>busLane</laneletType>
     <userOneWay>bus</userOneWay>
     <userBidirectional>priorityVehicle</userBidirectional>
-    <trafficSignRef ref="259" />
   </lanelet>
   <lanelet id="140">
     <leftBound>
@@ -5201,42 +5198,6 @@
       <point>
         <x>138.7313</x>
         <y>-48.0446</y>
-      </point>
-    </position>
-    <virtual>false</virtual>
-  </trafficSign>
-  <trafficSign id="257">
-    <trafficSignElement>
-      <trafficSignID>301</trafficSignID>
-    </trafficSignElement>
-    <position>
-      <point>
-        <x>77.1213</x>
-        <y>-77.0446</y>
-      </point>
-    </position>
-    <virtual>false</virtual>
-  </trafficSign>
-  <trafficSign id="256">
-    <trafficSignElement>
-      <trafficSignID>205</trafficSignID>
-    </trafficSignElement>
-    <position>
-      <point>
-        <x>78.4913</x>
-        <y>-77.1446</y>
-      </point>
-    </position>
-    <virtual>false</virtual>
-  </trafficSign>
-  <trafficSign id="259">
-    <trafficSignElement>
-      <trafficSignID>205</trafficSignID>
-    </trafficSignElement>
-    <position>
-      <point>
-        <x>131.0658</x>
-        <y>-77.5598</y>
       </point>
     </position>
     <virtual>false</virtual>
