@@ -30,7 +30,7 @@ tqdm = "^4.64.1"
 pyproj = "^3.4.0"
 pyarrow = ">=10.0.1"
 commonroad-route-planner = "^2025.1.0"
-commonroad-drivability-checker = "^2025.3.1"
+commonroad-drivability-checker = "^2025.4"
 commonroad-clcs = "^2025.2.0"
 pydantic = "^2.3.0"
 
