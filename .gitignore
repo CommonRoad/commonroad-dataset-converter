@@ -23,3 +23,5 @@ tests/outputs/
 /tests/resources/round/
 /tests/resources/sind/
 /tests/resources/unid/
+
+.DS_Store
