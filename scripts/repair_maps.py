@@ -1,3 +1,15 @@
+import glob
+import logging
+import traceback
+from functools import partial
+from multiprocessing import Pool
+from pathlib import Path
+from typing import List
+
+from commonroad.common.file_reader import CommonRoadFileReader
+from commonroad.common.file_writer import CommonRoadFileWriter, OverwriteExistingFile
+from commonroad.visualization.mp_renderer import MPRenderer
+from crdesigner.verification_repairing.config import MapVerParams
 from crdesigner.verification_repairing.map_verification_repairing import (
     verify_and_repair_scenario,
 )
@@ -5,18 +17,6 @@ from crdesigner.verification_repairing.verification.formula_ids import (
     FormulaID,
     LaneletFormulaID,
 )
-from crdesigner.verification_repairing.config import MapVerParams
-from commonroad.common.file_reader import CommonRoadFileReader
-from commonroad.common.file_writer import CommonRoadFileWriter, OverwriteExistingFile
-from commonroad.visualization.mp_renderer import MPRenderer
-from typing import List
-from multiprocessing import Pool
-from functools import partial
-import logging
-import traceback
-import glob
-from pathlib import Path
-
 
 date_strftime_format = "%d-%b-%y %H:%M:%S"
 message_format = "%(asctime)s - %(levelname)s - %(message)s"
@@ -53,15 +53,13 @@ def eval_maps(config: MapVerParams, path: str):
                 path, OverwriteExistingFile.ALWAYS
             )
         else:
-            logging.info("eval map {} is valid".format(sc.scenario_id))
+            logging.info(f"eval map {sc.scenario_id} is valid")
     except Exception:
-        logging.error(
-            "eval map {}, error: {}".format(sc.scenario_id, traceback.format_exc())
-        )
+        logging.error(f"eval map {sc.scenario_id}, error: {traceback.format_exc()}")
 
 
 def prepare_and_execute_eval(
-    scenario_base_dir: Path, selected_formulas: List[FormulaID], num_cores: int = 1
+    scenario_base_dir: Path, selected_formulas: list[FormulaID], num_cores: int = 1
 ):
     relevant_scenario_paths = glob.glob(f"{scenario_base_dir}/**/*.xml", recursive=True)
     path = Path(__file__).parent.parent / Path("figures")

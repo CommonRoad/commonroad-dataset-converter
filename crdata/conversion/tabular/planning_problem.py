@@ -1,11 +1,15 @@
 import logging
+from collections.abc import Sequence
 from dataclasses import dataclass
-from typing import Sequence, Optional
+from typing import Optional
 
+import pandas as pd
+import numpy as np
 from commonroad.common.util import AngleInterval, Interval
 from commonroad.geometry.shape import Rectangle
 from commonroad.planning.goal import GoalRegion
 from commonroad.planning.planning_problem import PlanningProblem, PlanningProblemSet
+from commonroad.scenario.lanelet import LaneletNetwork
 from commonroad.scenario.scenario import Scenario
 from commonroad.scenario.state import CustomState, InitialState
 
@@ -15,6 +19,11 @@ from crdata.conversion.util.planning_problem_utils import (
 )
 
 _logger = logging.getLogger(__name__)
+
+
+def _on_lanelet(state: pd.Series, lanelet_network: LaneletNetwork) -> bool:
+    lanelets = lanelet_network.find_lanelet_by_position([state[["x", "y"]].values])
+    return len(lanelets[0]) > 0
 
 
 @dataclass
@@ -43,36 +52,47 @@ class EgoPlanningProblemCreator(PlanningProblemCreator):
 
     #: Whether to keep the original ego vehicle's in the scenario.
     keep_ego: bool
+    obstacles_start_at_zero: bool = True
     orientation_half_range: float = 0.2  # rad
     velocity_half_range: float = 10.0  # m/s
-    time_step_half_range: int = 25  # 1
+    #: Number of time steps the goal may be reached after the ego's last state.
+    time_step_half_range: int = 100  # 1
 
-    def __call__(
+    def __call__(  # type: ignore[override]
         self, window_job: EgoWindow, meta_scenario: Scenario
     ) -> PlanningProblemSet:
         planning_problem_set = PlanningProblemSet()
         for ego_id in window_job.ego:
             ego_meta = window_job.vehicle_meta.loc[ego_id]
+            min_timestep = window_job.vehicle_states.index.get_level_values(-1).min()
             dynamic_obstacle_shape = Rectangle(ego_meta.length, ego_meta.width)
             states = window_job.vehicle_states.loc[ego_id]
-            dynamic_obstacle_initial_state = states.iloc[0]
 
-            # Search for the last state of the dynamic obstacle that is on a lanelet
-            for idx in range(len(states) - 1, -1, -1):
-                candidate_state = states.iloc[idx]
-                goal_lanelets = meta_scenario.lanelet_network.find_lanelet_by_position(
-                    [candidate_state[["x", "y"]].values]
-                )
-                if len(goal_lanelets[0]) > 0:
-                    dynamic_obstacle_final_state = candidate_state
-                    break
-            else:
+            # Tracks may start or end beyond the map, so the initial and goal state
+            # are the first and last state of the dynamic obstacle on a lanelet
+            lanelet_network = meta_scenario.lanelet_network
+            first_idx = next(
+                (
+                    i
+                    for i in range(len(states))
+                    if _on_lanelet(states.iloc[i], lanelet_network)
+                ),
+                None,
+            )
+            if first_idx is None:
                 _logger.info(
-                    "No valid goal state found for dynamic obstacle with id:",
+                    "No state on a lanelet for dynamic obstacle %s, skipping it.",
                     ego_id,
-                    "Skipping scenario.",
                 )
                 continue
+            last_idx = next(
+                i
+                for i in reversed(range(len(states)))
+                if _on_lanelet(states.iloc[i], lanelet_network)
+            )
+            dynamic_obstacle_initial_state = states.iloc[first_idx]
+            dynamic_obstacle_final_state = states.iloc[last_idx]
+            ego_timestep = states.index.get_level_values(-1)[first_idx]
 
             # define orientation, velocity and time step intervals as goal region
             orientation_interval = AngleInterval(
@@ -84,13 +104,21 @@ class EgoPlanningProblemCreator(PlanningProblemCreator):
                 dynamic_obstacle_final_state.velocity + self.velocity_half_range,
             )
 
-            final_time_step = min(
+            # Only depends on the ego, not on the scenario end, so the goal deadline
+            # does not change with --time-after-ego. It may exceed the scenario end.
+            final_time_step = (
                 window_job.vehicle_states.loc[ego_id].index.max()
-                + self.time_step_half_range,
-                window_job.vehicle_states.index.get_level_values(-1).max(),
+                + self.time_step_half_range
             )
 
-            time_step_interval = Interval(0, final_time_step)
+            # FIXME: should the time_step_interval start at the timestep of the initial state of the planning problem
+            #  or of the first obstacle in the scenario?
+            # -> Ansgar: I think it should start a few seconds before the planning problem. Then you have some obstacle history. If you start at the first obstacle you'll always have the entire recording in the scenario, right?! That would be too much data.
+
+            time_step_interval = Interval(
+                ego_timestep - min_timestep * self.obstacles_start_at_zero,
+                final_time_step - min_timestep * self.obstacles_start_at_zero,
+            )
 
             goal_shape = Rectangle(
                 length=dynamic_obstacle_shape.length + 2.0,
@@ -126,7 +154,8 @@ class EgoPlanningProblemCreator(PlanningProblemCreator):
             planning_problem = PlanningProblem(
                 ego_id + 100000,
                 InitialState(
-                    time_step=0,
+                    time_step=ego_timestep
+                    - min_timestep * self.obstacles_start_at_zero,
                     position=dynamic_obstacle_initial_state[["x", "y"]].values,
                     **dynamic_obstacle_initial_state.drop(labels=["x", "y"]),
                 ),
@@ -149,14 +178,51 @@ class RandomObstaclePlanningProblemWrapper(PlanningProblemCreator):
     wrapped_planning_problem_creator: PlanningProblemCreator
     #: Number of planning problems to create per scenario
     num_planning_problems: int = 1
+    #: Only choose obstacles that are present at the first time step and for at least
+    #: 75% (fallback 50%) of the window. Only supported for a single planning problem.
+    enforced_selection: bool = True
+    #: Random generator for the ego selection. None uses numpy's global state.
+    random_state: np.random.Generator | None = None
+
+    def __post_init__(self) -> None:
+        if self.enforced_selection and self.num_planning_problems > 1:
+            _logger.warning(
+                "Enforced planning problem selection only supports one planning "
+                "problem, ignoring it."
+            )
+            self.enforced_selection = False
 
     def __call__(self, window: Window, meta_scenario: Scenario) -> PlanningProblemSet:
         num_states = window.vehicle_states.groupby(level=0).x.count()
-        candidates = window.vehicle_meta.loc[
-            (num_states > 1) & (window.vehicle_meta.obstacle_type == "car")
-        ]
+        eligible = (num_states > 1) & (window.vehicle_meta.obstacle_type == "car")
+        if self.enforced_selection:
+            steps = window.vehicle_states.index.get_level_values(-1)
+            first_step = (
+                steps.to_series(index=window.vehicle_states.index)
+                .groupby(level=0)
+                .min()
+            )
+            at_start = first_step == steps.min()
+            share = num_states / (steps.max() - steps.min() + 1)
+            for min_share in (0.75, 0.5):
+                candidates = window.vehicle_meta.loc[
+                    eligible & at_start & (share >= min_share)
+                ]
+                if len(candidates) >= self.num_planning_problems:
+                    break
+            else:
+                _logger.warning(
+                    "No obstacle is present from the first time step for at least "
+                    "50%% of scenario %s, skipping it.",
+                    meta_scenario.scenario_id,
+                )
+                return PlanningProblemSet()
+        else:
+            candidates = window.vehicle_meta.loc[eligible]
         if len(candidates) >= self.num_planning_problems:
-            ego_ids = candidates.sample(self.num_planning_problems).index.values
+            ego_ids = candidates.sample(
+                self.num_planning_problems, random_state=self.random_state
+            ).index.values
             ego_window_job = EgoWindow(
                 window.vehicle_states, window.vehicle_meta, window.dt, ego_ids
             )
@@ -175,6 +241,7 @@ class FixedEgoPlanningProblemCreator(PlanningProblemCreator):
         keep_ego (bool): Indicates whether the ego vehicle should be retained in the meta-scenario.
         start_time_step (Optional[int]): Start time step for selecting the ego vehicle's states.
         end_time_step (Optional[int]): End time step for selecting the ego vehicle's states.
+        obstacles_start_at_zero (bool): Whether obstacles should start at time step 0.
 
     Methods:
         __call__(window_job: Window, meta_scenario: Scenario) -> PlanningProblemSet:
@@ -183,8 +250,9 @@ class FixedEgoPlanningProblemCreator(PlanningProblemCreator):
 
     ego_vehicle_id: int
     keep_ego: bool
-    start_time_step: Optional[int] = None
-    end_time_step: Optional[int] = None
+    start_time_step: int | None = None
+    end_time_step: int | None = None
+    obstacles_start_at_zero: bool = True
 
     def __call__(
         self, window_job: Window, meta_scenario: Scenario
@@ -193,19 +261,21 @@ class FixedEgoPlanningProblemCreator(PlanningProblemCreator):
             return PlanningProblemSet()
         vehicle_states = window_job.vehicle_states
         if self.start_time_step is not None and self.end_time_step is not None:
+            # Only restrict the ego's states, so the time steps stay relative to the window
             idx = vehicle_states.index
-            mask = (
-                (idx.get_level_values(-1) >= self.start_time_step)
-                & (idx.get_level_values(-1) <= self.end_time_step)
-                & (idx.get_level_values(-2) == self.ego_vehicle_id)
+            is_ego = idx.get_level_values(-2) == self.ego_vehicle_id
+            in_range = (idx.get_level_values(-1) >= self.start_time_step) & (
+                idx.get_level_values(-1) <= self.end_time_step
             )
-            vehicle_states = vehicle_states[mask]
-            if vehicle_states.empty:
+            if not (is_ego & in_range).any():
                 return PlanningProblemSet()
+            vehicle_states = vehicle_states[~is_ego | in_range]
         ego_window_job = EgoWindow(
             vehicle_states,
             window_job.vehicle_meta,
             window_job.dt,
             [self.ego_vehicle_id],
         )
-        return EgoPlanningProblemCreator(self.keep_ego)(ego_window_job, meta_scenario)
+        return EgoPlanningProblemCreator(self.keep_ego, self.obstacles_start_at_zero)(
+            ego_window_job, meta_scenario
+        )

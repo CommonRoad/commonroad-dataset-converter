@@ -1,9 +1,9 @@
-from typing import Dict, Union
+from typing import Any, Dict, Union
 
 from ruamel.yaml import YAML
 
 
-def load_yaml(file_name: str) -> Union[Dict, None]:
+def load_yaml(file_name: str) -> dict[str, Any]:
     """
     Loads configuration setup from a yaml file
 

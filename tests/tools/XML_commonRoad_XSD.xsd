@@ -235,7 +235,7 @@ __status__ = "released"
       <xs:element name="orientation" type="decimalExact"/>
       <xs:element name="yawRate" type="decimalExact"/>
       <xs:element name="slipAngle" type="decimalExact"/>
-      <xs:element name="time" type="integerExactZero"/>
+      <xs:element name="time" type="integerExactNonNegative"/>
       <xs:element name="acceleration" type="decimalExact" minOccurs="0"/>
     </xs:all>
   </xs:complexType>

@@ -1,12 +1,14 @@
 import logging
+from collections.abc import Iterable, Iterator
 from dataclasses import dataclass
-from typing import Generic, Iterable, Optional, Tuple, TypeVar
+from typing import Generic, Optional, Tuple, TypeVar
 
 import pandas as pd
 from commonroad.planning.planning_problem import PlanningProblemSet
 from commonroad.scenario.scenario import Scenario
 
 from ..interface import IScenarioJobProducer
+from .interface import Window
 from .planning_problem import EgoWindow, PlanningProblemCreator
 from .prototype_scenario import ScenarioPrototypeCreator
 
@@ -37,11 +39,11 @@ class TabularJob:
 class TabularJobProducer(IScenarioJobProducer[TabularJob], Generic[WindowMetaT]):
     meta_scenario_generator: ScenarioPrototypeCreator[WindowMetaT]
     planning_problem_generator: PlanningProblemCreator
-    window_generator: Iterable[Tuple[EgoWindow, WindowMetaT]]
+    window_generator: Iterable[tuple[Window, WindowMetaT]]
     #: The maximum number of jobs to process. None means unlimited.
-    max_jobs: Optional[int]
+    max_jobs: int | None
 
-    def __iter__(self) -> Iterable[TabularJob]:
+    def __iter__(self) -> Iterator[TabularJob]:
         for i, (window_job, window_meta) in enumerate(self.window_generator):
             try:
                 meta_scenario = self.meta_scenario_generator(window_job, window_meta)

@@ -1,5 +1,6 @@
+from collections.abc import Mapping, Sequence
 from enum import Enum
-from typing import Any, List, Mapping, Optional, Sequence, Tuple, Union
+from typing import Any, List, Optional, Tuple, Union
 
 import numpy as np
 from commonroad.geometry.polyline_util import resample_polyline_with_distance
@@ -34,7 +35,7 @@ class Direction(Enum):
 
 def get_lane_markings(
     recording_meta: Mapping[str, Any], extend_width: float = 0.0
-) -> Tuple[List[float], List[float]]:
+) -> tuple[list[float], list[float]]:
     """
     Extracts upper and lower lane markings from data frame;
 
@@ -63,7 +64,7 @@ def get_lane_markings(
     return upper_lane_markings, lower_lane_markings
 
 
-def get_speed_limit(recording_meta: Mapping[str, Any]) -> Union[float, None]:
+def get_speed_limit(recording_meta: Mapping[str, Any]) -> float | None:
     """
     Extracts speed limit from data frame
 
@@ -79,7 +80,7 @@ def get_speed_limit(recording_meta: Mapping[str, Any]) -> Union[float, None]:
 
 def create_highd_lanelet_network(
     lane_markings: Sequence[float],
-    speed_limit: float,
+    speed_limit: float | None,
     road_length: float,
     direction: Direction,
     road_offset: float,
@@ -90,8 +91,8 @@ def create_highd_lanelet_network(
     lanelet_network = LaneletNetwork()
     resample_step = (road_offset + 2 * road_offset) / num_vertices
     lanelet_id = 0
-    adjacent_left: Optional[int]
-    adjacent_right: Optional[int]
+    adjacent_left: int | None
+    adjacent_right: int | None
     if direction is Direction.UPPER:
         if shoulder:
             lane_y = lane_markings[0] + shoulder_width

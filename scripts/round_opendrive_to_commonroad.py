@@ -1,13 +1,12 @@
 import os
 from pathlib import Path
-import numpy as np
 
+import numpy as np
 from commonroad.planning.planning_problem import PlanningProblemSet
 from commonroad.scenario.scenario import Tag
-
+from crdesigner.common.config.gui_config import gui_config
 from crdesigner.common.config.opendrive_config import open_drive_config
 from crdesigner.common.file_writer import CRDesignerFileWriter, OverwriteExistingFile
-from crdesigner.common.config.gui_config import gui_config
 from crdesigner.map_conversion.map_conversion_interface import opendrive_to_commonroad
 
 input_path = (

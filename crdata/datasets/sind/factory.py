@@ -1,21 +1,21 @@
 import importlib.resources
+from collections.abc import Mapping
 from pathlib import Path
-from typing import Any, Mapping
+from typing import Any
 
 from pydantic import PrivateAttr
 
 from crdata.conversion.tabular.factory import (
     TabularConverterFactory,
 )
+from crdata.conversion.tabular.windowing import FixedTimeRangeWindowGenerator
 from crdata.conversion.util.yaml import load_yaml
-
 from crdata.datasets.sind.implementation import (
     SindMetaScenarioGenerator,
     SindRecordingGenerator,
     SindScenarioPrototypeGenerator,
     SindWindowMeta,
 )
-from crdata.conversion.tabular.windowing import FixedTimeRangeWindowGenerator
 
 
 def _get_sind_config() -> Mapping[str, Any]:

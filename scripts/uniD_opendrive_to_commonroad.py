@@ -1,13 +1,13 @@
 from pathlib import Path
-from commonroad.scenario.scenario import Scenario
 
+from commonroad.scenario.scenario import Scenario
+from crdesigner.common.config.general_config import general_config
 from crdesigner.common.config.lanelet2_config import lanelet2_config
 from crdesigner.common.config.opendrive_config import open_drive_config
-from crdesigner.common.config.general_config import general_config
-from crdata.conversion.util.yaml import load_yaml
-from scripts.utils import convert_opendrive
 from utils import convert_lanelet2
 
+from crdata.conversion.util.yaml import load_yaml
+from scripts.utils import convert_opendrive
 
 lanelet2 = False
 if lanelet2:

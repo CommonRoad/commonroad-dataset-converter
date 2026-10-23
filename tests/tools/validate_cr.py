@@ -50,10 +50,10 @@ def validate(xml_path: Path) -> int:
         print("File not found")
         return 1
     except etree.DocumentInvalid as e:
-        print("File invalid: {}".format(e))
+        print(f"File invalid: {e}")
         return 1
     except Exception as e:
-        print("Unknown error: {}".format(e))
+        print(f"Unknown error: {e}")
         return 1
     return 0
     # assert xml_path.exists()

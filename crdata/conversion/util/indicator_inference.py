@@ -12,11 +12,11 @@ from crdata.conversion.util.trajectory_classification import (
 
 def _add_indicator_lights_based_on_trajectory(
     obstacle_trajectory: Trajectory,
-    blink_padding: List[int],
+    blink_padding: list[int],
     initial_time_step: int,
     final_time_step: int,
     turn_threshold: float = 0.02,
-) -> List[SignalState]:
+) -> list[SignalState]:
     """
     Finds the point with the maximum curvature, adds indicator lights to a SignalState object
     according to the curvature of the trajectory.
@@ -31,8 +31,8 @@ def _add_indicator_lights_based_on_trajectory(
         obstacle_trajectory, turn_threshold=turn_threshold
     )
     turn_index = [
-        np.amin(np.where(curvature == np.amax(curvature))),
-        np.amin(np.where(curvature == np.amin(curvature))),
+        int(np.amin(np.where(curvature == np.amax(curvature)))),
+        int(np.amin(np.where(curvature == np.amin(curvature)))),
     ]
     signal_states = []
     if obs_traj == TrajectoryType.LEFT or obs_traj == TrajectoryType.RIGHT:
@@ -72,7 +72,7 @@ def _add_indicator_lights_based_on_trajectory(
 
 def _generate_empty_signal_series(
     initial_time_step: int, final_time_step: int
-) -> List[SignalState]:
+) -> list[SignalState]:
     signal_states = []
     for i in range(initial_time_step, final_time_step + 1):
         signal_states.append(

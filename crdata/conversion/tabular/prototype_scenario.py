@@ -7,23 +7,27 @@ from crdata.conversion.tabular.interface import (
     IMetaScenarioCreator,
     Window,
 )
+from crdata.conversion.tabular.planning_problem import EgoWindow
 
 WindowMetaT = TypeVar("WindowMetaT")
 
 
 class ScenarioIDCreator:
-    """Create the scenario id for a window.
+    """Create a ``ScenarioID`` for a ``Window``.
 
-    Resulting scenario IDs have the schema
-    {meta scenario country}_{meta scenario map name}-{meta scenario map id}_{window minimum time stamp}_T-
-    {window maximum time stamp}
+    ``EgoWindow`` appends ``ego<ID>`` to the map name, to avoid overwriting.
     """
 
     def __call__(self, window_job: Window, meta_scenario: Scenario) -> ScenarioID:
         meta_scenario_id = meta_scenario.scenario_id
+        map_name = meta_scenario_id.map_name
+        if isinstance(window_job, EgoWindow):
+            map_name += "".join(
+                f"ego{int(ego_id)}" for ego_id in sorted(window_job.ego)
+            )
         scenario_id = ScenarioID(
             country_id=meta_scenario_id.country_id,
-            map_name=meta_scenario_id.map_name,
+            map_name=map_name,
             map_id=meta_scenario_id.map_id,
             obstacle_behavior="T",
             configuration_id=int(

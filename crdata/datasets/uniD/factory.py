@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from crdata.conversion.tabular.job_consumer import (
     TabularJobConsumer,
 )

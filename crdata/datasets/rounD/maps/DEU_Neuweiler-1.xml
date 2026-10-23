@@ -15,6 +15,22 @@
   <lanelet id="102">
     <leftBound>
       <point>
+        <x>71.8652</x>
+        <y>-85.7544</y>
+      </point>
+      <point>
+        <x>73.3419</x>
+        <y>-84.4414</y>
+      </point>
+      <point>
+        <x>74.8508</x>
+        <y>-83.1656</y>
+      </point>
+      <point>
+        <x>76.3910</x>
+        <y>-81.9277</y>
+      </point>
+      <point>
         <x>77.9615</x>
         <y>-80.7285</y>
       </point>
@@ -56,6 +72,22 @@
       </point>
     </leftBound>
     <rightBound>
+      <point>
+        <x>78.1871</x>
+        <y>-87.1704</y>
+      </point>
+      <point>
+        <x>79.6266</x>
+        <y>-86.0143</y>
+      </point>
+      <point>
+        <x>81.0944</x>
+        <y>-84.8944</y>
+      </point>
+      <point>
+        <x>82.5897</x>
+        <y>-83.8113</y>
+      </point>
       <point>
         <x>84.1114</x>
         <y>-82.7658</y>
@@ -1139,6 +1171,22 @@
   <lanelet id="135">
     <leftBound>
       <point>
+        <x>93.5170</x>
+        <y>-5.0795</y>
+      </point>
+      <point>
+        <x>92.1383</x>
+        <y>-6.4419</y>
+      </point>
+      <point>
+        <x>90.7316</x>
+        <y>-7.7754</y>
+      </point>
+      <point>
+        <x>89.2974</x>
+        <y>-9.0793</y>
+      </point>
+      <point>
         <x>87.8365</x>
         <y>-10.3532</y>
       </point>
@@ -1204,6 +1252,22 @@
       </point>
     </leftBound>
     <rightBound>
+      <point>
+        <x>87.8236</x>
+        <y>-3.8415</y>
+      </point>
+      <point>
+        <x>86.4718</x>
+        <y>-5.0859</y>
+      </point>
+      <point>
+        <x>85.0945</x>
+        <y>-6.3019</y>
+      </point>
+      <point>
+        <x>83.6922</x>
+        <y>-7.4891</y>
+      </point>
       <point>
         <x>82.2655</x>
         <y>-8.6468</y>
@@ -1617,6 +1681,7 @@
     </rightBound>
     <predecessor ref="152"/>
     <successor ref="155"/>
+    <successor ref="158"/>
     <adjacentRight ref="151" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
@@ -1737,6 +1802,10 @@
         <x>99.0757</x>
         <y>-13.9708</y>
       </point>
+      <point>
+        <x>101.4034</x>
+        <y>-9.5027</y>
+      </point>
     </leftBound>
     <rightBound>
       <point>
@@ -1758,6 +1827,10 @@
       <point>
         <x>102.9635</x>
         <y>-15.1646</y>
+      </point>
+      <point>
+        <x>105.2912</x>
+        <y>-10.6965</y>
       </point>
     </rightBound>
     <predecessor ref="156"/>
@@ -1804,8 +1877,8 @@
     </leftBound>
     <rightBound>
       <point>
-        <x>101.4295</x>
-        <y>-31.5153</y>
+        <x>103.8047</x>
+        <y>-35.7777</y>
       </point>
       <point>
         <x>98.812</x>
@@ -1836,6 +1909,8 @@
         <y>-21.909</y>
       </point>
     </rightBound>
+    <predecessor ref="154"/>
+    <predecessor ref="151"/>
     <successor ref="159"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
@@ -1884,11 +1959,12 @@
         <y>-21.8793</y>
       </point>
       <point>
-        <x>81.2118</x>
-        <y>-21.909</y>
+        <x>78.2451</x>
+        <y>-21.9698</y>
       </point>
     </rightBound>
     <predecessor ref="161"/>
+    <successor ref="165"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
     <userOneWay>bicycle</userOneWay>
@@ -2053,6 +2129,7 @@
       </point>
     </rightBound>
     <predecessor ref="159"/>
+    <predecessor ref="160"/>
     <successor ref="164"/>
     <adjacentRight ref="162" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
@@ -2548,6 +2625,10 @@
   <lanelet id="178">
     <leftBound>
       <point>
+        <x>62.1639</x>
+        <y>-94.9213</y>
+      </point>
+      <point>
         <x>70.7869</x>
         <y>-78.4808</y>
       </point>
@@ -2565,6 +2646,10 @@
       </point>
     </leftBound>
     <rightBound>
+      <point>
+        <x>66.0870</x>
+        <y>-96.1505</y>
+      </point>
       <point>
         <x>74.71</x>
         <y>-79.71</y>
@@ -2738,6 +2823,10 @@
   <lanelet id="161">
     <leftBound>
       <point>
+        <x>103.9544</x>
+        <y>-1.2157</y>
+      </point>
+      <point>
         <x>97.0256</x>
         <y>-13.1624</y>
       </point>
@@ -2759,6 +2848,10 @@
       </point>
     </leftBound>
     <rightBound>
+      <point>
+        <x>100.2793</x>
+        <y>-0.4797</y>
+      </point>
       <point>
         <x>93.3505</x>
         <y>-12.4264</y>
@@ -2791,6 +2884,10 @@
   <lanelet id="166">
     <leftBound>
       <point>
+        <x>100.2793</x>
+        <y>-0.4797</y>
+      </point>
+      <point>
         <x>93.3505</x>
         <y>-12.4264</y>
       </point>
@@ -2812,6 +2909,10 @@
       </point>
     </leftBound>
     <rightBound>
+      <point>
+        <x>96.7800</x>
+        <y>0.8203</y>
+      </point>
       <point>
         <x>89.8512</x>
         <y>-11.1264</y>
@@ -3239,11 +3340,12 @@
         <y>-51.3832</y>
       </point>
       <point>
-        <x>106.3965</x>
-        <y>-47.4352</y>
+        <x>105.8221</x>
+        <y>-40.9539</y>
       </point>
     </rightBound>
     <predecessor ref="113"/>
+    <successor ref="151"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
     <userOneWay>bicycle</userOneWay>
@@ -3912,7 +4014,9 @@
       </point>
     </rightBound>
     <predecessor ref="150"/>
+    <predecessor ref="177"/>
     <successor ref="155"/>
+    <successor ref="158"/>
     <adjacentRight ref="154" drivingDir="opposite"/>
     <laneletType>urban</laneletType>
     <userOneWay>motorcycle</userOneWay>
@@ -4002,6 +4106,10 @@
         <x>65.3085</x>
         <y>-76.7247</y>
       </point>
+      <point>
+        <x>62.1351</x>
+        <y>-85.2573</y>
+      </point>
     </leftBound>
     <rightBound>
       <point>
@@ -4023,6 +4131,10 @@
       <point>
         <x>61.668</x>
         <y>-75.4248</y>
+      </point>
+      <point>
+        <x>58.4946</x>
+        <y>-83.9574</y>
       </point>
     </rightBound>
     <predecessor ref="173"/>
@@ -4064,6 +4176,10 @@
   <lanelet id="179">
     <leftBound>
       <point>
+        <x>58.7356</x>
+        <y>-93.8679</y>
+      </point>
+      <point>
         <x>67.3586</x>
         <y>-77.4274</y>
       </point>
@@ -4081,6 +4197,10 @@
       </point>
     </leftBound>
     <rightBound>
+      <point>
+        <x>62.1639</x>
+        <y>-94.9213</y>
+      </point>
       <point>
         <x>70.7869</x>
         <y>-78.4808</y>

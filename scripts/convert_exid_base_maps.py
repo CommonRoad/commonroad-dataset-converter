@@ -1,17 +1,16 @@
 from pathlib import Path
-from typing import List, Dict
+from typing import Dict, List
 
 import numpy as np
 from commonroad.common.common_lanelet import LaneletType
 from commonroad.scenario.scenario import Scenario
-
+from crdesigner.common.config.general_config import general_config
 from crdesigner.common.config.lanelet2_config import lanelet2_config
 from crdesigner.common.config.opendrive_config import open_drive_config
-from crdesigner.common.config.general_config import general_config
-from crdata.conversion.util.yaml import load_yaml
-from scripts.utils import convert_opendrive
 from utils import convert_lanelet2
 
+from crdata.conversion.util.yaml import load_yaml
+from scripts.utils import convert_opendrive
 
 lanelet2 = True
 exid_path = Path("/path/to/exiD/")
@@ -35,7 +34,7 @@ scenario_ids = config["locations"]
 map_verification_formulas = []
 map_verification_cores = 1
 
-access_ramp_positions: Dict[str, List[np.ndarray]] = {
+access_ramp_positions: dict[str, list[np.ndarray]] = {
     "DEU_AachenBrand-1": [
         np.array([780, -187]),
         np.array([741, -282]),
@@ -104,7 +103,7 @@ access_ramp_positions: Dict[str, List[np.ndarray]] = {
         np.array([457, -324]),
     ],
 }
-exit_ramp_positions: Dict[str, List[np.ndarray]] = {
+exit_ramp_positions: dict[str, list[np.ndarray]] = {
     "DEU_AachenBrand-1": [
         np.array([843, -225]),
         np.array([799, -256]),
@@ -148,7 +147,7 @@ exit_ramp_positions: Dict[str, List[np.ndarray]] = {
         np.array([405, -204]),
     ],
 }
-shoulder_positions: Dict[str, List[np.ndarray]] = {
+shoulder_positions: dict[str, list[np.ndarray]] = {
     "DEU_AachenBrand-1": [
         np.array([654, -458]),
         np.array([607, -533]),
@@ -208,7 +207,7 @@ shoulder_positions: Dict[str, List[np.ndarray]] = {
         np.array([315, -84]),
     ],
 }
-restricted_area_positions: Dict[str, List[np.ndarray]] = {
+restricted_area_positions: dict[str, list[np.ndarray]] = {
     "DEU_AachenBrand-1": [
         np.array([773, -239]),
         np.array([797, -248]),

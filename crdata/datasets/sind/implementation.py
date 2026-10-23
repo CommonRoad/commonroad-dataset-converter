@@ -1,9 +1,10 @@
 import copy
 import importlib.resources
 import logging
+from collections.abc import Iterable, Iterator, Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, Iterable, Sequence, Tuple
+from typing import Dict, Tuple
 
 import numpy as np
 import pandas as pd
@@ -49,7 +50,7 @@ class SindRecordingGenerator(IRecordingGenerator):
     def _read_trajectories(
         self,
         dataset_dir: Path,
-    ) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    ) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
         # Read vehicle trajectories
         vehicle_df = pd.read_csv(dataset_dir / "Veh_smoothed_tracks.csv")
         # We don't have a type for tricycle. Replace with motorcycle.
@@ -116,7 +117,7 @@ class SindRecordingGenerator(IRecordingGenerator):
 
         return traj_df, traj_meta, tl_df
 
-    def __iter__(self) -> Iterable[Tuple[Window, SindWindowMeta]]:
+    def __iter__(self) -> Iterator[tuple[Window, SindWindowMeta]]:
         assert (
             self.data_path.exists()
         ), f"{self.data_path.resolve().absolute()} does not exist!"
@@ -127,7 +128,7 @@ class SindRecordingGenerator(IRecordingGenerator):
         if all([p.is_file() for p in self.data_path.iterdir()]):
             recordings = [self.data_path]
         else:
-            recordings = [p for p in self.data_path.iterdir() if p.is_dir()]
+            recordings = sorted(p for p in self.data_path.iterdir() if p.is_dir())
 
         for recording in recordings:
             traj_df, dynamic_meta, tl_df = self._read_trajectories(recording)
@@ -139,8 +140,8 @@ class SindRecordingGenerator(IRecordingGenerator):
 
 @dataclass
 class SindScenarioPrototypeGenerator(ScenarioPrototypeCreator):
-    traffic_light_incomings: Dict[int, Sequence[int]]
-    traffic_light_positions: Dict[int, Tuple[float, float]]
+    traffic_light_incomings: dict[int, Sequence[int]]
+    traffic_light_positions: dict[int, tuple[float, float]]
 
     def _add_traffic_lights(self, scenario: Scenario, tl_states: pd.DataFrame) -> None:
         for t in scenario.lanelet_network.traffic_lights:
@@ -210,7 +211,7 @@ class SindScenarioPrototypeGenerator(ScenarioPrototypeCreator):
 @dataclass
 class SindMetaScenarioGenerator(IMetaScenarioCreator):
     location: str
-    ego_vehicle_id: int = None
+    ego_vehicle_id: int | None = None
     _meta_scenario: Scenario = field(default=None, init=False)
 
     def __post_init__(self) -> None:
@@ -220,7 +221,7 @@ class SindMetaScenarioGenerator(IMetaScenarioCreator):
             "Xian": "CHN_XIAN-1_1_T-1.xml",
             "Tianjin": "CHN_TIANJIN-1_1_T-1.xml",
         }
-        map_file = map_files.get(self.location)
+        map_file = map_files[self.location]
         with importlib.resources.path("crdata.datasets.sind", map_file) as map_path:
             self._meta_scenario = CommonRoadFileReader(str(map_path)).open()[0]
 

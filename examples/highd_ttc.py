@@ -30,7 +30,12 @@ class HighdTtcFactory(HighdConverterFactory):
     min_ttc: float = 2.0
 
     def build_obstacle_window_generator(self):
-        return HighdTtcVehicleWindowGenerator(self.lane_change, self.min_ttc)
+        return HighdTtcVehicleWindowGenerator(
+            self.time_before_ego,
+            self.time_after_ego,
+            lane_change=self.lane_change,
+            min_ttc=self.min_ttc,
+        )
 
 
 if __name__ == "__main__":

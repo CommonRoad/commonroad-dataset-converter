@@ -1,6 +1,8 @@
+from collections.abc import Iterable
 from dataclasses import dataclass
-from typing import Iterable, Tuple
+from typing import Tuple
 
+import numpy as np
 import pandas as pd
 
 from crdata.conversion.tabular.interface import (
@@ -10,21 +12,38 @@ from crdata.conversion.tabular.interface import (
 )
 from crdata.conversion.tabular.planning_problem import EgoWindow
 
+#: Cars whose positions span less than this many meters are considered parked.
+PARKED_MAX_EXTENT = 1.0
 
+
+@dataclass
 class ObstacleWindowGenerator(IWindowGenerator):
     """Create a window for each dynamic obstacle."""
 
+    #: Seconds included before the obstacle's time range, clipped to the recording.
+    time_before_ego: float = 0.0
+    #: Seconds included after the obstacle's time range, clipped to the recording.
+    time_after_ego: float = 0.0
+    #: Only create a window for this obstacle (of any type) instead of for every car.
+    obstacle_id: int | None = None
+    #: Time steps (start, end) used instead of the obstacle's first and last time step.
+    time_range: tuple[int, int] | None = None
+
     def __call__(
         self, recording: Window, window_meta: WindowMetaT
-    ) -> Iterable[Tuple[EgoWindow, WindowMetaT]]:
+    ) -> Iterable[tuple[EgoWindow, WindowMetaT]]:
         for obstacle in self._get_index(recording):
             window = self.get_obstacle_window(obstacle, recording)
             yield window, window_meta
 
     def get_obstacle_window(self, obstacle, recording):
         obstacle_states = recording.vehicle_states.loc[(obstacle,) + (slice(None),)]
-        start_timestep = obstacle_states.index.get_level_values(-1).min()
-        end_timestep = obstacle_states.index.get_level_values(-1).max()
+        start_timestep, end_timestep = self.time_range or (
+            obstacle_states.index.get_level_values(-1).min(),
+            obstacle_states.index.get_level_values(-1).max(),
+        )
+        start_timestep -= round(self.time_before_ego / recording.dt)
+        end_timestep += round(self.time_after_ego / recording.dt)
         states: pd.DataFrame = recording.vehicle_states.loc[
             (recording.vehicle_states.index.get_level_values(-1) >= start_timestep)
             & (recording.vehicle_states.index.get_level_values(-1) <= end_timestep)
@@ -35,10 +54,16 @@ class ObstacleWindowGenerator(IWindowGenerator):
 
     def _get_index(self, recording: Window) -> pd.Index:
         """Provide index values of ego obstacles."""
+        if self.obstacle_id is not None:
+            return recording.vehicle_meta.index.intersection([self.obstacle_id])
         index = recording.vehicle_meta.index[
             recording.vehicle_meta.obstacle_type == "car"
         ]
-        return index
+        # Skip parked cars: their planning problems are trivial (goal = start)
+        positions = recording.vehicle_states[["x", "y"]].groupby(level=-2)
+        extent = positions.max() - positions.min()
+        moving = extent.index[(extent.x**2 + extent.y**2) ** 0.5 >= PARKED_MAX_EXTENT]
+        return index.intersection(moving)
 
 
 @dataclass
@@ -50,7 +75,7 @@ class RollingWindowGenerator(IWindowGenerator):
 
     def __call__(
         self, recording: Window, window_meta: WindowMetaT
-    ) -> Iterable[Tuple[Window, WindowMetaT]]:
+    ) -> Iterable[tuple[Window, WindowMetaT]]:
         states = recording.vehicle_states.copy()
         # Not actually using seconds, just pseudo for resampling
         states["timestamp"] = pd.to_timedelta(
@@ -81,10 +106,12 @@ class DownsamplingWindowWrapper(IWindowGenerator):
 
     def __call__(
         self, recording: Window, window_meta: WindowMetaT
-    ) -> Iterable[Tuple[Window, WindowMetaT]]:
+    ) -> Iterable[tuple[Window, WindowMetaT]]:
         for window, window_meta in self.base_window_generator(recording, window_meta):
-            window.vehicle_states["time_stamp"] = pd.to_timedelta(
-                window.vehicle_states.index.get_level_values(-1), unit="s"
+            window.vehicle_states = window.vehicle_states.assign(
+                time_stamp=pd.to_timedelta(
+                    window.vehicle_states.index.get_level_values(-1), unit="s"
+                )
             )
             window.vehicle_states = window.vehicle_states.groupby(
                 [
@@ -116,10 +143,11 @@ class TimeSliceSamplingWindowGenerator(IWindowGenerator):
 
     window_length: int
     samples_per_recording: int
+    random_state: np.random.Generator | None = None
 
     def __call__(
         self, window: Window, window_meta: WindowMetaT
-    ) -> Iterable[Tuple[Window, WindowMetaT]]:
+    ) -> Iterable[tuple[Window, WindowMetaT]]:
         time_steps = (
             window.vehicle_states.index.get_level_values(-1)
             .unique()
@@ -129,7 +157,8 @@ class TimeSliceSamplingWindowGenerator(IWindowGenerator):
         # Make sure we have full windows
         time_steps = time_steps.head(-self.window_length)
         start_ts = time_steps.sample(
-            n=min(self.samples_per_recording, len(time_steps.index))
+            n=min(self.samples_per_recording, len(time_steps.index)),
+            random_state=self.random_state,
         ).values
         for ts in start_ts:
             vehicle_states = window.vehicle_states[
@@ -148,10 +177,11 @@ class TimeSliceSamplingWindowGenerator(IWindowGenerator):
 class VehicleSamplingWindowGenerator(IWindowGenerator):
     samples_per_recording: int
     base_window_generator: ObstacleWindowGenerator
+    random_state: np.random.Generator | None = None
 
     def __call__(
         self, window: Window, window_meta: WindowMetaT
-    ) -> Iterable[Tuple[Window, WindowMetaT]]:
+    ) -> Iterable[tuple[Window, WindowMetaT]]:
         for obstacle in self._get_index(window):
             yield (
                 self.base_window_generator.get_obstacle_window(obstacle, window),
@@ -161,9 +191,11 @@ class VehicleSamplingWindowGenerator(IWindowGenerator):
     def _get_index(self, recording: Window) -> pd.Index:
         """Provide index values of ego obstacles."""
         index = self.base_window_generator._get_index(recording)
-        df = index.to_frame().sample(n=min(self.samples_per_recording, len(index)))
-        index = pd.Index(df.values.squeeze(axis=0))
-        return index
+        df = index.to_frame().sample(
+            n=min(self.samples_per_recording, len(index)),
+            random_state=self.random_state,
+        )
+        return df.index
 
 
 @dataclass

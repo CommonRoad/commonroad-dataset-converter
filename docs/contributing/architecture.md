@@ -2,11 +2,11 @@
 
 ## Overview
 
-Trajectory datasets suitable for conversion into the CommonRoad format come in many different formats. Therefore, high flexibility for the conversion framework is required. We tackle this problem by a hierarchical approach, allowing customization and adaptation on each layer. On the highest level, a simple single producer-multi consumer scheme is introduced to split work into independent jobs (usually creating one scenario), which can be run in parallel.
+Trajectory datasets suitable for conversion into the CommonRoad format come in many different formats. Therefore, high flexibility for the conversion framework is required. We tackle this problem with a hierarchical approach, allowing customization and adaptation on each layer. On the highest level, a simple single-producer, multi-consumer scheme is introduced to split work into independent jobs (usually creating one scenario), which can be run in parallel.
 
-![Producer-Consumer Diagram](assets/producer_consumer.png)
+![Producer-Consumer Diagram](../assets/producer_consumer.png)
 
-A runner object drives the processing and takes care of the (optional) multi-processing.
+A runner object drives the processing and takes care of the (optional) multiprocessing.
 
 ::: crdata.conversion.util.runner
 
@@ -22,14 +22,14 @@ Since many trajectory datasets come in the form of tabular data or can be easily
 2. A table of static information about obstacles (e.g., obstacle shape and type),
 3. A static scene environment represented as a scenario without any dynamic obstacles.
 
-![Tabular API Data Flow](assets/tabular_api_data_flow.png)
+![Tabular API Data Flow](../assets/tabular_api_data_flow.png)
 
-To convert a new tabular dataset, only an iterator providing time windows of the dynamic obstacle information (1. and 2.) and a meta scenario creator needs to be implemented. Practically speaking, this is fulfilled by implementing the corresponding interfaces `interface.IRecordingGenerator` and `interface.IMetaScenarioCreator`.
+To convert a new tabular dataset, only an iterator providing time windows of the dynamic obstacle information (1. and 2.) and a meta scenario creator need to be implemented. Practically speaking, this is fulfilled by implementing the corresponding interfaces `interface.IRecordingGenerator` and `interface.IMetaScenarioCreator`.
 
 ```python
     @dataclass
     class MyRecordingMeta:
-        # Store meta data e.g. to select corresponding map to recording.
+        # Store metadata, e.g., to select the map corresponding to the recording.
         recording_meta: Dict[str, Any]
 
 
@@ -57,8 +57,8 @@ To convert a new tabular dataset, only an iterator providing time windows of the
                 ), MyRecordingMeta(recording_meta_data)
 
 ```
-The base classes are generic to allow passing a WindowMeta object. This object communicates to the MetaScenarioCreator,
-which meta scenario is to be created.
+The base classes are generic to allow passing a WindowMeta object. This object tells the MetaScenarioCreator
+which meta scenario to create.
 Finally, building the converter is achieved by creating a corresponding factory inheriting from
 `interface.TabularConverterFactory`, instantiating the previously created classes.
 

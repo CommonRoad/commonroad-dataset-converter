@@ -4,11 +4,11 @@ import warnings
 import matplotlib.pyplot as plt
 import numpy as np
 from commonroad.common.common_lanelet import LaneletType
+from commonroad.common.file_reader import CommonRoadFileReader
 from commonroad.common.file_writer import CommonRoadFileWriter
 from commonroad.common.writer.file_writer_interface import OverwriteExistingFile
-from commonroad.common.file_reader import CommonRoadFileReader
-from commonroad.visualization.mp_renderer import MPRenderer
 from commonroad.scenario.intersection import Intersection, IntersectionIncomingElement
+from commonroad.visualization.mp_renderer import MPRenderer
 
 
 def find_left_of(lanelet_network, incomings):
