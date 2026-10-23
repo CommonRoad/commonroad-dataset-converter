@@ -1,52 +1,34 @@
-# Examples - Custom Scenario Sampling
-Some datasets provide additional meta data for each vehicle, which can be used to select scenarios. The highD dataset for example provides the minimum time-to-collision (TTC) for each vehicle, indicating criticality of the driving behavior. To convert scenarios with low TTC of the original trajectory, we customize the conversion process:
-```python
-from pathlib import Path
+# Examples
 
-import pandas as pd
-from pydantic.dataclasses import dataclass
+This page shows how to create CommonRoad scenarios for different purposes. It assumes you have already downloaded the source dataset; if not, see [Getting Started](getting_started.md).
 
-from crdata.conversion.tabular.interface import Window
-from crdata.datasets.highD import HighdConverterFactory
-from crdata.datasets.highD.implementation import (
-    HighdObstacleWindowGenerator,
-)
+## CLI Examples
 
+For a detailed explanation of the CLI arguments, refer to [CLI Usage](cli.md).
 
-# Create a class that only provides index values of vehicles with a
-# minimum time-to-collision of less than 2s.
-@dataclass
-class HighdTtcVehicleWindowGenerator(HighdObstacleWindowGenerator):
-    min_ttc: float = 2.0
+### Converting Scenarios for Learning
 
-    def _get_index(self, recording: Window) -> pd.Index:
-        index = super()._get_index(recording)
-        # Get metadata of vehicles selected by parent class.
-        meta = recording.vehicle_meta.loc[index]
-        # Vehicles without leading vehicle have a minimum TTC of -1.0.
-        index = meta[(meta["minTTC"] < self.min_ttc) & (meta["minTTC"] >= 0.0)].index
-        return index
+For learning-based motion planners (e.g., reinforcement learning), we recommend scenarios that
 
+1. are as numerous as possible,
+2. are long and diverse,
+3. contain obstacle information before the initial time, which the planner can use as history context, and
+4. contain obstacle information after the ego car leaves.
 
-# Customize the factory to use the newly created class.
-class HighdTtcFactory(HighdConverterFactory):
-    min_ttc: float = 2.0
+We therefore generate one scenario per car in the recording, spanning its entire lifetime, with surrounding traffic before and after (see approach C.1 in [Scenario Selection and Time Spans](time_spans.md#approach-c1-one-scenario-per-car-with-surrounding-traffic-before-and-after)):
 
-    def build_obstacle_window_generator(self):
-        return HighdTtcVehicleWindowGenerator(self.lane_change, self.min_ttc)
-
-
-if __name__ == "__main__":
-    input_dir = Path("../tests/resources/highd")
-    output_dir = Path("/tmp/highd_ttc_scenarios")
-    output_dir.mkdir(exist_ok=True)
-
-    # Create the factory
-    factory = HighdTtcFactory(
-        input_dir=input_dir, output_dir=output_dir, num_time_steps=None
-    )
-    # Build the runner
-    runner = factory.build_runner()
-    # Run it
-    runner.run()
+```bash
+crconvert --all-vehicles --time-before-ego 4 --time-after-ego 5 \
+    --samples-per-recording K --downsample D --num-processes N \
+    INPUT_DIR OUTPUT_DIR COMMAND
 ```
+
+- `K` limits the number of scenarios. For example, MONA contains ~300 recordings, so `K=10` results in ~3000 scenarios.
+- `D` downsamples the scenarios to reduce the amount of data. Choose it so that the resulting time step is close to your simulation step size.
+- `N` sets the number of parallel worker processes.
+
+For imitation learning, add `--keep-ego` to keep the original car in its scenario.
+
+## Python Examples
+
+For more details, refer to [Python Usage](python_usage.md).

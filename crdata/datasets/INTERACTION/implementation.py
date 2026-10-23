@@ -1,7 +1,8 @@
 import copy
+from collections.abc import Iterable, Iterator
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, Iterable, Tuple
+from typing import Dict, Tuple
 
 import numpy as np
 import pandas as pd
@@ -23,8 +24,8 @@ class InteractionRecording:
 
 @dataclass
 class InteractionMetaScenarioGenerator(IMetaScenarioCreator):
-    map_names: Dict[str, str]
-    _name_to_map: Dict[str, Scenario] = field(default_factory=dict, init=False)
+    map_names: dict[str, str]
+    _name_to_map: dict[str, Scenario] = field(default_factory=dict, init=False)
 
     def __post_init__(self) -> None:
         path_prefix = Path(__file__).parent / "maps"
@@ -45,17 +46,17 @@ class InteractionMetaScenarioGenerator(IMetaScenarioCreator):
 @dataclass
 class InteractionRecordingGenerator(IRecordingGenerator):
     data_path: Path
-    locations: Dict[str, str]
-    offsets: Dict[str, Tuple[float, float]]
+    locations: dict[str, str]
+    offsets: dict[str, tuple[float, float]]
 
-    def __iter__(self) -> Iterable[Tuple[Window, InteractionRecording]]:
+    def __iter__(self) -> Iterator[tuple[Window, InteractionRecording]]:
         for location, path in self.locations.items():
             location_path = self.data_path / path
 
             if not location_path.exists():
                 continue
 
-            for trajectory_file in location_path.glob("*.csv"):
+            for trajectory_file in sorted(location_path.glob("*.csv")):
                 recording_id = int(trajectory_file.stem.split("_")[-1])
                 traj_df = pd.read_csv(trajectory_file)
                 # Translate

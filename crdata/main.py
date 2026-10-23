@@ -12,15 +12,15 @@ from crdata.conversion.factory import AbstractConverterFactory
 from crdata.conversion.tabular.filters import RoutabilityCheck
 from crdata.datasets.exiD import ExiDConverterFactory
 from crdata.datasets.highD import HighdConverterFactory
-from crdata.datasets.uniD import UnidConverterFactory
+from crdata.datasets.inD import IndConverterFactory
 from crdata.datasets.INTERACTION import (
     InteractionConverterFactory,
 )
-from crdata.datasets.inD import IndConverterFactory
 from crdata.datasets.mona import MonaConverterFactory
 from crdata.datasets.rounD import RounDConverterFactory
 from crdata.datasets.sind import SindConverterFactory
 from crdata.datasets.tumdot import TumdotConverterFactory
+from crdata.datasets.uniD import UnidConverterFactory
 
 _logger = logging.getLogger(__name__)
 
@@ -66,7 +66,7 @@ def main(
         help="Vehicles used for planning problem should be kept in the scenario.",
     ),
     obstacles_start_at_zero: bool = typer.Option(
-        False,
+        True,
         help="The lowest time step in the scenario is set to zero.",
     ),
     downsample: int = typer.Option(1, help="Decrease dt by n*dt"),
@@ -96,7 +96,34 @@ def main(
         None, help="End time step for scenario window."
     ),
     ego_vehicle_id: Optional[int] = typer.Option(
-        None, help="ID of the ego-vehicle for the planning problem."
+        None,
+        help="ID of the ego-vehicle for the planning problem. Creates one scenario "
+        "per recording spanning the ego's lifetime (or --start/--end-time-step).",
+    ),
+    enforced_planning_problem_selection: bool = typer.Option(
+        True,
+        help="Only choose the planning problem from obstacles that are present at "
+        "the first time step and for at least 75% (fallback 50%) of the scenario, "
+        "otherwise skip the scenario. Ignored for more than one planning problem.",
+    ),
+    seed: int = typer.Option(
+        42,
+        min=-1,
+        help="Seed for the random selection of egos and sampled windows. -1 disables seeding.",
+    ),
+    time_before_ego: float = typer.Option(
+        0.0,
+        min=0.0,
+        help="Seconds of the recording to include before the ego vehicle appears "
+        "(or before --start-time-step), clipped to the recording. Only used with "
+        "--all-vehicles or --ego-vehicle-id.",
+    ),
+    time_after_ego: float = typer.Option(
+        0.0,
+        min=0.0,
+        help="Seconds of the recording to include after the ego vehicle leaves "
+        "(or after --end-time-step), clipped to the recording. Only used with "
+        "--all-vehicles or --ego-vehicle-id.",
     ),
 ) -> None:
     # Relay all common parameters to all datasets without repeating the method signature.

@@ -29,7 +29,7 @@ class TabularJobConsumer(IScenarioJobConsumer[TabularJob]):
     #: File format of the converted scenarios.
     file_format: FileFormat = FileFormat.XML
     #: Let the scenario start at time step 0.
-    obstacles_start_at_zero: bool = False
+    obstacles_start_at_zero: bool = True
     #: Infer turning indicator signal from curvature.
     create_turning_indicator: bool = False
 

@@ -1,10 +1,8 @@
+from collections.abc import Callable, Collection, Iterable, Sized
 from dataclasses import dataclass
 from multiprocessing import Pool
 from typing import (
-    Callable,
-    Collection,
     Generic,
-    Iterable,
     TypeVar,
     Union,
 )
@@ -22,14 +20,14 @@ class WorkerRunner(Generic[JobT]):
     This is useful for debugging.
     """
 
-    generator: Union[Iterable[JobT], Collection[JobT]]
+    generator: Iterable[JobT] | Collection[JobT]
     processor: Callable[[JobT], None]
     #: Number of consumer processes.
     num_processes: int = 1
 
     def run(self) -> None:
         num_processes = self.num_processes
-        if hasattr(self.generator, "__len__"):
+        if isinstance(self.generator, Sized):
             num_scenarios = len(self.generator)
             num_processes = min(self.num_processes, num_scenarios)
         else:

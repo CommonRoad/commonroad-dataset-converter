@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
-from typing import Callable, Generic, Iterable, Sequence, TypeVar, Union
+from collections.abc import Callable, Iterable, Sequence
+from typing import Generic, TypeVar, Union
 
 from pydantic import BaseModel
 
@@ -14,14 +15,12 @@ class AbstractConverterFactory(BaseModel, Generic[JobT], ABC):
     num_processes: int = 1
 
     @abstractmethod
-    def build_job_generator(self) -> Union[Iterable[JobT], Sequence[JobT]]:
+    def build_job_generator(self) -> Iterable[JobT] | Sequence[JobT]:
         """Build a producer of independently runnable conversions jobs."""
-        pass
 
     @abstractmethod
     def build_job_processor(self) -> Callable[[JobT], None]:
         """Build a consumer of independently runnable conversion jobs."""
-        pass
 
     def build_job_filter(self) -> Callable[[JobT], bool]:
         """Build a filter function, returning true if a job is accepted."""

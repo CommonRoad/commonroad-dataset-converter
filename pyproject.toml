@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "commonroad-dataset-converter"
-version = "2025.1.0"
+version = "2026.1.0"
 description = "CommonRoad Dataset Converter"
 authors = ["Cyber-Physical Systems Group, Technical University of Munich <commonroad@lists.lrz.de>"]
 license = "BSD-3-Clause"
@@ -10,7 +10,6 @@ homepage = "https://commonroad.in.tum.de"
 classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Operating System :: OS Independent",
@@ -43,6 +42,7 @@ optional = true
 [tool.poetry.group.dev.dependencies]
 jupyter = "^1.0.0"
 pytest = "^8.3.2"
+mypy = "^2.4.0"
 commonroad-scenario-designer = { git = "https://github.com/CommonRoad/commonroad-scenario-designer", branch = "develop" }
 
 [tool.poetry.group.docs]
@@ -52,7 +52,19 @@ optional = true
 mkdocs = "^1.5.0"
 mkdocstrings-python = "^1.8.0"
 mkdocs-material = "^9.5.12"
+pymdown-extensions = "<12"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+ignore = ["F401"]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["crdata"]
+
+[[tool.mypy.overrides]]
+module = ["commonroad.*", "commonroad_route_planner.*", "pandas.*", "scipy.*", "shapely.*", "tqdm.*"]
+ignore_missing_imports = true

@@ -1,12 +1,14 @@
 import copy
-import importlib
+import importlib.resources
 import os
+from collections.abc import Iterable, Iterator
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Tuple
 
 import pandas as pd
-from pathlib import Path
-from typing import Iterable, Tuple
-from commonroad.scenario.scenario import Scenario
 from commonroad.common.file_reader import CommonRoadFileReader
+from commonroad.scenario.scenario import Scenario
 from commonroad.scenario.traffic_sign import TrafficSignIDCountries
 
 from crdata.conversion.tabular.interface import (
@@ -14,8 +16,7 @@ from crdata.conversion.tabular.interface import (
     IRecordingGenerator,
     Window,
 )
-from dataclasses import dataclass
-from crdata.datasets.common.obstacle_utils import get_velocity, get_acceleration
+from crdata.datasets.common.obstacle_utils import get_acceleration, get_velocity
 
 
 # Define a data class to store meta information for TumdotWindow
@@ -30,9 +31,10 @@ class TumdotRecordingGenerator(IRecordingGenerator):
     data_path: Path  # Path to the dataset
 
     # Define an iterator method to generate windows and meta information
-    def __iter__(self) -> Iterable[Tuple[Window, TumdotWindowMeta]]:
+    def __iter__(self) -> Iterator[tuple[Window, TumdotWindowMeta]]:
         folder = "Trajectory-Data"  # Folder containing the trajectory data
-        dir = os.listdir(self.data_path / folder)  # List all files in the folder
+        # List all files in the folder
+        dir = sorted(os.listdir(self.data_path / folder))
         for file in dir:
             # Mapping of integer codes to obstacle types
             INTEGER_TO_OBSTACLE_TYPE = {

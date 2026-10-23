@@ -2,7 +2,7 @@ import numpy as np
 from pandas import DataFrame, Series
 
 
-def get_velocity(track_df: DataFrame) -> np.array:
+def get_velocity(track_df: DataFrame) -> Series:
     """
     Calculates velocity given x-velocity and y-velocity
 
@@ -12,7 +12,7 @@ def get_velocity(track_df: DataFrame) -> np.array:
     return np.sqrt(track_df.xVelocity**2 + track_df.yVelocity**2)
 
 
-def get_orientation(track_df: DataFrame) -> np.array:
+def get_orientation(track_df: DataFrame) -> Series:
     """
     Calculates orientation given x-velocity and y-velocity
 
@@ -22,7 +22,7 @@ def get_orientation(track_df: DataFrame) -> np.array:
     return np.arctan2(-track_df.yVelocity, track_df.xVelocity)
 
 
-def get_acceleration(track_df: DataFrame, orientation: np.array) -> np.array:
+def get_acceleration(track_df: DataFrame, orientation: Series) -> Series:
     """
     Calculates acceleration given x-acceleration and y-acceleration
 

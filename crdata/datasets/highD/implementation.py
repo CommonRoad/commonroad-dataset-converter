@@ -1,6 +1,7 @@
+from collections.abc import Iterable, Iterator
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Iterable, Optional, Tuple
+from typing import Dict, Optional, Tuple
 
 import numpy as np
 import pandas as pd
@@ -39,7 +40,7 @@ class HighdMetaScenarioGenerator(IMetaScenarioCreator):
     num_vertices: int
     road_length: float
     road_offset: float
-    shoulder_width: Optional[float] = None
+    shoulder_width: float | None = None
     extend_width: float = 0.0
 
     def __call__(self, window: Window, window_meta: LevelXRecording) -> Scenario:
@@ -72,7 +73,7 @@ class HighdMetaScenarioGenerator(IMetaScenarioCreator):
         )
         lanelet_network = create_highd_lanelet_network(
             shoulder=self.shoulder_width is not None,
-            shoulder_width=self.shoulder_width,
+            shoulder_width=self.shoulder_width or 0.0,
             direction=direction,
             lane_markings=(
                 upper_lane_markings
@@ -91,10 +92,10 @@ class HighdMetaScenarioGenerator(IMetaScenarioCreator):
 @dataclass
 class HighdRecordingGenerator(IRecordingGenerator):
     data_path: Path
-    locations: Dict[int, str]
+    locations: dict[int, str]
 
-    def __iter__(self) -> Iterable[Tuple[Window, LevelXRecording]]:
-        for tracks_path in self.data_path.rglob("*_tracks.csv"):
+    def __iter__(self) -> Iterator[tuple[Window, LevelXRecording]]:
+        for tracks_path in sorted(self.data_path.rglob("*_tracks.csv")):
             tracks_meta_path = tracks_path.with_name(tracks_path.stem + "Meta.csv")
             recording_meta_path = tracks_path.with_name(
                 tracks_path.stem.split("_")[0] + "_recordingMeta.csv"

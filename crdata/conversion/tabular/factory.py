@@ -1,16 +1,18 @@
 from abc import abstractmethod
+from collections.abc import Callable, Generator, Iterable
 from pathlib import Path
-from typing import Callable, Generator, Generic, Iterable, Optional, Tuple, TypeVar
+from typing import Generic, Optional, Tuple, TypeVar
 
+import numpy as np
 from commonroad.common.file_writer import FileFormat
 
 from crdata.conversion.factory import AbstractConverterFactory
 from crdata.conversion.tabular.planning_problem import (
     EgoPlanningProblemCreator,
     EgoWindow,
+    FixedEgoPlanningProblemCreator,
     PlanningProblemCreator,
     RandomObstaclePlanningProblemWrapper,
-    FixedEgoPlanningProblemCreator,
 )
 from crdata.conversion.tabular.prototype_scenario import (
     ScenarioIDCreator,
@@ -25,7 +27,7 @@ from crdata.conversion.tabular.windowing import (
 )
 
 from .filters import RoutabilityCheck, RoutabilityFilter
-from .interface import IMetaScenarioCreator, Window
+from .interface import IMetaScenarioCreator, IWindowGenerator, Window
 from .job_consumer import TabularJobConsumer
 from .job_producer import TabularJob, TabularJobProducer
 
@@ -38,28 +40,36 @@ class TabularConverterFactory(
     """Factory base class for building producer-consumer pipelines in the tabular API."""
 
     output_dir: Path
-    num_time_steps: Optional[int] = 150
+    num_time_steps: int | None = 150
     num_planning_problems: int = 1
     downsample: int = 1
     file_writer_type: FileFormat = FileFormat.XML
-    max_scenarios: Optional[int] = None
+    max_scenarios: int | None = None
     routability_check: RoutabilityCheck = RoutabilityCheck.Nocheck
     keep_ego: bool = False
     obstacles_start_at_zero: bool = True
-    samples_per_recording: Optional[int] = None
-    start_time_step: Optional[int] = None
-    end_time_step: Optional[int] = None
-    ego_vehicle_id: Optional[int] = None
+    samples_per_recording: int | None = None
+    start_time_step: int | None = None
+    end_time_step: int | None = None
+    ego_vehicle_id: int | None = None
+    enforced_planning_problem_selection: bool = True
+    #: Seconds of context before / after the ego in obstacle-centred windows.
+    time_before_ego: float = 0.0
+    time_after_ego: float = 0.0
+    seed: int = 42
+
+    def _rng(self) -> np.random.Generator | None:
+        return None if self.seed == -1 else np.random.default_rng(self.seed)
 
     @abstractmethod
-    def build_recording_generator(self) -> Iterable[Tuple[Window, WindowMetaT]]:
+    def build_recording_generator(self) -> Iterable[tuple[Window, WindowMetaT]]:
         pass
 
     def build_job_generator(self) -> TabularJobProducer:
         recoding_generator = self.build_recording_generator()
         window_generator = self.build_window_generator()
 
-        def generator() -> Generator[Tuple[EgoWindow, WindowMetaT], None, None]:
+        def generator() -> Generator[tuple[Window, WindowMetaT], None, None]:
             for recording in recoding_generator:
                 yield from window_generator(*recording)
 
@@ -85,8 +95,18 @@ class TabularConverterFactory(
 
     def build_window_generator(
         self,
-    ) -> Callable[[Window, WindowMetaT], Iterable[Tuple[Window, WindowMetaT]]]:
-        if self.samples_per_recording is None:
+    ) -> Callable[[Window, WindowMetaT], Iterable[tuple[Window, WindowMetaT]]]:
+        if self.ego_vehicle_id is not None:
+            time_range = None
+            if self.start_time_step is not None and self.end_time_step is not None:
+                time_range = (self.start_time_step, self.end_time_step)
+            window_generator: IWindowGenerator = ObstacleWindowGenerator(
+                self.time_before_ego,
+                self.time_after_ego,
+                obstacle_id=self.ego_vehicle_id,
+                time_range=time_range,
+            )
+        elif self.samples_per_recording is None:
             if self.num_time_steps is None:
                 assert self.num_planning_problems == 1
                 window_generator = self.build_obstacle_window_generator()
@@ -98,10 +118,11 @@ class TabularConverterFactory(
                 window_generator = VehicleSamplingWindowGenerator(
                     self.samples_per_recording,
                     self.build_obstacle_window_generator(),
+                    self._rng(),
                 )
             else:
                 window_generator = TimeSliceSamplingWindowGenerator(
-                    self.num_time_steps, self.samples_per_recording
+                    self.num_time_steps, self.samples_per_recording, self._rng()
                 )
 
         if self.downsample > 1:
@@ -111,7 +132,7 @@ class TabularConverterFactory(
         return window_generator
 
     def build_obstacle_window_generator(self):
-        return ObstacleWindowGenerator()
+        return ObstacleWindowGenerator(self.time_before_ego, self.time_after_ego)
 
     def build_planning_problem_set_creator(self) -> PlanningProblemCreator:
         if self.ego_vehicle_id is not None:
@@ -124,11 +145,17 @@ class TabularConverterFactory(
         if self.num_planning_problems <= 0:
             planning_problem_creator = PlanningProblemCreator()
         else:
-            planning_problem_creator = EgoPlanningProblemCreator(self.keep_ego)
+            planning_problem_creator = EgoPlanningProblemCreator(
+                self.keep_ego,
+                self.obstacles_start_at_zero,
+            )
 
         if self.num_time_steps is not None:
             planning_problem_creator = RandomObstaclePlanningProblemWrapper(
-                planning_problem_creator, self.num_planning_problems
+                planning_problem_creator,
+                self.num_planning_problems,
+                self.enforced_planning_problem_selection,
+                self._rng(),
             )
 
         return planning_problem_creator

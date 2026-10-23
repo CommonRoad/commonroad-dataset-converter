@@ -1,5 +1,6 @@
+from collections.abc import Mapping
 from pathlib import Path
-from typing import Any, Mapping
+from typing import Any
 
 from pydantic import PrivateAttr
 
@@ -53,4 +54,6 @@ class HighdConverterFactory(TabularConverterFactory[LevelXRecording]):
         )
 
     def build_obstacle_window_generator(self):
-        return HighdObstacleWindowGenerator(self.lane_change)
+        return HighdObstacleWindowGenerator(
+            self.time_before_ego, self.time_after_ego, lane_change=self.lane_change
+        )

@@ -2,15 +2,29 @@ site_name: CommonRoad Dataset Converter
 theme:
   name: material
   logo: assets/commonroad_white150.png
+
 plugins:
-  - mkdocstrings
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: sphinx
+            show_root_heading: true
+            heading_level: 3
   - search
 
 nav:
   - Introduction: index.md
-  - Architecture: overview.md
+  - Usage:
+      - "Getting started": getting_started.md
+      - "CLI Usage": cli.md
+      - "Examples": examples.md
+      - "Scenario Selection": time_spans.md
+  - Datasets: datasets.md
+  - Python Usage: python_usage.md
+  - Development:
+      - Architecture: contributing/architecture.md
   - CommonRoad Dataset Converter API:
       - "Tabular": api/tabular.md
       - "Factory": api/factory.md
       - "Interface": api/interface.md
-  - Examples: examples.md

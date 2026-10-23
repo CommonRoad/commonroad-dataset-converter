@@ -1,23 +1,20 @@
 # Script for converting interaction dataset maps from Lanelet2 to CommonRoad
 # Requires Scenario Designer version >=0.8.0
 from pathlib import Path
-import numpy as np
 
+import numpy as np
 from commonroad.common.file_reader import CommonRoadFileReader
 from commonroad.common.file_writer import CommonRoadFileWriter, OverwriteExistingFile
 from commonroad.planning.planning_problem import PlanningProblemSet
-
 from crdesigner.common.config.gui_config import gui_config
 from crdesigner.common.config.lanelet2_config import lanelet2_config
+from crdesigner.common.config.opendrive_config import open_drive_config
 from crdesigner.map_conversion.map_conversion_interface import (
     lanelet_to_commonroad,
     opendrive_to_commonroad,
 )
-from crdesigner.common.config.opendrive_config import open_drive_config
-
 
 from crdata.conversion.util.yaml import load_yaml
-
 
 lanelet2_config.proj_string = gui_config.utm_default
 open_drive_config.proj_string_odr = gui_config.utm_default

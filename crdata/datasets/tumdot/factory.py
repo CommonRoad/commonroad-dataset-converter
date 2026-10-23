@@ -3,10 +3,11 @@ from pathlib import Path
 from crdata.conversion.tabular.factory import (
     TabularConverterFactory,
 )
+
 from .implementation import (
+    TumdotMetaScenarioCreator,
     TumdotRecordingGenerator,
     TumdotWindowMeta,
-    TumdotMetaScenarioCreator,
 )
 
 

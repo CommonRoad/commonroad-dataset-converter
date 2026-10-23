@@ -1,8 +1,9 @@
 import copy
 from abc import ABCMeta, abstractmethod
+from collections.abc import Iterable, Iterator, Mapping
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Dict, Iterable, Mapping, Tuple
+from typing import Any, Dict, Tuple
 
 import numpy as np
 import pandas as pd
@@ -24,14 +25,14 @@ from crdata.datasets.common.obstacle_utils import get_dt
 
 @dataclass
 class LevelXRecording:
-    recording_meta: Dict[str, Any]
+    recording_meta: dict[str, Any]
 
 
 @dataclass
 class LevelXMetaScenarioGenerator(IMetaScenarioCreator[LevelXRecording]):
     map_dir: Path
-    map_names: Dict[int, str]
-    _name_to_map: Dict[int, Scenario] = field(default_factory=dict, init=False)
+    map_names: dict[int, str]
+    _name_to_map: dict[int, Scenario] = field(default_factory=dict, init=False)
 
     def __post_init__(self) -> None:
         for map_id, name in self.map_names.items():
@@ -54,11 +55,11 @@ class LevelXMetaScenarioGenerator(IMetaScenarioCreator[LevelXRecording]):
 @dataclass
 class LevelXRecordingGenerator(IRecordingGenerator[LevelXRecording]):
     data_path: Path
-    locations: Dict[int, str]
-    obstacle_types: Dict[str, str]
+    locations: dict[int, str]
+    obstacle_types: dict[str, str]
 
-    def __iter__(self) -> Iterable[Tuple[Window, LevelXRecording]]:
-        recordings = list(self.data_path.rglob("*_tracks.csv"))
+    def __iter__(self) -> Iterator[tuple[Window, LevelXRecording]]:
+        recordings = sorted(self.data_path.rglob("*_tracks.csv"))
         assert self.data_path.exists()
         assert len(recordings) > 0
         for tracks_path in recordings:
@@ -92,7 +93,9 @@ class LevelXRecordingGenerator(IRecordingGenerator[LevelXRecording]):
                 },
                 inplace=True,
             )
-            tracks_meta["obstacle_type"].replace(self.obstacle_types, inplace=True)
+            tracks_meta["obstacle_type"] = tracks_meta["obstacle_type"].replace(
+                self.obstacle_types
+            )
 
             vehicle_tracks.set_index(["trackId", "frame"], inplace=True)
             tracks_meta.set_index(["trackId"], inplace=True)

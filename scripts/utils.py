@@ -1,14 +1,14 @@
+from collections.abc import Callable
 from pathlib import Path
-from typing import List, Callable, Dict, Set, Union
-import numpy as np
+from typing import Dict, List, Set, Union
 
+import numpy as np
 from commonroad.common.file_writer import CommonRoadFileWriter, OverwriteExistingFile
 from commonroad.planning.planning_problem import PlanningProblemSet
-from commonroad.scenario.scenario import Tag, ScenarioID
-
-from crdesigner.common.config.general_config import general_config, GeneralConfig
-from crdesigner.common.config.lanelet2_config import lanelet2_config, Lanelet2Config
-from crdesigner.common.config.opendrive_config import open_drive_config, OpenDriveConfig
+from commonroad.scenario.scenario import ScenarioID, Tag
+from crdesigner.common.config.general_config import GeneralConfig, general_config
+from crdesigner.common.config.lanelet2_config import Lanelet2Config, lanelet2_config
+from crdesigner.common.config.opendrive_config import OpenDriveConfig, open_drive_config
 from crdesigner.map_conversion.map_conversion_interface import (
     lanelet_to_commonroad,
     opendrive_to_commonroad,
@@ -17,14 +17,14 @@ from crdesigner.map_conversion.map_conversion_interface import (
 
 def convert_map(
     conversion_function: Callable,
-    paths: List[Path],
+    paths: list[Path],
     postprocess: Callable,
     map_path: Path,
-    scenario_ids: Dict[int, str],
+    scenario_ids: dict[int, str],
     general_conf: GeneralConfig,
-    conversion_conf: Union[Lanelet2Config, OpenDriveConfig],
-    translation: Dict[str, np.ndarray],
-    tags_raw: Dict[str, Set[Tag]],
+    conversion_conf: Lanelet2Config | OpenDriveConfig,
+    translation: dict[str, np.ndarray],
+    tags_raw: dict[str, set[Tag]],
 ):
     for path in paths:
         try:
@@ -69,14 +69,14 @@ def convert_map(
 
 
 def convert_lanelet2(
-    paths: List[Path],
+    paths: list[Path],
     postprocess: Callable,
     map_path: Path,
-    scenario_ids: Dict[int, str],
+    scenario_ids: dict[int, str],
     general_conf: GeneralConfig = general_config,
     lanelet2_conf: Lanelet2Config = lanelet2_config,
-    translation: Dict[str, np.ndarray] = None,
-    tags_raw: Dict[str, Set[Tag]] = None,
+    translation: dict[str, np.ndarray] = None,
+    tags_raw: dict[str, set[Tag]] = None,
 ):
     convert_map(
         lanelet_to_commonroad,
@@ -92,14 +92,14 @@ def convert_lanelet2(
 
 
 def convert_opendrive(
-    paths: List[Path],
+    paths: list[Path],
     postprocess: Callable,
     map_path: Path,
-    scenario_ids: Dict[int, str],
+    scenario_ids: dict[int, str],
     general_conf: GeneralConfig = general_config,
     open_drive_conf: OpenDriveConfig = open_drive_config,
-    translation: Dict[str, np.ndarray] = None,
-    tags: Dict[str, Set[Tag]] = None,
+    translation: dict[str, np.ndarray] = None,
+    tags: dict[str, set[Tag]] = None,
 ):
     convert_map(
         opendrive_to_commonroad,

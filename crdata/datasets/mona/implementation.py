@@ -1,9 +1,10 @@
 import copy
 import importlib.resources
 import re
+from collections.abc import Iterable, Iterator
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import ClassVar, Dict, Iterable, Tuple
+from typing import ClassVar, Dict, Tuple
 
 import numpy as np
 import pandas as pd
@@ -81,12 +82,12 @@ def _read_trajectories(trajectory_file: Path) -> pd.DataFrame:
 
 @dataclass
 class MonaMetaScenarioGenerator(IMetaScenarioCreator):
-    map_names: ClassVar[Dict[str, str]] = {
+    map_names: ClassVar[dict[str, str]] = {
         "east": "DEU_MONAEast-2.xml",
         "west": "DEU_MONAWest-2.xml",
         "merge": "DEU_MONAMerge-2.xml",
     }
-    _name_to_map: Dict[str, Scenario] = field(default_factory=dict, init=False)
+    _name_to_map: dict[str, Scenario] = field(default_factory=dict, init=False)
 
     def __post_init__(self) -> None:
         for location in ["east", "west", "merge"]:
@@ -109,7 +110,7 @@ class MonaMetaScenarioGenerator(IMetaScenarioCreator):
 class MonaRecordingGenerator(IRecordingGenerator):
     data_path: Path
 
-    def __iter__(self) -> Iterable[Tuple[Window, InteractionRecording]]:
+    def __iter__(self) -> Iterator[tuple[Window, InteractionRecording]]:
         if self.data_path.is_dir():
             files = sorted(list(self.data_path.rglob("trajectories.*")))
         else:

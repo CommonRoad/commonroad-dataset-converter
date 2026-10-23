@@ -1,6 +1,7 @@
 from abc import ABCMeta, abstractmethod
+from collections.abc import Iterable, Iterator
 from dataclasses import dataclass
-from typing import Generic, Iterable, Tuple, TypeVar
+from typing import Generic, Tuple, TypeVar
 
 import pandas as pd
 from commonroad.scenario.scenario import Scenario
@@ -30,7 +31,7 @@ class IWindowGenerator(Generic[WindowMetaT], metaclass=ABCMeta):
     @abstractmethod
     def __call__(
         self, window: Window, window_meta: WindowMetaT
-    ) -> Iterable[Tuple[Window, WindowMetaT]]:
+    ) -> Iterable[tuple[Window, WindowMetaT]]:
         pass
 
 
@@ -46,11 +47,10 @@ class IRecordingGenerator(Generic[WindowMetaT], metaclass=ABCMeta):
     """Iterate over the independent recordings of a dataset."""
 
     @abstractmethod
-    def __iter__(self) -> Iterable[Tuple[Window, WindowMetaT]]:
+    def __iter__(self) -> Iterator[tuple[Window, WindowMetaT]]:
         """
         Create an iterator that iterates over independent recordings.
 
         :return: Tuple of the full recordings window and a generic meta information
             object to be used by subsequent steps to identify the recording.
         """
-        pass

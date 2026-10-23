@@ -17,7 +17,7 @@ class TrajectoryType(Enum):
 
 def classify_trajectory(
     trajectory: Trajectory, min_velocity: float = 1.0, turn_threshold: float = 0.03
-) -> Tuple[TrajectoryType, np.ndarray]:
+) -> tuple[TrajectoryType, np.ndarray]:
     """
     Get TrajectoryType of the given trajectory
     :param trajectory: trajectory to classify
