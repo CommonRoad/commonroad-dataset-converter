@@ -4,6 +4,13 @@ Some datasets, such as highD then split recordings into different driving direct
 If you want to generate a balanced dataset from multiple source data, one easy way of doing that is
 to set `--samples-per-recording N`, which randomly (seeded) selects N scenarios from each recording. 
 
+## Creating a Dataset from multiple source datasets
+You can create a dataset from multiple source datasets, e.g., highD and exiD by sequentially running the converter to the same output dir, e.g.: 
+```bash
+crconvert high_input_dir joint_output_dir highd
+crconvert exid_input_dir joint_output_dir exid
+```
+
 ## Dataset Overview
 
 | Dataset | Recordings | Split recordings |
