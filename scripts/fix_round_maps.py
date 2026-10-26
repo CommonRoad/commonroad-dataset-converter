@@ -1,5 +1,6 @@
 """Repair the rounD maps in crdata/datasets/rounD/maps.
 
+0. Duplicates: lanelets with the same bounds as a lanelet with a lower id are removed.
 1. Diagonal edges: a dead end whose end edge runs diagonally across a neighbouring
    lanelet x (one corner at x's start, the other at x's end) is extended over x and
    linked to x's successors. Lanelets without predecessor are handled mirrored.
@@ -75,6 +76,24 @@ def close(p: np.ndarray, q: np.ndarray, tolerance: float) -> bool:
 def heading(points: np.ndarray) -> float:
     d = points[1] - points[0]
     return float(np.arctan2(d[1], d[0]))
+
+
+def remove_duplicates(ln: LaneletNetwork) -> list[str]:
+    """Remove lanelets whose bounds equal those of a lanelet with a lower id.
+
+    :param ln: lanelet network, modified in place
+    :return: description of every removed lanelet
+    """
+    fixes = []
+    kept = {}
+    for lanelet in sorted(ln.lanelets, key=lambda la: la.lanelet_id):
+        bounds = (lanelet.left_vertices.tobytes(), lanelet.right_vertices.tobytes())
+        if bounds in kept:
+            ln.remove_lanelet(lanelet.lanelet_id)
+            fixes.append(f"{lanelet.lanelet_id} duplicates {kept[bounds]}, removed")
+        else:
+            kept[bounds] = lanelet.lanelet_id
+    return fixes
 
 
 def fix_diagonal_edges(ln: LaneletNetwork) -> list[str]:
@@ -500,10 +519,17 @@ def insert_link(element, tag: str, ref: int) -> None:
 
 
 def write_changes(path: Path, ln: LaneletNetwork) -> None:
-    """Write changed bounds and links into the map file, leaving everything else as is."""
+    """Write changed bounds and links into the map file, leaving everything else as is.
+
+    :param path: map file, overwritten
+    :param ln: repaired lanelet network; lanelets missing in it are removed from the file
+    """
     tree = etree.parse(str(path))
-    for element in tree.getroot().iter("lanelet"):
+    for element in list(tree.getroot().iter("lanelet")):
         lanelet = ln.find_lanelet_by_id(int(element.get("id")))
+        if lanelet is None:
+            element.getparent().remove(element)
+            continue
         set_points(element.find("leftBound"), lanelet.left_vertices)
         set_points(element.find("rightBound"), lanelet.right_vertices)
         for tag, refs in (
@@ -519,6 +545,13 @@ def write_changes(path: Path, ln: LaneletNetwork) -> None:
             for ref in refs:
                 if ref not in existing:
                     insert_link(element, tag, ref)
+        for tag, ref in (
+            ("adjacentLeft", lanelet.adj_left),
+            ("adjacentRight", lanelet.adj_right),
+        ):
+            e = element.find(tag)
+            if e is not None and ref is None:
+                element.remove(e)
     tree.write(str(path), xml_declaration=True, encoding="UTF-8")
     with open(path, "a") as f:
         f.write("\n")
@@ -557,7 +590,12 @@ def main(dataset_dir: Path) -> None:
         states, keys, firsts = vehicle_states(dataset_dir / "data", location)
         print(map_name)
         report("before", ln, states, firsts)
-        for step in (fix_diagonal_edges, repair_broken_links, snap_touching):
+        for step in (
+            remove_duplicates,
+            fix_diagonal_edges,
+            repair_broken_links,
+            snap_touching,
+        ):
             for fix in step(ln):
                 print(f"  {step.__name__}: {fix}")
         for fix in extend_arms(ln, states, keys, CURVED_ARMS.get(map_name, set())):
