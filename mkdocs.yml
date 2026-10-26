@@ -17,6 +17,7 @@ nav:
   - Introduction: index.md
   - Usage:
       - "Getting started": getting_started.md
+      - "Balanced dataset": balanced_dataset.md
       - "CLI Usage": cli.md
       - "Examples": examples.md
       - "Scenario Selection": time_spans.md
